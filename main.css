@@ -7,7 +7,7 @@ main {
 }
 .header {
     width: 100%;
-    height: 100px;
+    height: 70px;
     position: fixed;
     top: 0;
     left: 0;
@@ -20,19 +20,6 @@ main {
     font-size: 30px;
 }
 
-.wave_white {
-    width: 100%;
-    padding-top: 15.625%;
-    background-image: url(../img/wavy\ line_w.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    background-position: center bottom;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    margin-bottom: -2px;
-}
 .wave_bw {
     width: 100%;
     padding-top: 20.833333%;
@@ -51,21 +38,23 @@ main {
     background-position: center bottom;
     margin-bottom: -2px;
 }
-.main .section1 {
+.section1 {
     position: relative;
+    overflow: hidden;
 }
 .confetti {
-    height: 60%;
-    position: absolute;
+    width: 50%;
+    height: auto;
     z-index: 99;
     opacity: 0;
-    transform: translateY(50%);
+    transform: translateY(-20%);
 }
 .confetti.show {
     animation: confetti 1.2s ease-in-out;
 }
 .confetti > img {
-    height: 100%;
+    width: 100%;
+    padding-top: 60%;
 }
 @keyframes confetti {
     0% {
@@ -90,31 +79,26 @@ main {
 
 .main .section1 .sec_wrap_b {
     position: relative;
-    height: 100vh;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
-}
-.main_imgs {
-    width: 80%;
+    width: 100%;
     height: 100%;
+}
+.main .sec1_wrap > div {
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
 }
 .main_logo {
     width: 15%;
-    margin: 200px auto 0;
+    transform: translateY(55%);
 }
 .main_logo > .img {
     padding-top: 53.69319%;
     background-image: url(../img/bfoc_logo_white.png);
 }
 .main .main_right {
-    position: absolute;
-    bottom: 17%;
-    right: 15%;
     width: 20%;
+    transform: translateX(110%) translateY(24%);
     z-index: 5;
 }
 .main_right > .img {
@@ -122,32 +106,40 @@ main {
     background-image: url(../img/main_right.png);
 }
 .main .main_center {
-    position: absolute;
-    bottom: 26%;
-    left: 62%;
-    transform: translateX(-50%);
-    width: 22%;
+    width: 25%;
+    transform: translateX(45%) translateY(37%);
 }
 .main_center > .img {
     padding-top: 145.7777%;
     background-image: url(../img/main_center.png);
 }
 .main .main_left {
-    position: absolute;
-    bottom: 19%;
-    left: 15%;
     width: 46%;
     z-index: 6;
+    transform: translateX(-27%) translateY(21%);
 }
 .main_left > .img {
     padding-top: 95.111111%;
     background-image: url(../img/main_left.png);
 }
+.wave_white {
+    width: 100%;
+    padding-top: 15.625%;
+    background-image: url(../img/wavy\ line_w.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: center bottom;
+    bottom: 0;
+    z-index: 100;
+    margin-bottom: -2px;
+}
 
 /* ======================================sec2========================= */
-.main .sec2 {
+.main .section2 {
     position: relative;
     background-color: #f3f2ee;
+    max-height: fit-content;
 }
 .main .festi-poster {
     width: 100%;
@@ -156,21 +148,18 @@ main {
     padding: 0 100px;
     box-sizing: border-box;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.main .img {
-    width: 100%;
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 1000;
+.speaker,
+.seagal,
+.lp {
+    position: absolute;
 }
 .main .speaker {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 14%;
-    transform: rotate(-16.32deg);
+    width: 15%;
+    transform: translateX(-280%) translateY(55%) rotate(-16.32deg);
     z-index: 500;
 }
 .main .speaker > .img {
@@ -178,38 +167,41 @@ main {
     background-image: url(../img/speaker.png);
 }
 .main .seagal {
-    position: absolute;
-    top: 0;
-    right: 50px;
     width: 22%;
+    transform: translateX(180%) translateY(-43%) rotate(8.32deg);
     z-index: 499;
 }
 .main .seagal > .img {
     padding-top: 99.25%;
     background-image: url(../img/seagal.png);
 }
+.main .img {
+    width: 100%;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1000;
+}
+
 .lp {
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
+    transform: translateX(-300%) translateY(-10%);
     width: 14%;
-    left: 0;
 }
 .lp > .img {
     padding-top: 97.2%;
     background-image: url(../img/LP.png);
 }
-.main .swiper {
+.main .festi-poster .swiper {
     width: 100%;
     overflow-x: hidden;
     gap: 0;
 }
 
-.main .swiper-wrapper {
+.main .festi-poster .swiper-wrapper {
     gap: 0;
 }
 
-.main .swiper-slide {
+.main .festi-poster .swiper-slide {
     transform: scaleY(0.9);
     text-align: center;
     font-size: 18px;
@@ -221,28 +213,35 @@ main {
     padding: 0;
 }
 
-.main .swiper-slide-active {
+.main .festi-poster .swiper-slide-active {
     background: #fff;
     transform: scale(1);
     height: 100%;
     z-index: 2;
 }
 
-.main .swiper-slide > img {
+.main .festi-poster .swiper-slide > img {
     width: 100%;
     opacity: 0.5;
 }
-.main .swiper-slide-active > img {
+.main .festi-poster .swiper-slide-active > img {
     width: 100%;
     opacity: 1;
 }
+.section2 .wave_bw {
+    position: absolute;
+    bottom: 0;
+}
 /* ==========sec3==================== */
+.section3 {
+    position: relative;
+}
 .main .sec3_wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #0c0c0c;
-    height: 800px;
+    height: 100%;
 }
 .main .sec3_wrap > div {
     width: calc(50% - 50px);
@@ -252,11 +251,12 @@ main {
     height: 100%;
     background-color: #f3f2ee;
 }
-.main .sec3_right {
+/* .main .sec3_right {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap:wrap;
     gap: 25px;
-}
+} */
 .main .sec3_subtitle {
     display: flex;
     flex-wrap: wrap;
@@ -316,23 +316,59 @@ main {
     justify-content: start;
 }
 .main .sec3_info h4:nth-child(1) {
-    width: 15%;
-    margin-right: 20px;
+    width: 30%;
+}
+.main .section3 .wave_wb {
+    position: absolute;
+    bottom: 0;
 }
 @media (max-width: 1440px) {
-    .main .sec3_subtitle {
-        gap: 0;
+    .main .festi-poster {
+        padding: 0;
     }
-    .main .sec3_subtitle > h3 {
-        width: 100%;
+    .main .speaker {
+        width: 17%;
     }
-    .main .sec3_wrap > div {
+    .lp {
+        width: 16%;
+    }
+    .main .seagal {
+        width: 25%;
     }
 }
-@media (max-width: 1020px) {
+@media (max-width: 1100px) {
+    .main section.section3{
+        height:800px;
+    }
+    .d-day{
+        width:100%;
+    }
+    .main .sec3_subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    width:40%;
+    }
+    .main .sec3_content_right{
+        width:60%;
+    }
+    .main .sec3_subtitle > h3:nth-child(2) {
+        margin-top: -10px;
+    }
+    .m_sec3_content{
+        display: flex;
+    }
+    .main .sec3_info h4:nth-child(1) {
+        width: 30%;
+    }
+    .main .sec3_info h4:nth-child(2){
+        width: 60%;
+    }
+    .main.sec3_wrap {
+        display: block;
+    }
     .main .sec3_wrap > div {
         width: 100%;
-        height: 50%;
+        height:45%
     }
     .main .sec3_right p {
         display: none;
@@ -345,4 +381,29 @@ main {
     .main .sec3_content_left {
         width: 100%;
     } */
+}
+@media (max-width: 800px) {
+    .main section.section3{
+        height:600px;
+    }
+   
+}
+@media (max-width: 500px) {
+    .main section.section3 {
+        height: 400px;
+    }
+    h1{
+        font-size:24px;
+    }
+    h3 {
+        font-size: 16px;
+        font-weight: 900;
+    }
+    h4 {
+        font-size: 10px;
+        font-weight: 900;
+    }
+    p {
+        font-size: 10px;
+    }
 }
