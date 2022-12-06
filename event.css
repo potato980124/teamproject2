@@ -1,0 +1,41 @@
+.event .section1{
+    background-color: #f3f2ee;
+    margin-top:70px;
+}
+.event .section2{
+    background-color: #0c0c0c;
+}
+.event .section2 .sec_wrap{
+    transform: translateY(-5%);
+}
+.event .tab_wrap{
+    width:100%;
+    display: flex;
+    gap:12px;
+    height:100px;
+}
+.event .tab_wrap>div{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f2ee;
+}
+.event .tab_wrap>div>h4{
+    text-align: center;
+}
+.event_wrap{
+    margin-top:12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:12px;
+}
+.event_wrap>div{
+    width:calc(25% - 9px);
+    height:auto;
+}
+.event_wrap > div > .img{
+    width:100%;
+    padding-top:100%;
+    background-color: #f3f2ee;
+}
