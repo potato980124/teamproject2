@@ -1,0 +1,126 @@
+#gallery .section1 {
+    background-color:  #f3f2ee;
+}
+
+#gallery .section2{
+    background-color: #0c0c0c;
+}
+#gallery .section2 .sec_wrap{
+    margin-top: -100px;
+}
+.content_wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-bottom: 200px;
+}
+.content_left{
+    width: 35%;
+    /* max-height: 320px; */
+    color:#fff;
+}
+.content_left>h1{
+    display: inline-block;
+    font-size: 55px;
+}
+.content_left .sub_p{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.content_right{
+    width:65%;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    background-color: #0c0c0c;
+  }
+
+
+.section2 .mySwiper_gall .swiper-slide{
+    filter: brightness(50%);
+}
+
+.section2 .mySwiper_gall .swiper-slide-active{
+    filter: brightness(100%)
+}
+.section2 .mySwiper_gall .swiper-wrapper .swiper-slide{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.section2 .mySwiper_gall .swiper-wrapper .no1.img1{
+    background-image: url(../img/port-fes1.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no1.img2{
+    background-image: url(../img/port-fes2.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no1.img3{
+    background-image: url(../img/port-fes3.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no1.img4{
+    background-image: url(../img/port-fes4.jpg);
+}
+
+
+.section2 .mySwiper_gall .swiper-wrapper .no2.img1{
+    background-image: url(../img/sea-fes1.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no2.img2{
+    background-image: url(../img/sea-fes2.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no2.img3{
+    background-image: url(../img/sea-fes3.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no2.img4{
+    background-image: url(../img/sea-fes4.jpg);
+}
+
+
+.section2 .mySwiper_gall .swiper-wrapper .no3.img1{
+    background-image: url(../img/road-fes1.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no3.img2{
+    background-image: url(../img/road-fes2.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no3.img3{
+    background-image: url(../img/road-fes3.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no3.img4{
+    background-image: url(../img/road-fes4.jpg);
+}
+
+
+
+.section2 .mySwiper_gall .swiper-wrapper .no4.img1{
+    background-image: url(../img/fireworks1.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no4.img2{
+    background-image: url(../img/fireworks2.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no4.img3{
+    background-image: url(../img/fireworks3.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no4.img4{
+    background-image: url(../img/fireworks4.jpg);
+}
+
+
+.swiper-gall-next{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px; height: 44px;
+    opacity: 0.8;
+    background-image: url(../img/arrow_next_wh.png);
+    background-size: cover;
+    background-position: center center;
+    z-index: inherit;
+}
