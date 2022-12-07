@@ -8,7 +8,7 @@
 .event .section2 .sec_wrap {
     transform: translateY(-5%);
 }
-.event .swiper-wrapper{
+.event .swiper-wrapper {
     display: flex;
     height: 100px;
     flex-wrap: nowrap;
@@ -23,8 +23,8 @@
     flex-shrink: 0;
     margin-right: 12px;
 }
-.event_tab:nth-child(4){
-    margin:0;
+.event_tab:nth-child(4) {
+    margin: 0;
 }
 /* .event .tab_wrap {
     width: 100%;
@@ -104,16 +104,24 @@
     background-image: url(../img/tape.png);
 }
 @media (max-width: 800px) {
+    .event .section2 .sec_wrap {
+        transform: translateY(0%);
+    }
+    .event .section1 {
+        margin-top: 50px;
+    }
     .event_wrap {
         gap: 10px;
     }
-    .event_tab:nth-child(2n-1){
-        margin-right:10px;
+    .event .swiper-wrapper {
+        height: 50px;
     }
-    .event_tab{
-        width: calc(50% - 5px)!important;
-        margin:0;
-
+    .event_tab:nth-child(2n-1) {
+        margin-right: 10px;
+    }
+    .event_tab {
+        width: calc(50% - 5px) !important;
+        margin: 0;
     }
     .event_wrap > div {
         width: calc(50% - 5px);

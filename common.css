@@ -1,7 +1,7 @@
 @import url(reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 .header {
     width: 100%;
@@ -119,26 +119,27 @@ p {
 }
 
 /* ===========sub========= */
-.main .section1{
-    margin-top:0;
+.main .section1 {
+    margin-top: 0;
 }
-.section1{
-    margin-top:70px;
+.section1 {
+    margin-top: 70px;
 }
-.subpage_title{
+.subpage_title_wrap {
+    margin-top: 100px;
+}
+.subpage_title {
     display: flex;
     flex-wrap: wrap;
-    gap:10px;
+    gap: 10px;
     justify-content: center;
 }
-.sec_wrap>h2{
+.subpage_title_wrap > h2 {
     width: 100%;
     text-align: center;
 }
-.subpage_title > div{
-    width:62px;
-    height:75px;
-    padding-top: 5px;
+.subpage_title > div {
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,7 +163,7 @@ p {
 .subpage_title > div:nth-child(6) {
     background-color: #ee4b3c;
 }
-.subpage_title > div> h2 {
+.subpage_title > div > h2 {
     color: #fff;
 }
 .tab_wrap {
@@ -193,7 +194,7 @@ p {
 .tab:nth-child(7).tab_active > h4 {
     color: #f9b6b0;
 }
-.tab> h4 {
+.tab > h4 {
     text-align: center;
     font-weight: 900;
     color: #f3f2ee;
@@ -213,6 +214,7 @@ p {
     h1 {
         font-size: 44px;
     }
+
     h3 {
         font-size: 28px;
         font-weight: 900;
@@ -238,6 +240,10 @@ p {
     h1 {
         font-size: 34px;
     }
+    h2 {
+        font-size: 28px;
+        font-weight: 900;
+    }
     h3 {
         font-size: 24px;
         font-weight: 900;
@@ -249,6 +255,10 @@ p {
     p {
         font-size: 14px;
     }
+    /* ========================subpage=================== */
+    .subpage_title_wrap {
+        margin-top: 50px;
+    }
 }
 @media (max-width: 500px) {
     .sec_wrap {
@@ -257,15 +267,26 @@ p {
     h1 {
         font-size: 24px;
     }
+    h2 {
+        font-size: 20px;
+    }
+    .subpage_title > div {
+        padding: 5px 10px;
+    }
     h3 {
         font-size: 16px;
         font-weight: 900;
     }
+
     h4 {
         font-size: 10px;
         font-weight: 900;
     }
     p {
         font-size: 10px;
+    }
+    /* ========================sub======================== */
+    .subpage_title_wrap {
+        margin-top: 25px;
     }
 }
