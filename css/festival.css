@@ -1,48 +1,6 @@
-/* 공통 */
-.w1440{
-    width: 1440px;
-    margin: 0 auto;
-}
 
-/* 물결섹션 공통 */
-.wave{
-    margin-bottom: -2px;
-    margin-top: -2px;
-    width: 100%; height: 300px;
-    overflow: hidden;
-}
-.wave_bg{
-    width: 200%; height: 100%;
-    background-repeat: no-repeat;
-    background-position: center 10%;
-    background-size: cover;
-    animation-name: wave;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-.wbg_top{
-    background-image: url(../img/wavy\ line_bw.png);
-}
-.wbg_bot{
-    background-image: url(../img/wavy\ line_wb.png)
-}
-@keyframes wave{
-    0% {
-        transform: translate3d(0,0,0);
-    }
-    50% {
-        transform: translate3d(-25%,0,0);
-    }
-    100%{
-        transform: translate3d(-50%,0,0);
-    }
-}
-/* 헤더 */
-header{
-    height: 100px;
-    background-color: black;
-}
+
+
 
 /* 메인시작 */
 
