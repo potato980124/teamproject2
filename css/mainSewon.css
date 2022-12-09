@@ -1,4 +1,4 @@
-
+@import url(common/reset.css);
 @import url(common.css);
 main {
     background-color: #0c0c0c;
@@ -12,8 +12,8 @@ main {
     background-color: #0c0c0c;
     overflow: hidden;
 }
-.main .sec1_wrap{
-    height:80vh;
+.main .sec1_wrap {
+    height: 80vh;
     position: relative;
     margin-top: 70px;
     display: flex;
@@ -22,8 +22,8 @@ main {
     width: 100%;
 }
 .confetti {
-    width:70%;
-    margin:0 auto;
+    width: 70%;
+    margin: 0 auto;
     z-index: 99;
     opacity: 0;
     transform: translateY(20%);
@@ -90,7 +90,7 @@ main {
     width: 46%;
     z-index: 6;
     /* translateY(-30%) */
-    transform: translateX(-27%)translateY(15%);
+    transform: translateX(-27%) translateY(15%);
 }
 .main_left > .img {
     padding-top: 95.111111%;
@@ -139,7 +139,7 @@ main {
 .main .speaker {
     width: 15%;
     /* transform: translateX(-280%) translateY(55%) rotate(-16.32deg); */
-    transform: translateX(-20%)translateY(55%) rotate(-16.32deg);
+    transform: translateX(-20%) translateY(55%) rotate(-16.32deg);
     z-index: 500;
     left: 0;
 }
@@ -150,7 +150,7 @@ main {
 .main .seagal {
     width: 22%;
     /* transform: translateX(180%) translateY(-43%) rotate(8.32deg); */
-    transform: translateX(25%)translateY(-43%) rotate(8.32deg);
+    transform: translateX(25%) translateY(-43%) rotate(8.32deg);
     right: 0;
     z-index: 499;
 }
@@ -234,7 +234,6 @@ main {
 }
 .main .sec3_wrap > div {
     width: calc(50% - 50px);
-
 }
 
 .main .sec3_left {
@@ -294,7 +293,7 @@ main {
 .main .section3 h4.yellow {
     color: #ffbc16;
 }
-.m_sec3_content{
+.m_sec3_content {
     display: flex;
     flex-wrap: wrap;
 }
@@ -302,7 +301,7 @@ main {
     width: 100%;
     display: flex;
     justify-content: start;
-    gap:25px;
+    gap: 25px;
 }
 .main .section3 .wave_wb {
     position: relative;
@@ -334,7 +333,7 @@ main {
     .main .sec3_wrap > div {
         width: 100%;
     }
-    .main .sec3_left{
+    .main .sec3_left {
         height: 200px;
     }
     .d-day {
@@ -345,10 +344,8 @@ main {
     }
 }
 @media (max-width: 800px) {
-
 }
 @media (max-width: 600px) {
-  
     h1 {
         font-size: 24px;
     }
@@ -372,12 +369,12 @@ main {
         width: 100%;
     }
     .main .sec3_left {
-        height:200px;
+        height: 200px;
     }
-    .sec3_content_right{
-        width:100%;
+    .sec3_content_right {
+        width: 100%;
     }
-    .sec3_info{
-        width:100%;
+    .sec3_info {
+        width: 100%;
     }
 }

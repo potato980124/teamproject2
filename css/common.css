@@ -1,4 +1,4 @@
-@import url(reset.css);
+@import url(common/reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
 * {
     font-family: "Roboto", sans-serif;
@@ -207,6 +207,7 @@ p {
     align-items: center;
     border: 1px solid #f3f2ee;
     box-sizing: border-box;
+    background-color: #0c0c0c;
 }
 .tab > h4 {
     text-align: center;

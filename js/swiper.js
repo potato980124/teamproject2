@@ -40,15 +40,15 @@ var swiper = new Swiper(".news_mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
+        delay: 2500,
+        disableOnInteraction: false,
     },
     pagination: {
-      el: ".swiper-pagination",
-      type: "fraction"
+        el: ".swiper-pagination",
+        type: "fraction",
     },
     navigation: {
-      nextEl: ".slide_next",
-      prevEl: ".slide_prev",
+        nextEl: ".slide_next",
+        prevEl: ".slide_prev",
     },
-  });
+});
