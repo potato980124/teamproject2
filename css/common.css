@@ -96,7 +96,7 @@ p {
     font-size: 16px;
 }
 .subTitle {
-    transform: translateY(100%);
+    transform: translateY(-100%);
     display: flex;
     gap: 20px;
 }
@@ -132,6 +132,12 @@ p {
 }
 .subTitle > h1:nth-child(10) {
     color: #1ea849;
+}
+.subTitle > h1:nth-child(11) {
+    color: #ee4b3c;
+}
+.subTitle > h1:nth-child(12) {
+    color: #f9b6b0;
 }
 .tabBtn {
     width: 170px;
