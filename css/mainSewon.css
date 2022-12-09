@@ -1,10 +1,11 @@
 
-@import url(common.css);
 main {
     background-color: #0c0c0c;
 }
 
 /* =========================section1========================= */
+
+
 .main section.section1 {
     display: flex;
     flex-direction: column;
@@ -96,7 +97,7 @@ main {
     padding-top: 95.111111%;
     background-image: url(../img/main_left.png);
 }
-.wave_white {
+/* .wave_white {
     width: 100%;
     padding-top: 15.625%;
     background-image: url(../img/wavy\ line_w.png);
@@ -105,7 +106,7 @@ main {
     background-position: center bottom;
     z-index: 100;
     margin-bottom: -2px;
-}
+} */
 
 /* ======================================sec2========================= */
 .main .section2 {
@@ -172,17 +173,17 @@ main {
     left: 0;
     width: 14%;
 }
-.lp > .img {
+.lp >.img {
     padding-top: 97.2%;
     background-image: url(../img/LP.png);
 }
-.main .festi-poster .swiper {
+.main .festi-poster .mySwiper {
     width: 100%;
     overflow-x: hidden;
     gap: 0;
 }
 
-.main .festi-poster .swiper-wrapper {
+.main .festi-poster  .swiper-wrapper {
     gap: 0;
 }
 

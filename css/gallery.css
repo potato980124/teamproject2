@@ -1,13 +1,11 @@
-#gallery .section1 {
+.gallery .section1 {
     background-color:  #f3f2ee;
 }
 
-#gallery .section2{
+.gallery .section2{
     background-color: #0c0c0c;
 }
-#gallery .section2 .sec_wrap{
-    /* margin-top: -100px; */
-}
+
 .content_wrap{
     width: 100%;
     display: flex;
@@ -33,7 +31,7 @@
 .content_right{
     width:65%;
 }
-.swiper {
+.mySwiper_gall {
     width: 100%;
     height: 100%;
     background-color: #0c0c0c;
@@ -123,6 +121,20 @@
 }
 .section2 .mySwiper_gall .swiper-wrapper .no5.img4{
     background-image: url(../img/rock-fes4.jpg);
+}
+
+
+.section2 .mySwiper_gall .swiper-wrapper .no6.img1{
+    background-image: url(../img/bell-fes1.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no6.img2{
+    background-image: url(../img/bell-fes2.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no6.img3{
+    background-image: url(../img/bell-fes3.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no6.img4{
+    background-image: url(../img/bell-fes4.jpg);
 }
 
 

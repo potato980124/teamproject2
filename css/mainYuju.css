@@ -2,6 +2,10 @@
 
 .subTitle{
     justify-content: center;
+        transform: translateY(0%);
+        display: flex;
+        gap: 20px;
+    
 
 }
 
@@ -48,6 +52,7 @@
     border-bottom: 1px solid #000;
 }
 .sec4_title{
+    /* position: relative; */
     padding-bottom: 100px;
 }
 .notice_list td{
@@ -82,7 +87,7 @@ colgroup col:last-child{
 background-color: #F3F2EE;
 }
 .sec5_title{
-    padding-bottom: 100px;
+    padding: 100px 0;
 }
 .swiper {
     width: 100%;
@@ -155,8 +160,8 @@ background-color: #F3F2EE;
     }
     
     .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
-        bottom: -3px;
-        width: auto;}
+    bottom: -3px;
+     width: auto;}
 
   .swiper-pagination{
     width: 50px;
@@ -259,28 +264,28 @@ background-color: #F3F2EE;
         /* padding-right: 10px; */
         box-sizing: border-box;
     }
-#right_title_1{
-    background-image: url(../img/temple-off.png);
-}
-#right_title_2{
-    background-image: url(../img/art-off.png);
-}
-#right_title_3{
-    background-image: url(../img/sea-off.png);
-}
-#right_title_4{
-    background-image: url(../img/park-off.png);
-}
-.tabcont{
-    display: none;
-    width: 100%; height: fit-content;
-    margin-top: 100px;
+    #right_title_1{
+        background-image: url(../img/temple-off.png);
+    }   
+    #right_title_2{
+        background-image: url(../img/art-off.png);
+    }
+    #right_title_3{
+        background-image: url(../img/sea-off.png);
+    }
+    #right_title_4{
+        background-image: url(../img/park-off.png);
+    }
+    .tabcont{
+        display: none;
+        width: 100%; height: fit-content;
+        margin-top: 100px;
     /* border: 1px solid #333; */
-  }
-#sec6_tab1{
-    display: block;
+    }
+    #sec6_tab1{
+        display: block;
     
-}
+    }
 
 #right_title_1.active{
     background-image: url(../img/temple-active.png);
@@ -288,7 +293,7 @@ background-color: #F3F2EE;
     color: #EE4B3C;
 }
 #right_title_2.active{
-    background-image: url(../img/art-active1.png);
+    background-image: url(../img/art-active.png);
     border: 2px solid #efa7a0;
     color: #efa7a0;
 }
@@ -369,30 +374,18 @@ background-color: #F3F2EE;
 
 
 
-
-
-
-
-
-
-
-
-
-  
 footer{
    text-align: center;
+   background-color: #0C0C0C;
+   
+  
 }
-.footer_bg{
-    width: 100%;
-    position: relative;
-    /* padding-bottom: 100px; */
-    margin: 0 auto;
-}
+
 .footer_txt{
-    /* bottom: 50px; */
+    /* position: absolute; */
     color: #fff;
     padding-bottom: 20px;
-    margin-top: -100px;
+    /* margin-top: -100px; */
 }
 .f_icon{
     width: 15%; height: 35px;

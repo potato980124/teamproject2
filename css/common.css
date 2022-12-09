@@ -185,6 +185,9 @@ p {
 .subpage_title > div:nth-child(6) {
     background-color: #ee4b3c;
 }
+.subpage_title > div:nth-child(7) {
+    background-color: #f9b6b0;
+}
 .subpage_title > div > h2 {
     color: #fff;
 }

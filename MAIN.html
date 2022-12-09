@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/common/reset.css" />
-        <link rel="stylesheet" href="css/common.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="css/mainSewon.css" />
-        <link rel="stylesheet" href="css/mainYuju.css" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/common/reset.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/mainSewon.css">
+        <link rel="stylesheet" href="css/mainYuju.css">
+
         <title>메인섹션 합체하기</title>
     </head>
     <body>
@@ -23,14 +24,16 @@
                     <div class="main_right"><div class="img"></div></div>
                     <div class="main_center"><div class="img"></div></div>
                 </div>
-                <div class="wave_white"></div>
+                <div class="wave">
+                    <div class="wave_bg wb_transparent pront"></div>
+                </div>
             </section>
             <section class="section2">
                 <div class="sec_wrap">
                     <div class="festi-poster">
                         <div class="speaker"><div class="img"></div></div>
                         <div class="seagal"><div class="img"></div></div>
-                        <div class="swiper">
+                        <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img src="img/building-bw.png" alt="" /></div>
                                 <div class="swiper-slide"><img src="img/building-bw.png" alt="" /></div>
@@ -43,7 +46,9 @@
                         <div class="lp"><div class="img"></div></div>
                     </div>
                 </div>
-                <div class="wave_bw"></div>
+                <div class="wave">
+                    <div class="wave_bg wbg_top"></div>
+                </div>
             </section>
             <section class="section3">
                 <div class="sec3_wrap sec_wrap">
@@ -82,7 +87,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="wave_wb"></div>
+                <div class="wave">
+                    <div class="wave_bg wbg_bot"></div>
+                </div>
             </section>
 
             <!-- 유주섹션 -->
@@ -150,7 +157,7 @@
                         </div>
                     </div>
                     <!-- 스와이퍼 이미지 -->
-                    <div class="swiper news_mySwiper">
+                    <div class="swiper mySwiperN">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="news_bnr news_bnr1"></div>
@@ -351,32 +358,37 @@
                 </div>
             </section>
 
-            <footer>
-                <div class="footer_bg wave_bw">
-                    <div class="footer_txt sec_wrap">
-                        <div class="footer_pc_wrap">
-                            <h1 class="f_logo">BFOC</h1>
-                            <p>
-                                (사)부산문화관광축제조직위원회 47500 부산광역시 연제구 월드컵대로 344(거제동 1299) 아시아드 주경기장 <br />대표전화 :
-                                051-713-5000 개인정보방침 | 이메일무단수집거부
-                            </p>
-                            <p>copyright ⓒ BUSAN Culture & tourism festival organizing committee all right reserved</p>
-                        </div>
-                        <div class="f_icon">
-                            <ul>
-                                <li class="insta"></li>
-                                <li class="youtube"></li>
-                                <li class="twiter"></li>
-                                <li class="facebook"></li>
-                            </ul>
-                        </div>
+        </main>
+        
+        <footer>
+            <div class="wave">
+                <div class="wave_bg wbg_top"></div>  
+            </div>
+           
+           
+                <div class="footer_txt sec_wrap">
+                    <div class="footer_pc_wrap">
+                        <h1 class="f_logo">BFOC</h1>
+                        <p>
+                            (사)부산문화관광축제조직위원회 47500 부산광역시 연제구 월드컵대로 344(거제동 1299) 아시아드 주경기장 <br />대표전화 :
+                            051-713-5000 개인정보방침 | 이메일무단수집거부
+                        </p>
+                        <p>copyright ⓒ BUSAN Culture & tourism festival organizing committee all right reserved</p>
+                    </div>
+                    <div class="f_icon">
+                        <ul>
+                            <li class="insta"></li>
+                            <li class="youtube"></li>
+                            <li class="twiter"></li>
+                            <li class="facebook"></li>
+                        </ul>
                     </div>
                 </div>
-            </footer>
-        </main>
+           
+          
+        </footer>
     </body>
     <script src="js/main.js"></script>
-    <script src="js/SectionYuju.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="js/swiper.js"></script>
 </html>

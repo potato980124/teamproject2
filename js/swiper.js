@@ -1,4 +1,4 @@
-var swiper = new Swiper(".swiper", {
+var swiper = new Swiper(".mySwiper", {
     // Optional parameters
     // effect: "coverflow",
     loop: true,
@@ -17,7 +17,6 @@ var swiper = new Swiper(".swiper", {
             spaceBetween: 0,
         },
     },
-
     // If we need pagination
     pagination: {
         el: ".swiper-pagination",
@@ -35,10 +34,14 @@ var swiper = new Swiper(".swiper", {
   },*/
 });
 
+
+
+
 // <!-- Initialize Swiper -->
-var swiper = new Swiper(".news_mySwiper", {
+var swiper = new Swiper(".mySwiperN", {
     spaceBetween: 30,
     centeredSlides: true,
+    slidesPerView: 1,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
@@ -47,6 +50,17 @@ var swiper = new Swiper(".news_mySwiper", {
       el: ".swiper-pagination",
       type: "fraction"
     },
+     // Responsive breakpoints
+     breakpoints: {
+      640: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+      },
+      992: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+      },
+  },
     navigation: {
       nextEl: ".slide_next",
       prevEl: ".slide_prev",
