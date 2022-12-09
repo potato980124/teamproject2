@@ -1,51 +1,156 @@
-
+@import url(common/reset.css);
+@import url(common.css);
 
 
 
 /* 메인시작 */
 
 /* 섹션1 축제소개 컨텐츠 및 포스터 섹션 */
-.festival>.sec1{
+.festival>.section1{
     background-color: #F3F2EE;
 }
-
-.festival .sec1_wrap{
+.sec1_festival{
+    margin-top: 80px;
     display: flex;
 }
-.festival .sec1_wrap>div{
+.sec1_festival>div{
     width: 50%;
 }
+/* 왼쪽 포스터 내용 */
 .festival .sec1_cont{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-}
-.festival .sec1_cont>h1{
-    /* font-size: 60px; font-weight: bold; */
-}
-
-.festival .sec1_cont>h2{
-    /* font-size: 40px; font-weight: bold; */
-    margin: 80px 0;
-}
-.festival .sec1_cont>.sec1_cont_line{
-    width: 100%;
-    height: 1px;
-    background-color: black;
-}
-.festival .sec1_cont>.sec1_cont_maintxt{
-    margin: 80px 0;
     text-align: right;
 }
-.festival .sec1_cont>.sec1_cont_maintxt>p{
-    /* font-size: 18px; */
+.festival .sec1_cont>h2{
+    margin: 80px 0;
 }
-.festival .sec1_cont>h3{
-    /* font-size: 22px; font-weight: bold; */
+.festival .sec1_cont_line{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+.festival .sec1_cont > .sec1_cont_maintxt {
+    margin: 80px 0;
+}
+
+/* 오른쪽 포스터 */
+.festival .sec1_poster{
+    display: flex;
+    justify-content: flex-end;
+}
+.festival .poster_img{
+    width: 65%; height: 750px;
+    background-color: red;
+}
+
+/* 섹션 2 축제 프로그램 안내 */
+.festival>.section2{
+    background-color: #0c0c0c;
+}
+
+.festival .sec2_addi_tit{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+.festival .subTitle{
+    justify-content: center;
+}
+
+/* 축제프로그램 안내 콘텐츠 스와이퍼 */
+.fes_info_cont_wrap{
+    position: relative;
+    margin-top: 50px;
+}
+.mySwiper_fes_info{
+    width: 55%;
+}
+.fes_info_bg{
+    height: 500px;
+}
+.f_i_bg1{
+    background-color: #fff;
+}
+.f_i_bg2{
+    background-color: red;
+}
+.f_i_bg3{
+    background-color: #fff;
+}
+
+.f_i_txt_wrap>li{
+    display: flex;
+    justify-content: space-between;
+}
+.f_i_txt_wrap>li:nth-child(1){
+    margin: 80px 0 20px;
+}
+.f_i_txt_wrap>li>div{
+    width: 120px; height: fit-content; 
+}
+.f_i_txt_wrap>li>div>h4{
+    line-height: 45px;
+    text-align: center;
+    color: #fff; font-weight: bold;
+}
+.f_i_txt_wrap>li>h4{
+    width: 80%; color: #fff;
+}
+.f_i_peri_tit{
+    background-color: red;
+}
+.f_i_contxt_tit{
+    background-color: #F9B6B0;
+}
+
+
+.fes_info_swi_btn_wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+}
+.f_i_prev{
+    transform: scaleX(-1);
+}
+
+
+/* 섹션3 축제위치 섹션 */
+.festival>.section3{
+    background-color: #F3F2EE;
+}
+
+.fes_loca_cont_wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fes_loca_map{
+    width: calc(50% - 70px);
+}
+.loca_map_bg{
+    width: 100%; padding-top: 95%;
+    background-image: url(../img/mapmap.png);
+    background-size: cover;
+    background-position: center center;
+}
+.fes_location_info{
+    width: 50%;
 }
 
 @media(max-width:1440px){
-    .w1440{
-        width: 100%;
+    .festival .sec1_cont>h1{
+        font-size: 44px;
+    }
+    .festival .sec1_cont>h2{
+        font-size: 30px;
+    }
+    .festival .sec1_cont>h3{
+        font-size: 28px;
     }
 }

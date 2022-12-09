@@ -66,7 +66,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab_content_wrap">
+                    <div class="tab_content_wrap tab_active">
                         <div>
                             <div class="img starbucks"></div>
                         </div>
@@ -104,7 +104,7 @@
                             <div class="img"></div>
                         </div>
                     </div>
-                    <div class="tab_content_wrap none">
+                    <div class="tab_content_wrap">
                         <div>
                             <div class="img ship"></div>
                         </div>
@@ -142,7 +142,7 @@
                             <div class="img"></div>
                         </div>
                     </div>
-                    <div class="tab_content_wrapp none">
+                    <div class="tab_content_wrap">
                         <div>
                             <div class="img">third</div>
                         </div>
@@ -180,7 +180,7 @@
                             <div class="img"></div>
                         </div>
                     </div>
-                    <div class="tab_content_wrap none">
+                    <div class="tab_content_wrap">
                         <div>
                             <div class="img">fourth</div>
                         </div>
@@ -218,7 +218,7 @@
                             <div class="img"></div>
                         </div>
                     </div>
-                    <div class="tab_content_wrap none">
+                    <div class="tab_content_wrap">
                         <div>
                             <div class="img">fifth</div>
                         </div>
@@ -256,7 +256,7 @@
                             <div class="img"></div>
                         </div>
                     </div>
-                    <div class="tab_content_wrap none">
+                    <div class="tab_content_wrap">
                         <div>
                             <div class="img">sixth</div>
                         </div>
@@ -294,7 +294,7 @@
                             <div class="img"></div>
                         </div>
                     </div>
-                    <div class="tab_content_wrap none">
+                    <div class="tab_content_wrap">
                         <div>
                             <div class="img">seventh</div>
                         </div>
@@ -343,18 +343,35 @@
     <script src="js/event.js"></script>
     <script>
         // Init Swiper
-        var swiper = new Swiper(".tap_swiper", {
-            // Install Plugin To Swiper
-            // modules: [myPlugin],
-            // spaceBetween: 12,
-            grabCursor: true,
-            loop: false,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            // Enable debugger
-            debugger: true,
-        });
+        // var swiper = new Swiper(".tap_swiper", {
+        //     // Install Plugin To Swiper
+        //     // modules: [myPlugin],
+        //     // spaceBetween: 12,
+        //     centeredSlides: false,
+        //     loop: false,
+        //     spaceBetween: 12,
+        //     slidesPerView: 4,
+        // });
+        if (window.innerWidth >= 800) {
+            var swiper = new Swiper(".tap_swiper", {
+                // Install Plugin To Swiper
+                // modules: [myPlugin],
+                // spaceBetween: 12,
+                centeredSlides: false,
+                loop: false,
+                spaceBetween: 12,
+                slidesPerView: 4,
+            });
+        } else if (window.innerWidth < 800) {
+            var swiper = new Swiper(".tap_swiper", {
+                // Install Plugin To Swiper
+                // modules: [myPlugin],
+                // spaceBetween: 12,
+                centeredSlides: false,
+                loop: false,
+                spaceBetween: 12,
+                slidesPerView: 2,
+            });
+        }
     </script>
 </html>

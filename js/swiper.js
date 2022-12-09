@@ -43,12 +43,12 @@ var swiper = new Swiper(".mySwiperN", {
     centeredSlides: true,
     slidesPerView: 1,
     autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
+        delay: 2500,
+        disableOnInteraction: false,
     },
     pagination: {
-      el: ".swiper-pagination",
-      type: "fraction"
+        el: ".swiper-pagination",
+        type: "fraction",
     },
      // Responsive breakpoints
      breakpoints: {
@@ -62,7 +62,7 @@ var swiper = new Swiper(".mySwiperN", {
       },
   },
     navigation: {
-      nextEl: ".slide_next",
-      prevEl: ".slide_prev",
+        nextEl: ".slide_next",
+        prevEl: ".slide_prev",
     },
-  });
+});
