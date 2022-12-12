@@ -338,11 +338,50 @@
                         </div>
                     </div>
                 </div>
-                <div class="wave">
-                    <div class="wave_bg wbg_top"></div>  
+
+            </section>
+            <section class="sec3_sponser">
+                <div class="sec_wrap">
+                    <div class="sponser_slide_box">
+                        <div class="swiper sponser_slide">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide"><img src="img/jung.jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/be_support.jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/seogu_1.jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/support1[3].jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/support2.jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/support4.jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/support5.jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/young.jpg" alt=""></div>
+                            </div>
+                          </div>
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+                    <script>
+                        var swiper = new Swiper(".sponser_slide", {
+                          slidesPerView: 2,
+                          breakpoints: {
+                                1200: {
+                                slidesPerView: 6,  
+                                spaceBetween: 40,
+                                },
+                                600: {
+                                slidesPerView: 4, 
+                                spaceBetween: 40,
+                                },
+                            },
+                          spaceBetween: 30,
+                          autoplay: {
+                            delay: 2500,
+                            disableOnInteraction: false,
+                            },
+                        });
+                      </script>
                 </div>
             </section>
-
+            <div class="wave">
+                <div class="wave_bg wbg_top"></div>  
+            </div>
         </main>
         
         <footer>

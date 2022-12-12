@@ -439,7 +439,7 @@ main{
 }
 @media(max-width:1200px){
     /* 섹션1 시작 */
-    .section1{
+    .committee>.section1{
         padding: 0 70px;
         box-sizing: border-box;
     }
