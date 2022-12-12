@@ -1,3 +1,4 @@
+setInterval(dDay, 1000);
 setInterval(sprinkleFirst, 2000);
 setInterval(sprinkleSecond, 2100);
 
@@ -58,7 +59,7 @@ function tabOpen(e, tabName){
         tabT[i].className = tabT[i].className.replace(' active','');
     }
     e.currentTarget.className += ' active';
-}
+};
 
 
 
@@ -68,33 +69,41 @@ let sec6_tab_sub = document.getElementsByClassName('sec6_tab_sub');
 let tab_title = document.getElementsByClassName('tab_title');
 
 
-
 for (let i =0; i< tab_title.length; i++){
-    tab_title[i].addEventListener('click',(e)=>{
-
+    tab_title[i].addEventListener('click',(event)=>{
         tab_title[i].classList.toggle('tab_active');
 
+
+
         let next = tab_title[i].nextElementSibling;
-        if( tab_title[i].style.maxHeight){
-            tab_title[i].style.maxHeight = '0'; //null =값을 아예 빼버리는 것
+        if(next.style.maxHeight){
+            next.style.maxHeight = null;
           }else{
-            let act = document.querySelectorAll('.sec6_tab_sub.sub_toggle')
+            let act = document.querySelectorAll('.tab_active')
            
             for(let j = 0; j < act.length; j++){
-              //for문 안에 또 for문 만드는거라 i를 쓸 수 없음!
-              act[j].classList.remove('sub_toggle')
+              act[j].classList.remove('tab_active')
+              act[j].nextElementSibling.style.maxHeight = null;
             }
-              sec6_tab_sub[i].classList.toggle('sub_toggle');
+            tab_title[i].classList.add('tab_active')
+            next.style.maxHeight = 'fit-content';
 
             
-        let tab_act = document.querySelectorAll('.tab_active')
-
-        for( let k=0; k < tab_act.length; k++){
-            tab_act[k].classList.remove('tab_active')
-        }
-        tab_title[i].classList.toggle('tab_active')
+     
     }
 })
 }
 
-
+//dday
+function dDay(){
+    let nextLastday= new Date("2023-12-31");
+    let today = new Date();
+    let leftDate = nextLastday - today;
+    let d_day = document.querySelector('#d_day_count');
+    const leftDay = Math.floor(leftDate / (1000*60*60*24));
+    const leftHour = Math.floor((leftDate / (1000*60*60)) % 24);
+    const leftMinute = Math.floor((leftDate / (1000*60)) % 60);
+    const  leftSecond= Math.floor(leftDate / 1000 % 60);
+    d_day.innerText = `${leftDay}일 ${leftHour}시간 ${leftMinute}분 ${leftSecond}초`
+}
+dDay();

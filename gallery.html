@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/committee.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/mainYuju.css">
+    
     <title>Gallery</title>
 </head>
 <body>
@@ -50,6 +52,7 @@
             <div class="wave">
               <div class="wave_bg wbg_top"></div>
           </div>
+        </section>
       <section class="section2">
                 <div class="sec_wrap">
                 <div class="content_wrap">
@@ -221,10 +224,10 @@
                          <!-- Swiper -->
     <div class="swiper mySwiper_gall">
         <div class="swiper-wrapper">
-          <div class="swiper-slide .no6 img1"></div>
-          <div class="swiper-slide .no6 img2"></div>
-          <div class="swiper-slide .no6 img3"></div>
-          <div class="swiper-slide .no6 img4"></div>
+          <div class="swiper-slide no6 img1"></div>
+          <div class="swiper-slide no6 img2"></div>
+          <div class="swiper-slide no6 img3"></div>
+          <div class="swiper-slide no6 img4"></div>
         </div>
         
         <div class="swiper-gall-next"></div>
@@ -235,7 +238,7 @@
                 <div class="content_wrap">
                   <div class="content_left">
                     <h3>FESTIVAL 2022</h3>
-                    <h1>부산항 축제</h1>
+                    <h1>낙동강유채꽃축제</h1>
                     <span class="sub_p">문화 콘텐츠와 함께하는 부산항 
                       <br>다채로운 장르의 공연</span>
                       <ul>
@@ -251,10 +254,10 @@
                          <!-- Swiper -->
     <div class="swiper mySwiper_gall">
         <div class="swiper-wrapper">
-          <div class="swiper-slide img1">Slide 1</div>
-          <div class="swiper-slide img2">Slide 2</div>
-          <div class="swiper-slide img3">Slide 3</div>
-          <div class="swiper-slide img4">Slide 4</div>
+          <div class="swiper-slide no7 img1"></div>
+          <div class="swiper-slide no7 img2"></div>
+          <div class="swiper-slide no7 img3"></div>
+          <div class="swiper-slide no7 img4"></div>
         </div>
         
         <div class="swiper-gall-next"></div>
@@ -265,11 +268,43 @@
                 
                 </div>
               
-            </section>
 
+            <div class="wave">
+              <div class="wave_bg wbg_bot"></div>  
+          </div>
+      </section>
+
+  </main>
+  
+  <footer class="f_gallery">
+
+     
+     
+          <div class="footer_txt sec_wrap">
+              <div class="footer_wrap">
+                  <div class="footer_pc_wrap">
+                      <p>
+                          (사)부산문화관광축제조직위원회 47500 부산광역시 연제구 월드컵대로 344(거제동 1299) 아시아드 주경기장 <br />대표전화 :
+                          051-713-5000 개인정보방침 | 이메일무단수집거부
+                      </p>
+                      <p>copyright ⓒ BUSAN Culture & tourism festival organizing committee all right reserved</p>
+                  </div>
+                  <div class="f_icon">
+                      <ul>
+                          <li class="insta_sub"></li>
+                          <li class="youtube_sub"></li>
+                          <li class="twiter_sub"></li>
+                          <li class="facebook_sub"></li>
+                      </ul>
+                  </div>
+              </div>
+             
+             
+          </div>
+    </footer>
       
-    </section>
-</main>
+
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     
@@ -288,7 +323,18 @@
           nextEl: ".swiper-gall-next",
           prevEl: ".swiper-button-prev",
         },
-      });
+        breakpoints: {
+      640: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+      },
+      1100: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+      },
+      
+      }
+    });
     </script>
 </body>
 

@@ -1,35 +1,28 @@
 @import url(common/reset.css);
+@import url(common.css);
 .subTitle {
     justify-content: center;
-<<<<<<< HEAD
-        transform: translateY(0%);
-        display: flex;
-        gap: 20px;
-    
-
-=======
->>>>>>> 5a594bb2d1d18ab0ca800ac16ec95d7c550279e0
 }
 
 /*category color 시작*/
 
-.notice_list .red {
+.sec4_cont .notice_list .red {
     color: #ee4b3c;
     font-weight: bold;
 }
-.notice_list .pink {
+.sec4_cont .notice_list .pink {
     color: #f9b6b0;
     font-weight: bold;
 }
-.notice_list .blue {
+.sec4_cont .notice_list .blue {
     color: #1874c1;
     font-weight: bold;
 }
-.notice_list .yellow {
+.sec4_cont .notice_list .yellow {
     color: #ffbc16;
     font-weight: bold;
 }
-.notice_list .bold {
+.sec4_cont .notice_list .bold {
     font-weight: bold;
 }
 
@@ -44,33 +37,34 @@
     border-top: 1px solid #000;
     padding-bottom: 40px;
 }
-.sec4_cont > table {
+/* .sec4_cont > table {
     width: 100%;
-    border-collapse: collapse;
-}
-.sec4_cont tr {
+    border-collapse: collapse; 
+}*/
+.sec4_cont div {
     width: 100%;
     border-bottom: 1px solid #000;
 }
-<<<<<<< HEAD
 .sec4_title{
-    /* position: relative; */
-=======
-.sec4_title {
->>>>>>> 5a594bb2d1d18ab0ca800ac16ec95d7c550279e0
-    padding-bottom: 100px;
+padding-top: 100px;
 }
-.notice_list td {
-    height: 90px;
+.sec4_cont>.notice_list{
+    display: flex;
+    justify-content: space-between;
     vertical-align: middle;
+    padding: 30px 50px;
+    box-sizing: border-box;
+}
+.notice_list h4 {
+
     padding: 0 20px;
     box-sizing: border-box;
     text-align: center;
 }
-colgroup col:first-child {
+.notice_list>h4:first-child {
     width: 15%;
 }
-colgroup col:last-child {
+.notice_list>h4:last-child {
     width: 15%;
 }
 .notice_list .notice_title {
@@ -90,25 +84,16 @@ colgroup col:last-child {
 #section5 {
     background-color: #f3f2ee;
 }
-<<<<<<< HEAD
 .sec5_title{
-    padding: 100px 0;
-=======
-.sec5_title {
-    padding-bottom: 100px;
->>>>>>> 5a594bb2d1d18ab0ca800ac16ec95d7c550279e0
+    /* padding: 100px 0; */
+    padding-top: 200px;
 }
-.swiper {
+.swiperN {
     width: 100%;
     height: 100%;
 }
 
-<<<<<<< HEAD
- 
-  .news_bnr{
-=======
 .news_bnr {
->>>>>>> 5a594bb2d1d18ab0ca800ac16ec95d7c550279e0
     position: relative;
     width: 100%;
     height: 500px;
@@ -244,12 +229,13 @@ colgroup col:last-child {
 }
 
 .sec6_title {
-    padding-bottom: 100px;
+    padding-top: 200px;
 }
 
 .sec6_cont {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 10px;
 }
 .sec6_cont .left_cont {
     width: 50%;
@@ -275,51 +261,12 @@ colgroup col:last-child {
     padding-inline-start: 0px;
 }
 
-<<<<<<< HEAD
-    }
-    #right_title>ul>li>p{
-        font-size: 18px;
-        padding-top: 120px;
-        text-align: center;
-        width: 100%;
-        font-weight: bold;
-        box-sizing: border-box;
-    }
-    #right_title>ul>li .edit_txt{
-        width: 110%;
-        text-align: left;
-        /* padding-right: 10px; */
-        box-sizing: border-box;
-    }
-    #right_title_1{
-        background-image: url(../img/temple-off.png);
-    }   
-    #right_title_2{
-        background-image: url(../img/art-off.png);
-    }
-    #right_title_3{
-        background-image: url(../img/sea-off.png);
-    }
-    #right_title_4{
-        background-image: url(../img/park-off.png);
-    }
-    .tabcont{
-        display: none;
-        width: 100%; height: fit-content;
-        margin-top: 100px;
-    /* border: 1px solid #333; */
-    }
-    #sec6_tab1{
-        display: block;
-    
-    }
-=======
 #right_title > ul > li {
     width: 110px;
     height: 110px;
     border-radius: 50%;
     box-sizing: border-box;
-    border: 2px solid #000;
+    border: 3px solid #000;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto 55px;
@@ -339,16 +286,16 @@ colgroup col:last-child {
     box-sizing: border-box;
 }
 #right_title_1 {
-    background-image: url(../img/temple-off.png);
+    background-image: url(../img/temple-off2.png);
 }
 #right_title_2 {
-    background-image: url(../img/art-off.png);
+    background-image: url(../img/art-off2.png);
 }
 #right_title_3 {
-    background-image: url(../img/sea-off.png);
+    background-image: url(../img/sea-off2.png);
 }
 #right_title_4 {
-    background-image: url(../img/park-off.png);
+    background-image: url(../img/park-off2.png);
 }
 .tabcont {
     display: none;
@@ -360,31 +307,25 @@ colgroup col:last-child {
 #sec6_tab1 {
     display: block;
 }
->>>>>>> 5a594bb2d1d18ab0ca800ac16ec95d7c550279e0
 
 #right_title_1.active {
-    background-image: url(../img/temple-active.png);
-    border: 2px solid #ee4b3c;
+    background-image: url(../img/temple-active2.png);
+    border: 3px solid #ee4b3c;
     color: #ee4b3c;
 }
-<<<<<<< HEAD
 #right_title_2.active{
-    background-image: url(../img/art-active.png);
-=======
-#right_title_2.active {
-    background-image: url(../img/art-active1.png);
->>>>>>> 5a594bb2d1d18ab0ca800ac16ec95d7c550279e0
-    border: 2px solid #efa7a0;
+    background-image: url(../img/art-active2.png);
+    border: 3px solid #efa7a0;
     color: #efa7a0;
 }
 #right_title_3.active {
-    background-image: url(../img/sea-active.png);
-    border: 2px solid #1874c1;
+    background-image: url(../img/sea-active2.png);
+    border: 3px solid #1874c1;
     color: #1874c1;
 }
 #right_title_4.active {
-    background-image: url(../img/park-active.png);
-    border: 2px solid #1ea849;
+    background-image: url(../img/park-active2.png);
+    border: 3px solid #1ea849;
     color: #1ea849;
 }
 
@@ -400,23 +341,23 @@ colgroup col:last-child {
     box-sizing: border-box;
     border-bottom: 1px solid #000;
 }
-#sec6_tab > li:first-child {
+.tabcont .tab_title:first-child {
     border-top: 1px solid #000;
 }
-#sec6_tab span {
-    display: inline-block;
-}
+
 .sec6_tab_sub {
     width: 100%;
     max-height: 0;
-    padding: 10px 10px;
     top: 100px;
     box-sizing: border-box;
     overflow: hidden;
 }
-.sec6_tab_sub > li > a {
+.sec6_tab_sub ul {
+    padding: 10px 10px;
+}
+.sec6_tab_sub ul > li > a {
     width: 100%;
-    /* display: block; */
+    display: block;
     font-size: 16px;
     padding: 10px 0;
     box-sizing: border-box;
@@ -450,38 +391,31 @@ colgroup col:last-child {
 .tab_active {
     display: block;
     height: 100%;
-<<<<<<< HEAD
   }
 
 
 
 footer{
+    position: relative;
    text-align: center;
+   width: 100%; height: 100%;
    background-color: #0C0C0C;
-   
-  
+   padding-bottom: 150px;
 }
 
 .footer_txt{
-    /* position: absolute; */
-=======
-}
 
-footer {
-    text-align: center;
-}
-.footer_bg {
-    width: 100%;
-    position: relative;
-    /* padding-bottom: 100px; */
-    margin: 0 auto;
-}
-.footer_txt {
-    /* bottom: 50px; */
->>>>>>> 5a594bb2d1d18ab0ca800ac16ec95d7c550279e0
     color: #fff;
-    padding-bottom: 20px;
+    width: 100%;
+    position:absolute;
+    /* background-color: #0C0C0C; */
+    bottom: 0px;
+   left: 50%;
+    transform: translateX(-50%);
     /* margin-top: -100px; */
+}
+.footer_wrap{
+
 }
 .f_icon {
     width: 15%;
@@ -490,7 +424,7 @@ footer {
 }
 .f_logo {
     font-size: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 .f_icon > ul {
     display: flex;
@@ -517,10 +451,18 @@ footer {
     background-image: url(../img/footer_fb_wt.png);
 }
 
-@media (max-width: 1100px) {
+
+
+@media (max-width: 1440px) {
+    .f_icon {
+        width: 20%;
+    }
+}
+
+
+@media (max-width: 1300px) {
     .sec6_cont {
         flex-direction: column;
-        /* flex-wrap: no-wrap; */
     }
     .sec6_cont .left_cont {
         width: 100%;
@@ -529,13 +471,31 @@ footer {
     .sec6_cont .right_cont {
         width: 100%;
     }
-    colgroup col:first-child {
-        width: 30%;
+    .f_icon {
+        width: 25%;
     }
-    colgroup col:last-child {
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 1000px) {
+    .sec4_cont>.notice_list{
+        padding: 30px 20px;
+    }
+    .notice_list>h4:nth-child(2) {
+        overflow: hidden;
+        white-space: no-wrap;
+        text-overflow: ellipsis;
+    }
+    .notice_list>h4:first-child {
+        width: 20%;
+        font-size: 15px;
+    }
+    .notice_list>h4:last-child {
         width: 15%;
+        font-size: 15px;
     }
-    .notice_list td {
+    .notice_list h4{
         padding: 0 0;
     }
 }

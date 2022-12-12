@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-
-=======
 @import url(common/reset.css);
 @import url(common.css);
->>>>>>> 5a594bb2d1d18ab0ca800ac16ec95d7c550279e0
 main {
     background-color: #0c0c0c;
 }
@@ -125,6 +121,9 @@ main {
     justify-content: space-between;
 }
 
+.main .section1 .wave{
+    z-index: 99;
+}
 .main .festi-poster {
     width: 100%;
     margin: 0 auto;
@@ -162,7 +161,7 @@ main {
 }
 .main .seagal > .img {
     padding-top: 99.25%;
-    background-image: url(../img/seagal.png);
+    background-image: url(../img/seagull_main.png);
 }
 .main .img {
     width: 100%;
@@ -325,6 +324,7 @@ main {
     .main .seagal {
         width: 25%;
     }
+ 
 }
 @media (max-width: 1100px) {
     /* .main section.section1 {
