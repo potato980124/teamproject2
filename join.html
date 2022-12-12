@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <link rel="stylesheet" href="css/join.css">
+</head>
+
+<body>
+    <div class="header"></div>
+    <main class="join">
+        <section class="section1">
+            <div class="sec_wrap">
+                <div class="join_title">
+                    <h3>개인정보입력</h3>
+                </div>
+                <form action="">
+                    <table>
+                        <colgroup>
+                            <col width="20%"> 
+                            <col width="80%"> 
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td class="join_title_box"><strong>*</strong>아이디</td>
+                                <td><input class="join_input_box" type="text" value="* 공백 없는 3-15자의 영문/숫자를 조합하여 입력해야 합니다." onfocus="javascrip:this.value=''"></td>
+                            </tr>
+                            <tr>
+                                <td class="join_title_box"><strong>*</strong>비밀번호</td>
+                                <td><input class="join_input_box" type="text" value="* 공백 없는 8-16자의 영문/숫자/특수문자를 조합하여 입력해야 합니다."onfocus="javascrip:this.value=''"></td>
+                            </tr>
+                            <tr>
+                                <td class="join_title_box"><strong>*</strong>비밀번호 확인</td>
+                                <td><input class="join_input_box" type="text" value="* 비밀번호 확인을 위해 다시 입력해주세요."onfocus="javascrip:this.value=''"></td>
+                            </tr>
+                            <tr>
+                                <td class="join_title_box"><strong>*</strong>이름</td>
+                                <td><input class="join_input_box" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td class="join_title_box"><strong>*</strong>생년월일</td>
+                                <td><input class="join_input_box" type="date"></td>
+                            </tr>
+                            <tr>
+                                <td class="join_title_box"><strong>*</strong>이메일</td>
+                                <td><input class="join_input_box" type="text" value="* 본인확인을 위해 정확한 이메일주소를 입력해주세요."onfocus="javascrip:this.value=''"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input class="join_btn" type="button" value="가입하기">
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

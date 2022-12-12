@@ -1,0 +1,206 @@
+@import url(common.css);
+
+/* 메인 시작 */
+.login{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* <!-- 섹션1 로그인 섹션시작 --> */
+.login .sec1{
+    /* padding: 200px 0;
+    box-sizing: border-box; */
+}
+.login .login_sec1_wrap{
+    display: flex;
+}
+.sec_wrap{
+    max-width: none;
+}
+/* 로고 이미지 ,밑에 이미지 공통 */
+.login .left_logo_wrap{
+    width: 50%; height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login .left_logo_wrap .img{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+}
+/* 로고 */
+.login .left_logo_wrap>.logo{
+    position: relative;
+    z-index: 999;
+    width: 25%; 
+}
+.login .left_logo_wrap>.logo>a{
+    width: 100%; 
+}
+.login .left_logo_wrap>.logo>a>.img{
+    padding-top: 53.69319%;
+     background-image: url(../img/bfoc_logo_black.png);   
+}
+
+/* 로고밑에 이미지 */
+.login .logo_under_img{
+    width: 100%; 
+    position: relative;
+}
+.login .logo_under_img>div{
+    position: absolute;
+}
+.login .log_left{
+    width: 80%;
+    z-index: 99;
+}
+.login .log_left>.img{
+    padding-top: 100%;
+    background-image: url(../img/main_left.png);
+    transform: translate(-5%,-17%);
+}
+.login .log_center{
+    width: 35%;
+}
+.login .log_center>.img{
+    padding-top: 145.7777%;
+    background-image: url(../img/main_center.png);
+    transform: translate(160%,-5%);
+}
+.login .log_right{
+    width: 40%;
+}
+.login .log_right>.img{
+    padding-top: 145.7777%;
+    background-image: url(../img/main_right.png);
+    transform: translate(100%,-20%);
+}
+
+
+
+/* 오른쪽 로그인 정보 입력 */
+.login .right_content_wrap{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid #000;
+}
+.login .right_content_inner{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.login .right_content_inner>.subTitle{
+    transform: translateY(0);
+    margin-bottom: 35px;
+}
+
+.login .right_content_inner>input{
+    width: 100%;
+    margin-bottom: 35px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+.login .idpw_box{
+    font-size: 22px;
+    color: #ADADAD;
+}
+.login .login_input_box{
+    background-color: #000;
+    color: #ffff; 
+    font-size: 22px; font-weight: bold;
+}
+.login .right_content_inner>ul{
+    margin-bottom: 35px;
+}
+
+.login .find_idpw{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.login .find_idpw>li>a{
+    color: #ADADAD;
+}
+.login .center_line{
+    width: 1px; height: 50%; background-color: #ADADAD;
+    margin: 0 10px;
+}
+
+
+
+.login .or{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+.login .under_line{
+    width: 40%; height: 1px; background-color: #000;
+}
+
+.login .kakao_api{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.login .kakao_api>a{
+    width: 100%;
+    display: block;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px; font-weight: 600;
+}
+.login .kakao_api>a>.kakao_img{
+    width: 40px; height: 40px;
+    background-color: yellow;
+}
+.right_content_inner>p{
+    width: 100%;
+    font-size: 16px; font-weight: 600;
+    text-align: right;
+    margin-bottom: 35px;
+}
+
+
+@media(max-width:1440px){
+    .login .left_logo_wrap{
+        display: none;
+    }
+    .login .right_content_wrap{
+        width: 100%;
+        border: 0;
+    }
+}
+@media(max-width:600px){
+    .login .right_content_inner{
+        width: 100%;
+    }
+
+    
+    .login .idpw_box{
+        font-size: 15px;
+    }
+    .login .login_input_box{
+        font-size: 20px; 
+    }
+    
+    
+    .login .find_idpw>li>a{
+        font-size: 12px;
+    }
+    
+    
+    .login .kakao_api>a{
+        padding: 10px 5px;
+        box-sizing: border-box;
+    }
+}

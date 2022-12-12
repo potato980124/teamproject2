@@ -48,10 +48,10 @@
     animation-timing-function: linear;
 }
 .wbg_top{
-    background-image: url(../img/wavy\ line_bw.png);
+    background-image: url(../img/wave_bw.png);
 }
 .wbg_bot{
-    background-image: url(../img/wavy\ line_wb.png)
+    background-image: url(../img/wave_wb.png)
 }
 
 @keyframes wave{
