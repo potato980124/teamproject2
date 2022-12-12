@@ -1,6 +1,8 @@
 @import url(common/reset.css);
+@import url(common.css);
 #gallery .section1 {
     background-color: #f3f2ee;
+    margin-top: 70px;
 }
 
 #gallery .section2 {
@@ -34,7 +36,7 @@
 .content_right {
     width: 65%;
 }
-.swiper {
+.mySwiper_gall {
     width: 100%;
     height: 100%;
     background-color: #0c0c0c;
@@ -105,7 +107,53 @@
     background-image: url(../img/fireworks4.jpg);
 }
 
-.swiper-gall-next {
+
+.section2 .mySwiper_gall .swiper-wrapper .no5.img1{
+    background-image: url(../img/rock-fes1.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no5.img2{
+    background-image: url(../img/rock-fes2.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no5.img3{
+    background-image: url(../img/rock-fes3.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no5.img4{
+    background-image: url(../img/rock-fes4.jpg);
+}
+
+
+.section2 .mySwiper_gall .swiper-wrapper .no6.img1{
+    background-image: url(../img/bell-fes1.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no6.img2{
+    background-image: url(../img/bell-fes2.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no6.img3{
+    background-image: url(../img/bell-fes3.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no6.img4{
+    background-image: url(../img/bell-fes4.jpg);
+}
+
+
+.section2 .mySwiper_gall .swiper-wrapper .no7.img1{
+    background-image: url(../img/flower-fes1.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no7.img2{
+    background-image: url(../img/flower-fes2.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no7.img3{
+    background-image: url(../img/flower-fes3.jpg);
+}
+.section2 .mySwiper_gall .swiper-wrapper .no7.img4{
+    background-image: url(../img/flower-fes4.png);
+}
+
+.section2 .content_wrap:last-child{
+    padding-bottom: 0px;
+}
+
+.swiper-gall-next{
     position: absolute;
     right: 10px;
     top: 50%;
@@ -118,3 +166,49 @@
     background-position: center center;
     z-index: inherit;
 }
+
+
+.f_gallery{
+    background-color: #f3f2ee;
+    padding-bottom: 100px;
+
+}
+.f_gallery p{
+    color: #0c0c0c;
+}
+
+
+.f_icon .insta_sub {
+    background-image: url(../img/footer_insta_bk.png);
+}
+.f_icon .youtube_sub {
+    background-image: url(../img/footer_youtube_bk.png);
+}
+.f_icon .twiter_sub {
+    background-image: url(../img/footer_twt_bk.png);
+}
+.f_icon .facebook_sub {
+    background-image: url(../img/footer_fb_bk.png);
+}
+
+
+
+@media (max-width: 1440px) {
+    .content_left > h1 {
+        display: inline-block;
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .content_left{
+        width: 50%;
+    }
+    .content_right {
+        width: 50%;
+    }
+
+
+}
+
+

@@ -1,3 +1,4 @@
+setInterval(dDay, 1000);
 setInterval(sprinkleFirst, 2000);
 setInterval(sprinkleSecond, 2100);
 
@@ -41,3 +42,68 @@ function sprinkleSecond() {
 //     }
 //     // confetti.classList.add('active');
 // }
+
+
+//섹션6 탭 섹션, 아코디언
+
+function tabOpen(e, tabName){
+    let tabContent = document.getElementsByClassName('tabcont');
+    for ( let i = 0; i<tabContent.length; i++){
+        tabContent[i].style.display = 'none';
+    }
+
+    document.getElementById(tabName).style.display='block';
+
+    let tabT = document.getElementsByClassName('tabTitle');
+    for (let i = 0; i<tabT.length; i++){
+        tabT[i].className = tabT[i].className.replace(' active','');
+    }
+    e.currentTarget.className += ' active';
+};
+
+
+
+let sec6_tab = document.getElementById('sec6_tab');
+
+let sec6_tab_sub = document.getElementsByClassName('sec6_tab_sub');
+let tab_title = document.getElementsByClassName('tab_title');
+
+
+for (let i =0; i< tab_title.length; i++){
+    tab_title[i].addEventListener('click',(event)=>{
+        tab_title[i].classList.toggle('tab_active');
+
+
+
+        let next = tab_title[i].nextElementSibling;
+        if(next.style.maxHeight){
+            next.style.maxHeight = null;
+          }else{
+            let act = document.querySelectorAll('.tab_active')
+           
+            for(let j = 0; j < act.length; j++){
+              act[j].classList.remove('tab_active')
+              act[j].nextElementSibling.style.maxHeight = null;
+            }
+            tab_title[i].classList.add('tab_active')
+            next.style.maxHeight = 'fit-content';
+
+            
+     
+    }
+})
+}
+
+//dday
+function dDay(){
+    let nextLastday= new Date("2023-12-31");
+    let today = new Date();
+    let leftDate = nextLastday - today;
+    let d_day = document.querySelector('#d_day_count');
+    const leftDay = Math.floor(leftDate / (1000*60*60*24));
+    const leftHour = Math.floor((leftDate / (1000*60*60)) % 24);
+    const leftMinute = Math.floor((leftDate / (1000*60)) % 60);
+    const  leftSecond= Math.floor(leftDate / 1000 % 60);
+    d_day.innerText = `${leftDay}일 ${leftHour}시간 ${leftMinute}분 ${leftSecond}초`
+}
+dDay();

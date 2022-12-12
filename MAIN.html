@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="css/mainSewon.css" />
-        <link rel="stylesheet" href="css/mainYuju.css" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/common/reset.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/mainSewon.css">
+        <link rel="stylesheet" href="css/mainYuju.css">
+
         <title>메인섹션 합체하기</title>
     </head>
     <body>
@@ -21,14 +24,16 @@
                     <div class="main_right"><div class="img"></div></div>
                     <div class="main_center"><div class="img"></div></div>
                 </div>
-                <div class="wave_white"></div>
+                <div class="wave">
+                    <div class="wave_bg wb_transparent pront"></div>
+                </div>
             </section>
             <section class="section2">
                 <div class="sec_wrap">
                     <div class="festi-poster">
                         <div class="speaker"><div class="img"></div></div>
                         <div class="seagal"><div class="img"></div></div>
-                        <div class="swiper">
+                        <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img src="img/building-bw.png" alt="" /></div>
                                 <div class="swiper-slide"><img src="img/building-bw.png" alt="" /></div>
@@ -41,7 +46,9 @@
                         <div class="lp"><div class="img"></div></div>
                     </div>
                 </div>
-                <div class="wave_bw"></div>
+                <div class="wave">
+                    <div class="wave_bg wbg_top"></div>
+                </div>
             </section>
             <section class="section3">
                 <div class="sec3_wrap sec_wrap">
@@ -53,6 +60,7 @@
                             <h1>D</h1>
                             <h1>A</h1>
                             <h1>Y</h1>
+                            <h1 id="d_day_count"></h1>
                         </div>
                         <div class="m_sec3_content">
                             <div class="sec3_subtitle">
@@ -80,7 +88,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="wave_wb"></div>
+                <div class="wave">
+                    <div class="wave_bg wbg_bot"></div>
+                </div>
             </section>
 
             <!-- 유주섹션 -->
@@ -96,44 +106,34 @@
                             <h1>E</h1>
                         </div>
                     </div>
-                    <div class="sec4_cont">
-                        <table>
-                            <colgroup>
-                                <col />
-                                <col />
-                                <col />
-                            </colgroup>
-                            <tr class="notice_list">
-                                <td class="notice_cate red">불꽃축제</td>
-                                <td class="notice_title"><a href="">『제17회 부산불꽃축제』 자원봉사자 추가 모집공고</a></td>
-                                <td class="notice_date">2022.11.29</td>
-                            </tr>
-                            <tr class="notice_list">
-                                <td class="notice_cate red">불꽃축제</td>
-                                <td class="notice_title"><a href="">『제17회 부산불꽃축제』 자원봉사자 합격자 발표</a></td>
-                                <td class="notice_date">2022.10.14</td>
-                            </tr>
-                            <tr class="notice_list">
-                                <td class="notice_cate blue">바다축제</td>
-                                <td class="notice_title"><a href="">『제26회 부산바다축제』 자원봉사자 합격자 발표</a></td>
-                                <td class="notice_date">2022.09.23</td>
-                            </tr>
-                            <tr class="notice_list">
-                                <td class="notice_cate yellow">록페스티벌</td>
-                                <td class="notice_title"><a href="">2022 부산국제록페스티벌 메인스테이지 시설 설치 용역 입찰 결과 공고</a></td>
-                                <td class="notice_date">2022.09.22</td>
-                            </tr>
-                            <tr class="notice_list">
-                                <td class="notice_cate bold">조직위원회</td>
-                                <td class="notice_title"><a href="">(사)부산문화관광축제조직위 전화번호 변경 안내</a></td>
-                                <td class="notice_date">2022.07.11</td>
-                            </tr>
-                            <tr class="notice_list">
-                                <td class="notice_cate blue">바다축제</td>
-                                <td class="notice_title"><a href=""> 『제26회 부산바다축제』 '바다 플레이리스트' 버스킹 공모</a></td>
-                                <td class="notice_date">2022.06.22</td>
-                            </tr>
-                        </table>
+                    <div class="sec4_cont">   
+                            <div class="notice_list">
+                                <h4 class="notice_cate red">불꽃축제</h4>
+                                <h4 class="notice_title">
+                                    <a href="">『제17회 부산불꽃축제』 자원봉사자 추가 모집공고</a></h4>
+                                <h4 class="notice_date">2022.11.29</h4>
+                            </div>
+                            <div class="notice_list">
+                                <h4 class="notice_cate pink">불꽃축제</h4>
+                                <h4 class="notice_title"><a href="">『제17회 부산불꽃축제』 자원봉사자 추가 모집공고</a></h4>
+                                <h4 class="notice_date">2022.11.29</h4>
+                            </div>
+                            <div class="notice_list">
+                                <h4 class="notice_cate red">불꽃축제</h4>
+                                <h4 class="notice_title"><a href="">『제17회 부산불꽃축제』 자원봉사자 추가 모집공고</a></h4>
+                                <h4 class="notice_date">2022.11.29</h4>
+                            </div>
+                            <div class="notice_list">
+                                <h4 class="notice_cate blue">불꽃축제</h4>
+                                <h4 class="notice_title"><a href="">『제17회 부산불꽃축제』 자원봉사자 추가 모집공고</a></h4>
+                                <h4 class="notice_date">2022.11.29</h4>
+                            </div>
+                            <div class="notice_list">
+                                <h4 class="notice_cate red">불꽃축제</h4>
+                                <h4 class="notice_title"><a href="">『제17회 부산불꽃축제』 자원봉사자 추가 모집공고</a></h4>
+                                <h4 class="notice_date">2022.11.29</h4>
+                            </div>
+        
                     </div>
                 </div>
             </section>
@@ -148,7 +148,7 @@
                         </div>
                     </div>
                     <!-- 스와이퍼 이미지 -->
-                    <div class="swiper news_mySwiper">
+                    <div class="swiper mySwiperN">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="news_bnr news_bnr1"></div>
@@ -230,128 +230,166 @@
                                     </li>
                                     <li id="right_title_4" class="tabTitle" onclick="tabOpen(event, 'sec6_tab4')"><p>공원/시설</p></li>
                                 </ul>
+                                <div id="acco">                               
                                 <div id="sec6_tab1" class="tabcont">
-                                    <ul id="sec6_tab">
-                                        <li class="tab_title">
-                                            광안리
-                                            <ul class="sec6_tab_sub">
+                                    <div class="tab_title">
+                                        광안리</div>
+                                     <div class="sec6_tab_sub">
+                                            <ul>
                                                 <li><a href="#">서브메뉴1</a></li>
                                                 <li><a href="#">서브메뉴2</a></li>
-                                                <li><a href="#">서브메뉴3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="tab_title">
-                                            메뉴2
-                                            <ul class="sec6_tab_sub">
+                                                <li><a href="#">서브메뉴3</a></li></ul>
+                                        </div>
+                                         <div class="tab_title">
+                                            메뉴2</div>
+                                          <div class="sec6_tab_sub">
+                                              <ul>
                                                 <li><a href="#">서브메뉴1</a></li>
                                                 <li><a href="#">서브메뉴2</a></li>
-                                                <li><a href="#">서브메뉴3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="tab_title">
-                                            메뉴3
-                                            <ul class="sec6_tab_sub">
-                                                <li><a href="#">서브메뉴1</a></li>
-                                                <li><a href="#">서브메뉴2</a></li>
-                                                <li><a href="#">서브메뉴3</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                                 <li><a href="#">서브메뉴3</a></li></ul>
+                                            </div>
+                                            <div class="tab_title">
+                                                메뉴3</div>
+                                              <div class="sec6_tab_sub">
+                                                  <ul>
+                                                    <li><a href="#">서브메뉴1</a></li>
+                                                    <li><a href="#">서브메뉴2</a></li>
+                                                     <li><a href="#">서브메뉴3</a></li></ul>
+                                                </div>
                                 </div>
                                 <div id="sec6_tab2" class="tabcont">
-                                    <ul id="sec6_tab">
-                                        <li class="tab_title">
-                                            박물관
-                                            <ul class="sec6_tab_sub">
+                                    <div class="tab_title">
+                                        박물관</div>
+                                     <div class="sec6_tab_sub">
+                                            <ul>  <li><a href="#">서브메뉴1</a></li>
+                                                <li><a href="#">서브메뉴2</a></li>
+                                                <li><a href="#">서브메뉴3</a></li></ul>
+                                        </div>
+                                         <div class="tab_title">
+                                            메뉴2</div>
+                                          <div class="sec6_tab_sub">
+                                              <ul>
                                                 <li><a href="#">서브메뉴1</a></li>
                                                 <li><a href="#">서브메뉴2</a></li>
-                                                <li><a href="#">서브메뉴3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="tab_title">
-                                            미술관
-                                            <ul class="sec6_tab_sub">
-                                                <li><a href="#">서브메뉴1</a></li>
-                                                <li><a href="#">서브메뉴2</a></li>
-                                                <li><a href="#">서브메뉴3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="tab_title">
-                                            메뉴3
-                                            <ul class="sec6_tab_sub">
-                                                <li><a href="#">서브메뉴1</a></li>
-                                                <li><a href="#">서브메뉴2</a></li>
-                                                <li><a href="#">서브메뉴3</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                                 <li><a href="#">서브메뉴3</a></li></ul>
+                                            </div>
+                                            <div class="tab_title">
+                                                메뉴3</div>
+                                              <div class="sec6_tab_sub">
+                                                  <ul>
+                                                    <li><a href="#">서브메뉴1</a></li>
+                                                    <li><a href="#">서브메뉴2</a></li>
+                                                     <li><a href="#">서브메뉴3</a></li></ul>
+                                                </div>
                                 </div>
                                 <div id="sec6_tab3" class="tabcont">
-                                    <ul id="sec6_tab">
-                                        <li class="tab_title">
-                                            해수욕장
-                                            <ul class="sec6_tab_sub">
+                                    <div class="tab_title">
+                                        해운대</div>
+                                     <div class="sec6_tab_sub">
+                                            <ul>  <li><a href="#">서브메뉴1</a></li>
+                                                <li><a href="#">서브메뉴2</a></li>
+                                                <li><a href="#">서브메뉴3</a></li></ul>
+                                        </div>
+                                         <div class="tab_title">
+                                            메뉴2</div>
+                                          <div class="sec6_tab_sub">
+                                              <ul>
                                                 <li><a href="#">서브메뉴1</a></li>
                                                 <li><a href="#">서브메뉴2</a></li>
-                                                <li><a href="#">서브메뉴3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="tab_title">
-                                            미술관
-                                            <ul class="sec6_tab_sub">
-                                                <li><a href="#">서브메뉴1</a></li>
-                                                <li><a href="#">서브메뉴2</a></li>
-                                                <li><a href="#">서브메뉴3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="tab_title">
-                                            메뉴3
-                                            <ul class="sec6_tab_sub">
-                                                <li><a href="#">서브메뉴1</a></li>
-                                                <li><a href="#">서브메뉴2</a></li>
-                                                <li><a href="#">서브메뉴3</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                                 <li><a href="#">서브메뉴3</a></li></ul>
+                                            </div>
+                                            <div class="tab_title">
+                                                메뉴3</div>
+                                              <div class="sec6_tab_sub">
+                                                  <ul>
+                                                    <li><a href="#">서브메뉴1</a></li>
+                                                    <li><a href="#">서브메뉴2</a></li>
+                                                     <li><a href="#">서브메뉴3</a></li></ul>
+                                                </div>
                                 </div>
                                 <div id="sec6_tab4" class="tabcont">
-                                    <ul id="sec6_tab">
-                                        <li class="tab_title">
-                                            공원
-                                            <ul class="sec6_tab_sub">
+                                    <div class="tab_title">
+                                        공원</div>
+                                     <div class="sec6_tab_sub">
+                                            <ul>  <li><a href="#">서브메뉴1</a></li>
+                                                <li><a href="#">서브메뉴2</a></li>
+                                                <li><a href="#">서브메뉴3</a></li></ul>
+                                        </div>
+                                         <div class="tab_title">
+                                            메뉴2</div>
+                                          <div class="sec6_tab_sub">
+                                              <ul>
                                                 <li><a href="#">서브메뉴1</a></li>
                                                 <li><a href="#">서브메뉴2</a></li>
-                                                <li><a href="#">서브메뉴3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="tab_title">
-                                            미술관
-                                            <ul class="sec6_tab_sub">
-                                                <li><a href="#">서브메뉴1</a></li>
-                                                <li><a href="#">서브메뉴2</a></li>
-                                                <li><a href="#">서브메뉴3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="tab_title">
-                                            메뉴3
-                                            <ul class="sec6_tab_sub">
-                                                <li><a href="#">서브메뉴1</a></li>
-                                                <li><a href="#">서브메뉴2</a></li>
-                                                <li><a href="#">서브메뉴3</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                                 <li><a href="#">서브메뉴3</a></li></ul>
+                                            </div>
+                                            <div class="tab_title">
+                                                메뉴3</div>
+                                              <div class="sec6_tab_sub">
+                                                  <ul>
+                                                    <li><a href="#">서브메뉴1</a></li>
+                                                    <li><a href="#">서브메뉴2</a></li>
+                                                     <li><a href="#">서브메뉴3</a></li></ul>
+                                                </div>
                                 </div>
+                                </div>
+
                             </div>
-                            <div class="right_accor"></div>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <footer>
-                <div class="footer_bg wave_bw">
-                    <div class="footer_txt sec_wrap">
+            </section>
+            <section class="sec3_sponser">
+                <div class="sec_wrap">
+                    <div class="sponser_slide_box">
+                        <div class="swiper sponser_slide">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide"><img src="img/jung.jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/be_support.jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/seogu_1.jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/support1[3].jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/support2.jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/support4.jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/support5.jpg" alt=""></div>
+                              <div class="swiper-slide"><img src="img/young.jpg" alt=""></div>
+                            </div>
+                          </div>
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+                    <script>
+                        var swiper = new Swiper(".sponser_slide", {
+                          slidesPerView: 2,
+                          breakpoints: {
+                                1200: {
+                                slidesPerView: 6,  
+                                spaceBetween: 40,
+                                },
+                                600: {
+                                slidesPerView: 4, 
+                                spaceBetween: 40,
+                                },
+                            },
+                          spaceBetween: 30,
+                          autoplay: {
+                            delay: 2500,
+                            disableOnInteraction: false,
+                            },
+                        });
+                      </script>
+                </div>
+            </section>
+            <div class="wave">
+                <div class="wave_bg wbg_top"></div>  
+            </div>
+        </main>
+        
+        <footer>
+
+           
+           
+                <div class="footer_txt sec_wrap">
+                    <div class="footer_wrap">
                         <div class="footer_pc_wrap">
                             <h1 class="f_logo">BFOC</h1>
                             <p>
@@ -369,12 +407,14 @@
                             </ul>
                         </div>
                     </div>
+                   
+                   
                 </div>
-            </footer>
-        </main>
+           
+          
+        </footer>
     </body>
     <script src="js/main.js"></script>
-    <script src="js/SectionYuju.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="js/swiper.js"></script>
 </html>
