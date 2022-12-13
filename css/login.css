@@ -13,14 +13,15 @@
     box-sizing: border-box; */
 }
 .login .login_sec1_wrap{
-    display: flex;
+    display: flex; height: fit-content;
 }
 .sec_wrap{
     max-width: none;
 }
 /* 로고 이미지 ,밑에 이미지 공통 */
 .login .left_logo_wrap{
-    width: 50%; height: fit-content;
+    margin-top: 50px;
+    width: 50%; height: fit-content; /* min-width: 960px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,7 +60,7 @@
 .login .log_left>.img{
     padding-top: 100%;
     background-image: url(../img/main_left.png);
-    transform: translate(-5%,-17%);
+    transform: translate(-5%,-10%);
 }
 .login .log_center{
     width: 35%;
@@ -67,7 +68,7 @@
 .login .log_center>.img{
     padding-top: 145.7777%;
     background-image: url(../img/main_center.png);
-    transform: translate(160%,-5%);
+    transform: translate(160%,5%);
 }
 .login .log_right{
     width: 40%;
@@ -75,7 +76,7 @@
 .login .log_right>.img{
     padding-top: 145.7777%;
     background-image: url(../img/main_right.png);
-    transform: translate(100%,-20%);
+    transform: translate(100%,-10%);
 }
 
 
