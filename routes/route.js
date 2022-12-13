@@ -22,6 +22,9 @@ router.get("/event", (req, res) => {
 router.get("/notice_list", (req, res) => {
     res.render("notice_list");
 });
+router.get("/notice_write", (req, res) => {
+    res.render("notice_write");
+});
 router.get("/gallery", (req, res) => {
     res.render("gallery");
 });
@@ -30,6 +33,9 @@ router.get("/login", (req, res) => {
 });
 router.get("/join", (req, res) => {
     res.render("join");
+});
+router.get("/test", (req, res) => {
+    res.render("test");
 });
 
 module.exports = router;
