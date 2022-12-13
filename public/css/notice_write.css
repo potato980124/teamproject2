@@ -108,10 +108,11 @@
     padding-bottom: 10px;
 
 }
-.notice_write .notice_btn input{
+ .notice_btn input{
     width: 200px; height: 50px;
 }
-.notice_write .notice_btn .list_btn{
+
+.notice_btn .list_btn{
     background-color: transparent;
     border: 1px solid #f3f2ee;
     color: #f3f2ee;

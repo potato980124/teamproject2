@@ -4,27 +4,27 @@
     width: 1440px;
     margin: 0 auto;
 }
-.red{
+.committee_title .red{
     color: #EE4B3C;
     font-size: 60px;
     font-weight: bold;
 }
-.pink{
+.committee_title .pink{
     color: #F9B6B0;
     font-size: 60px;
     font-weight: bold;
 }
-.blue{
+.committee_title .blue{
     color: #1874C1;
     font-size: 60px;
     font-weight: bold;
 }
-.orange{
+.committee_title .orange{
     color: #FFBC16;
     font-size: 60px;
     font-weight: bold;
 }
-.green{
+.committee_title .green{
     color: #1EA849;
     font-size: 60px;
     font-weight: bold;
@@ -48,10 +48,10 @@
     animation-timing-function: linear;
 }
 .wbg_top{
-    background-image: url(../img/wavy\ line_bw.png);
+    background-image: url(../img/wave_bw.png);
 }
 .wbg_bot{
-    background-image: url(../img/wavy\ line_wb.png)
+    background-image: url(../img/wave_wb.png)
 }
 
 @keyframes wave{
