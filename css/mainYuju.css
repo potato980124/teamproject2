@@ -340,6 +340,9 @@ padding-top: 100px;
     font-weight: bold;
     box-sizing: border-box;
     border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }
 .tabcont .tab_title:first-child {
     border-top: 1px solid #000;
@@ -370,35 +373,32 @@ padding-top: 100px;
     opacity: 1;
     background-color: #f3f2ee;
 }
-#sec6_plus_btn {
-    width: 100%;
-}
-
-#sec6_plus_btn > li {
-    width: 30px;
-    height: 2px;
-    background-color: #000;
-    margin-top: 8px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    text-align: right;
-}
-#sec6_plus_btn > li:last-child {
-    transform: translateY(-10px) rotate(90deg);
-}
 
 .tab_active {
-    display: block;
-    height: 100%;
+    text-align: right;
+    /* background-image: url(../img/close_btn.png);
+    background-size: 32px auto;
+    background-position: right  25px;
+    background-repeat: no-repeat; */
   }
 
-
-.main .sec3_sponser{
-    margin-top: 0px;
+.accor_btn{
+    display: inline-block;
+    text-align: right;
+    width: 35px; height: auto;
+    background-image: url(../img/more_btn.png);
+    background-size: 32px auto;
+    background-position: right 25px;
+    background-repeat: no-repeat;
 }
+  
+  
 
-/* sec4 스폰서 시작 */
+  
+  /* sec4 스폰서 시작 */
+  .main .sec3_sponser{
+      margin-top: 0px;
+  }
 .sec3_sponser{
     margin-top: 200px;
     background-color: #F3F2EE;

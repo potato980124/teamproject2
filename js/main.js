@@ -46,6 +46,8 @@ function sprinkleSecond() {
 
 //섹션6 탭 섹션, 아코디언
 
+
+
 function tabOpen(e, tabName){
     let tabContent = document.getElementsByClassName('tabcont');
     for ( let i = 0; i<tabContent.length; i++){
@@ -61,7 +63,7 @@ function tabOpen(e, tabName){
     e.currentTarget.className += ' active';
 };
 
-
+let accor_btn = document.querySelectorAll('.accor_btn')
 
 let sec6_tab = document.getElementById('sec6_tab');
 
@@ -73,8 +75,9 @@ for (let i =0; i< tab_title.length; i++){
     tab_title[i].addEventListener('click',(event)=>{
         tab_title[i].classList.toggle('tab_active');
 
-
-
+            
+        
+       
         let next = tab_title[i].nextElementSibling;
         if(next.style.maxHeight){
             next.style.maxHeight = null;
@@ -85,13 +88,15 @@ for (let i =0; i< tab_title.length; i++){
               act[j].classList.remove('tab_active')
               act[j].nextElementSibling.style.maxHeight = null;
             }
+            
+       
             tab_title[i].classList.add('tab_active')
             next.style.maxHeight = 'fit-content';
 
             
-     
+        }
     }
-})
+)
 }
 
 //dday
