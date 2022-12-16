@@ -9,7 +9,7 @@
             <div class="main_center"><div class="img"></div></div>
         </div>
         <div class="wave">
-            <div class="wave_bg wb_transparent pront"></div>
+            <div class="wave_bg wb_transparent"></div>
         </div>
     </section>
     <section class="section2">
@@ -41,11 +41,49 @@
                 <div class="d-day">
                     <h1>D</h1>
                     <h1>-</h1>
-                    <h1>D</h1>
-                    <h1>A</h1>
-                    <h1>Y</h1>
-                    <h1 id="d_day_count"></h1>
+                    <h1 id="d_date"></h1>
+                    <h1>일</h1>
+                    <h1 id="d_hour"></h1>
+                    <h1>시</h1>
+                    <h1 id="d_miniute"></h1>
+                    <h1>분</h1>
+                    <h1 id="d_second"></h1>
+                    <h1>초</h1>
+                    <!-- <div class="d_day_count">
+                        <div>
+                            <h3 id="d_date"></h3>
+                            <p>:</p>
+                        </div>
+                        <div>
+                            <h3 id="d_hour"></h3>
+                            <p>:</p>
+                        </div>
+                        <div>
+                            <h3 id="d_miniute"></h3>
+                            <p>:</p>
+                        </div>
+                        <div>
+                            <h3 id="d_second"></h3>
+                        </div>
+                    </div> -->
                 </div>
+                <!-- <div class="d_day_count">
+                    <div>
+                        <h3 id="d_date"></h3>
+                        <p>:</p>
+                    </div>
+                    <div>
+                        <h3 id="d_hour"></h3>
+                        <p>:</p>
+                    </div>
+                    <div>
+                        <h3 id="d_miniute"></h3>
+                        <p>:</p>
+                    </div>
+                    <div>
+                        <h3 id="d_second"></h3>
+                    </div>
+                </div> -->
                 <div class="m_sec3_content">
                     <div class="sec3_subtitle">
                         <h3>2023 새해맞이</h3>
@@ -341,30 +379,10 @@
                     </div>
                 </div>
             </div>
-            <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-            <script>
-                var swiper = new Swiper(".sponser_slide", {
-                    slidesPerView: 2,
-                    breakpoints: {
-                        1200: {
-                            slidesPerView: 6,
-                            spaceBetween: 40,
-                        },
-                        600: {
-                            slidesPerView: 4,
-                            spaceBetween: 40,
-                        },
-                    },
-                    spaceBetween: 30,
-                    autoplay: {
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    },
-                });
-            </script>
         </div>
     </section>
     <div class="wave">
         <div class="wave_bg wbg_top"></div>
     </div>
 </main>
+<script src="js/main.js"></script>

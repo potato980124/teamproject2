@@ -1,3 +1,17 @@
-.notice_detail .section1 {
+.notice_content .section1 {
     background-color: #f3f2ee;
+}
+.notice_content .tab_content_wrap {
+    display: block;
+    height: 500px;
+    margin-bottom: 50px;
+}
+.notice_content h3 {
+    color: #0c0c0c;
+    text-align: center;
+    width: 100%;
+}
+.notice_content p,
+.notice_content pre {
+    color: #f3f2ee;
 }

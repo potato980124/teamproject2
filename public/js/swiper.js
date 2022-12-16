@@ -34,9 +34,6 @@ var swiper = new Swiper(".mySwiper", {
   },*/
 });
 
-
-
-
 // <!-- Initialize Swiper -->
 var swiper = new Swiper(".mySwiperN", {
     spaceBetween: 30,
@@ -50,19 +47,37 @@ var swiper = new Swiper(".mySwiperN", {
         el: ".swiper-pagination",
         type: "fraction",
     },
-     // Responsive breakpoints
-     breakpoints: {
-      640: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-      },
-      992: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-      },
-  },
+    // Responsive breakpoints
+    breakpoints: {
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+        },
+        992: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+        },
+    },
     navigation: {
         nextEl: ".slide_next",
         prevEl: ".slide_prev",
+    },
+});
+var swiper = new Swiper(".sponser_slide", {
+    slidesPerView: 2,
+    breakpoints: {
+        1200: {
+            slidesPerView: 6,
+            spaceBetween: 40,
+        },
+        600: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        },
+    },
+    spaceBetween: 30,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
 });
