@@ -21,7 +21,7 @@
     border: 1px solid #f3f2ee;
     box-sizing: border-box;
 }
-.notice_list .tab_content_wrap > div {
+.tab_content_wrap > div {
     display: flex;
     width: 100%;
     padding: 20px 50px;
@@ -38,7 +38,7 @@
 .notice_list .tab_content_wrap {
     display: none;
 }
-.notice_list .tab_content_wrap > .notice_cate {
+.tab_content_wrap > .notice_cate {
     border-top: 0;
     background-color: #f3f2ee;
     padding: 10px 50px;
@@ -63,6 +63,6 @@
     text-align: right;
 }
 
-.notice_list .notice_btn .list_btn{
+.notice_list .notice_btn .list_btn {
     margin-right: 0px;
 }
