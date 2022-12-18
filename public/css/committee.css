@@ -1,75 +1,13 @@
-/* 공통 */
+@import url(common/reset.css);
+@import url(common.css);
 
-.w1440{
-    width: 1440px;
-    margin: 0 auto;
-}
-.committee_title .red{
-    color: #EE4B3C;
-    font-size: 60px;
-    font-weight: bold;
-}
-.committee_title .pink{
-    color: #F9B6B0;
-    font-size: 60px;
-    font-weight: bold;
-}
-.committee_title .blue{
-    color: #1874C1;
-    font-size: 60px;
-    font-weight: bold;
-}
-.committee_title .orange{
-    color: #FFBC16;
-    font-size: 60px;
-    font-weight: bold;
-}
-.committee_title .green{
-    color: #1EA849;
-    font-size: 60px;
-    font-weight: bold;
-}
 
-/* 물결섹션 공통 */
-.wave{
-    margin-bottom: -2px;
-    margin-top: -2px;
-    width: 100%; height: 300px;
-    overflow: hidden;
-}
-.wave_bg{
-    width: 200%; height: 100%;
-    background-repeat: no-repeat;
-    background-position: center 10%;
-    background-size: cover;
-    animation-name: wave;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-.wbg_top{
-    background-image: url(../img/wave_bw.png);
-}
-.wbg_bot{
-    background-image: url(../img/wave_wb.png)
-}
 
-@keyframes wave{
-    0% {
-        transform: translate3d(0,0,0);
-    }
-    50% {
-        transform: translate3d(-25%,0,0);
-    }
-    100%{
-        transform: translate3d(-50%,0,0);
-    }
-}
-/* 헤더 */
-header{
-    height: 70px;
-    background-color: black;
-}
+
+
+
+
+
 
 /* 메인시작 */
 main{
@@ -77,7 +15,7 @@ main{
 }
 /* 섹션1 시작 */
 .committee>.section1{
-    padding-top: 40px;
+    padding-top: 100px;
     box-sizing: border-box;
     background-color: #F3F2EE;
 }
@@ -137,24 +75,14 @@ main{
 .committee .bottom_txt{
     text-align: center;
 }
-.committee .bottom_txt>p{
-    font-size: 22px;
-}
-.committee .bottom_txt>h1{
-    font-size: 40px; font-weight: bold;
+.committee .bottom_txt>h2{
     margin-bottom: 100px;
 }
 
 
 
 
-/* section2 공통*/
-.w400{
-    width: 400px;
-    margin: 0 auto;
-}
 /* section2*/
-
 .section2{
     background-color: #0C0C0C;
 }
@@ -171,7 +99,7 @@ main{
 /* sec2 탭 시작 */
 .sec2_tab_wrap{
     width: 40%;
-    margin: 45px auto 100px;
+    margin: 0 auto 100px;
     display: flex;
     color: #fff;
     justify-content: space-between;
@@ -189,7 +117,7 @@ main{
 
 .sec2_con_wrap{
     display: none;
-    margin-top: 100px;
+    margin-top: 100px;  
     position: relative;
 }
 
@@ -203,9 +131,8 @@ main{
     text-align: center;
     overflow: scroll;
 }
-.his_con_box>h1{
+.his_con_box>h2{
     color: #1EA849;
-    font-size: 40px; font-weight: bold;
     margin-bottom: 20px;
 }
 
@@ -215,7 +142,6 @@ main{
 }
 .his_cont_wrap>p{
     margin-bottom: 25px;
-    font-size: 17px; font-weight: lighter;
 }
 .his_cont_wrap>p:nth-child(2){
     margin-left: 10px;
@@ -321,12 +247,9 @@ main{
 
 
 /* 섹션3 로케이션 시작 */
-.sec3_location{
-    background-color: #F3F2EE;
-}
+
 
 .location_cont_wrap{
-    margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -439,10 +362,6 @@ main{
 }
 @media(max-width:1200px){
     /* 섹션1 시작 */
-    .committee>.section1{
-        padding: 0 70px;
-        box-sizing: border-box;
-    }
     .middle_imgs{
         height: 800px;
     }
@@ -461,11 +380,6 @@ main{
     }
 
     /* 섹션3 로케이션시작 */
-    .sec3_location{
-        padding: 0 70px;
-        box-sizing: border-box;
-    }
-
     .location_cont_wrap{
         justify-content: center;
     }
@@ -483,48 +397,10 @@ main{
         margin-top: 50px;
     }
     /* sec4 스폰서 시작 */
-    .sec3_sponser{
-        padding: 0 70px;
-        box-sizing: border-box;
-    }
 }
 
 @media(max-width:600px){
-    /* 공통 */
-    .red{
-        color: #EE4B3C;
-        font-size: 22px;
-        font-weight: bold;
-    }
-    .pink{
-        color: #F9B6B0;
-        font-size: 22px;
-        font-weight: bold;
-    }
-    .blue{
-        color: #1874C1;
-        font-size: 22px;
-        font-weight: bold;
-    }
-    .orange{
-        color: #FFBC16;
-        font-size: 22px;
-        font-weight: bold;
-    }
-    .green{
-        color: #1EA849;
-        font-size: 22px;
-        font-weight: bold;
-    }
-    /* 물결섹션 공통 */
-    .wave{
-        height: 200px;
-    }
     /* 섹션1 시작 */
-    .section1{
-        padding: 0 25px;
-        box-sizing: border-box;
-    }
     .middle_imgs{
         height: 500px;
     }
@@ -561,13 +437,6 @@ main{
         justify-content: center;
         flex-direction: column;
     }
-    /* .his_con_box>h1{
-        font-size: 18px; font-weight: bold;
-        margin-bottom: 20px;
-    }
-    .his_con_box>p{
-        font-size: 10px; 
-    } */
     /* 조직체계 컨텐츠시작 */
 
     .ogar_con_box{
@@ -593,10 +462,6 @@ main{
 
 
     /* 섹션3 로케이션시작 */
-    .sec3_location{
-        padding: 0 25px;
-        box-sizing: border-box;
-    }
     .location_cont_wrap {
         margin-top: 50px;
     }
@@ -634,10 +499,7 @@ main{
     }
 
      /* sec4 스폰서 시작 */
-     .sec3_sponser{
-        padding: 0 25px;
-        box-sizing: border-box;
-    }.sponser_slide_box{
+    .sponser_slide_box{
         width: 100%;
     }
     .sponser_slide_box img{
