@@ -20,7 +20,7 @@
                 </div>
             </div>
             <!-- 오른쪽 로그인 정보 입력  -->
-            <form class="right_content_wrap" method="post">
+            <form class="right_content_wrap" method="post" action="loginCheck">
                 <div class="right_content_inner">
                     <div class="subTitle">
                         <h1>L</h1>
@@ -29,14 +29,14 @@
                         <h1>I</h1>
                         <h1>N</h1>
                     </div>
-                    <input class="idpw_box" type="text" value="아이디" />
-                    <input class="idpw_box" type="text" value="비밀번호" />
+                    <input class="idpw_box" type="text" placeholder="아이디" name="id">
+                    <input class="idpw_box" type="text" placeholder="비밀번호" name="pw">
                     <ul class="find_idpw">
                         <li><a href="">아이디찾기</a></li>
                         <li class="center_line"></li>
                         <li><a href="">비밀번호 찾기</a></li>
                     </ul>
-                    <input class="login_input_box" type="button" value="LOGIN" />
+                    <input class="login_input_box" type="submit" value="LOGIN">
                     <ul class="or">
                         <li class="under_line"></li>
                         <li>OR</li>
@@ -48,7 +48,7 @@
                             <div class="kakao_img"></div>
                         </a>
                     </div>
-                    <p><a href="">아직 회원이 아니신가요?</a></p>
+                    <p><a href="/join">아직 회원이 아니신가요?</a></p>
                 </div>
             </form>
         </div>

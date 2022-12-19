@@ -4,7 +4,7 @@
             <div class="join_title">
                 <h3>개인정보입력</h3>
             </div>
-            <form action="">
+            <form action="/joininfo" method="post" name="joininfo" >
                 <table>
                     <colgroup>
                         <col width="20%" />
@@ -17,8 +17,9 @@
                                 <input
                                     class="join_input_box"
                                     type="text"
-                                    value="* 공백 없는 3-15자의 영문/숫자를 조합하여 입력해야 합니다."
-                                    onfocus="javascrip:this.value=''"
+                                    placeholder="공백 없는 3-15자의 영문/숫자를 조합하여 입력해야 합니다."
+                                    name="id"
+                                    id="id"
                                 />
                             </td>
                         </tr>
@@ -28,8 +29,9 @@
                                 <input
                                     class="join_input_box"
                                     type="text"
-                                    value="* 공백 없는 8-16자의 영문/숫자/특수문자를 조합하여 입력해야 합니다."
-                                    onfocus="javascrip:this.value=''"
+                                    placeholder="* 공백 없는 3-15자의 영문/숫자를 조합하여 입력해야 합니다."
+                                    name="pw"
+                                    id="pw"
                                 />
                             </td>
                         </tr>
@@ -39,18 +41,18 @@
                                 <input
                                     class="join_input_box"
                                     type="text"
-                                    value="* 비밀번호 확인을 위해 다시 입력해주세요."
-                                    onfocus="javascrip:this.value=''"
+                                    placeholder="* 비밀번호 확인을 위해 다시 입력해주세요."
+                                    id="rpw"
                                 />
                             </td>
                         </tr>
                         <tr>
                             <td class="join_title_box"><strong>*</strong>이름</td>
-                            <td><input class="join_input_box" type="text" /></td>
+                            <td><input class="join_input_box" type="text" name="name" id="name"/></td>
                         </tr>
                         <tr>
                             <td class="join_title_box"><strong>*</strong>생년월일</td>
-                            <td><input class="join_input_box" type="date" /></td>
+                            <td><input class="join_input_box" type="date" name="birth" /></td>
                         </tr>
                         <tr>
                             <td class="join_title_box"><strong>*</strong>이메일</td>
@@ -58,15 +60,22 @@
                                 <input
                                     class="join_input_box"
                                     type="text"
-                                    value="* 본인확인을 위해 정확한 이메일주소를 입력해주세요."
-                                    onfocus="javascrip:this.value=''"
+                                    placeholder="* 본인확인을 위해 정확한 이메일주소를 입력해주세요."
+                                    name="email"
+                                    id="email"
                                 />
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <input class="join_btn" type="button" value="가입하기" />
+                <% let ides = [];%>
+                <%ids.forEach((index)=>{%>
+                 <%ides.push(index.id);%>
+                 <% console.log(ides); %>
+                 <%})%>
+                 <input class="join_btn" type="button" value="가입하기" onclick="Validation(<%for(i=0;i<ides.length;i++){%> '<%=ides[i]%>',<%}%>)">
             </form>
+            <script src="js/join.js"></script>
         </div>
     </section>
 </main>

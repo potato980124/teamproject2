@@ -8,10 +8,6 @@
 }
 
 /* <!-- 섹션1 로그인 섹션시작 --> */
-.login .sec1{
-    /* padding: 200px 0;
-    box-sizing: border-box; */
-}
 .login .login_sec1_wrap{
     display: flex; height: fit-content;
 }
@@ -20,8 +16,8 @@
 }
 /* 로고 이미지 ,밑에 이미지 공통 */
 .login .left_logo_wrap{
-    margin-top: 50px;
-    width: 50%; height: fit-content; /* min-width: 960px; */
+    margin-top: 100px;
+    width: 50%; height: fit-content; 
     display: flex;
     flex-direction: column;
     align-items: center;

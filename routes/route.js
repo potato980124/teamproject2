@@ -53,9 +53,34 @@ router.get("/gallery", (req, res) => {
 router.get("/login", (req, res) => {
     res.render("login");
 });
+router.post("/loginCheck",(req,res)=>{
+    let param = JSON.parse(JSON.stringify(req.body));
+    let id = param['id'];
+    let pw = param['pw'];
+    db.loginCheck(id,pw,(results)=>{
+        if(results.length > 0){
+            res.redirect('/');
+        }else{
+            res.send(`<script>alert('로그인정보가 일치하지 않습니다'); document.location.href="/login";</script>`)
+        }
+    })
+})
 router.get("/join", (req, res) => {
-    res.render("join");
+    db.getJointable((ids)=>{
+        res.render('join',{ids:ids});
+    })
 });
+router.post("/joininfo",(req,res)=>{
+    let param = JSON.parse(JSON.stringify(req.body));
+    let id = param['id'];
+    let pw = param['pw'];
+    let name = param['name'];
+    let birth = param['birth'];
+    let email = param['email'];
+    db.insertIntoJoinTable(id,pw,name,birth,email,()=>{
+        res.redirect('/login');
+    })
+})
 router.get("/test", (req, res) => {
     res.render("test");
 });

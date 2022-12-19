@@ -10,7 +10,7 @@
     background-color: #F3F2EE;
 }
 
-.sec1_festival {
+.sec_wrap.sec1_festival {
     margin-top: 80px;
     display: flex;
 }
@@ -49,8 +49,10 @@
 
 .festival .poster_img {
     width: 65%;
-    height: 750px;
-    background-color: red;
+    height: 700px;
+    background-image: url(../img/main_sec3.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 /* 모바일 텍스트 */
@@ -245,7 +247,7 @@
 @media(max-width:1100px) {
 
     /* 섹션1 축제소개 컨텐츠 및 포스터 섹션 */
-    .sec1_festival {
+    .sec_wrap.sec1_festival {
         margin-top: 80px;
         display: block;
     }
