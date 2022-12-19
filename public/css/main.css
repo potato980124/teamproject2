@@ -237,14 +237,20 @@ main {
 .main .sec3_wrap > div {
     width: calc(50% - 50px);
 }
-
+.main .sec3_wrap > .sec3_right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.main .sec3_wrap > .sec3_right p {
+    font-size: 22px;
+}
 .main .sec3_left {
     background-color: #f3f2ee;
     height: 500px;
 }
 .main .sec3_subtitle {
     display: flex;
-    flex-direction: column;
     gap: 10px;
 }
 .main .sec3_subtitle > h3 {
@@ -255,35 +261,11 @@ main {
     box-sizing: border-box;
     border-bottom: 1px solid #f3f2ee;
 }
-.main .section3 .d-day > h1 {
-    color: #f3f2ee;
-    font-weight: bold;
-    color: #ee4b3c;
-}
-.main .section3 .d-day > h1:nth-child(2) {
-    color: #f9b6b0;
-}
-.main .section3 .d-day > h1:nth-child(3) {
-    color: #1874c1;
-}
-.main .section3 .d-day > h1:nth-child(4) {
-    color: #ffbc16;
-}
-.main .section3 .d-day > h1:nth-child(5) {
-    color: #1ea849;
-}
-.d_day_count {
+.d-day > div {
     display: flex;
-    gap: 10px;
 }
-.d_day_count > div {
+.d-day > div > h1 {
     color: #f3f2ee;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.d_day_count > div > p {
-    font-size: 20px;
 }
 #d_date {
     color: #ee4b3c;
@@ -300,6 +282,12 @@ main {
 #d_second {
     color: #1874c1;
     /* background-color: #f3f2ee; */
+}
+.sec3_content_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
 }
 .main .sec3_wrap p {
     color: #f3f2ee;
@@ -325,8 +313,11 @@ main {
     color: #ffbc16;
 }
 .m_sec3_content {
+    height: 100%;
+    flex-direction: column;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .main .sec3_info {
     width: 100%;
@@ -767,6 +758,26 @@ main {
     .f_icon {
         width: 20%;
     }
+    .main .sec3_subtitle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .d-day {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        border-bottom: 1px solid #f3f2ee;
+    }
+    .sec3_content_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .main .sec3_right p {
+        display: none;
+    }
 }
 @media (max-width: 1300px) {
     .main .sec6_cont {
@@ -801,9 +812,10 @@ main {
     }
     .d-day {
         width: 100%;
-    }
-    .main .sec3_right p {
-        display: none;
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        border-bottom: 1px solid #f3f2ee;
     }
 }
 @media (max-width: 1000px) {
