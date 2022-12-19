@@ -44,14 +44,17 @@
                     <h4 class="notice_list_title">제목</h4>
                     <h4>작성일</h4>
                 </div>
-                <% for(i=0; i<9; i++){%> <% let regisDate = rows[i].create_time.getDate(); %> <% let regisMonth = rows[i].create_time.getMonth()+1; %>
-                <% let regisYear = rows[i].create_time.getFullYear(); %>
-                <div onclick="javascript:location.href='/notice_detail?id=<%= rows[i].id %>'">
-                    <h4><%= rows[i].category %></h4>
-                    <h4 class="notice_list_title"><%= rows[i].title %></h4>
+                <% for(i=0; i<9; i++){%> <% let regisDate = rows1[i].create_time.getDate(); %> <% let regisMonth = rows1[i].create_time.getMonth()+1; %>
+                <% let regisYear = rows1[i].create_time.getFullYear(); %>
+                <div onclick="javascript:location.href='/notice_detail?id=<%= rows1[i].id %>'">
+                    <h4><%= rows1[i].category %></h4>
+                    <h4 class="notice_list_title"><%= rows1[i].title %></h4>
                     <h4><%= regisYear %>.<%= regisMonth%>.<%= regisDate %></h4>
                 </div>
                 <% }; %>
+                <div class="notice_btn">
+                    <input type="button" value="글쓰기" class="list_btn" onclick="location.href='/notice_write'" />
+                </div>
             </div>
             <div class="tab_content_wrap">
                 <div class="notice_cate">
@@ -59,59 +62,16 @@
                     <h4 class="notice_list_title">제목</h4>
                     <h4>작성일</h4>
                 </div>
-                <div>
-                    <h4>카테고리</h4>
-                    <h4 class="notice_list_title">제목</h4>
-                    <h4>작성일</h4>
+               <% for(i=0; i<9; i++){%> <% let regisDate = rows2[i].create_time.getDate(); %> <% let regisMonth = rows2[i].create_time.getMonth()+1; %>
+                <% let regisYear = rows2[i].create_time.getFullYear(); %>
+                <div onclick="javascript:location.href='/notice_detail?id=<%= rows2[i].id %>'">
+                    <h4><%= rows2[i].category %></h4>
+                    <h4 class="notice_list_title"><%= rows2[i].title %></h4>
+                    <h4><%= regisYear %>.<%= regisMonth%>.<%= regisDate %></h4>
                 </div>
-                <div>
-                    <h4>카테고리</h4>
-                    <h4 class="notice_list_title">제목</h4>
-                    <h4>작성일</h4>
-                </div>
-                <div>
-                    <h4>카테고리</h4>
-                    <h4 class="notice_list_title">제목</h4>
-                    <h4>작성일</h4>
-                </div>
-                <div>
-                    <h4>카테고리</h4>
-                    <h4 class="notice_list_title">제목</h4>
-                    <h4>작성일</h4>
-                </div>
-                <div>
-                    <h4>카테고리</h4>
-                    <h4 class="notice_list_title">제목</h4>
-                    <h4>작성일</h4>
-                </div>
-                <div>
-                    <h4>카테고리</h4>
-                    <h4 class="notice_list_title">제목</h4>
-                    <h4>작성일</h4>
-                </div>
-                <div>
-                    <h4>카테고리</h4>
-                    <h4 class="notice_list_title">제목</h4>
-                    <h4>작성일</h4>
-                </div>
-                <div>
-                    <h4>카테고리</h4>
-                    <h4 class="notice_list_title">제목</h4>
-                    <h4>작성일</h4>
-                </div>
-                <div>
-                    <h4>카테고리</h4>
-                    <h4 class="notice_list_title">제목</h4>
-                    <h4>작성일</h4>
-                </div>
-                <div>
-                    <h4>카테고리</h4>
-                    <h4 class="notice_list_title">제목</h4>
-                    <h4>작성일</h4>
-                </div>
-            </div>
+                <% }; %>
             <div class="notice_btn">
-                <input type="button" value="글쓰기" class="list_btn" onclick="location.href='/notice_write'" />
+                <input type="button" value="글쓰기" class="list_btn" onclick="location.href='/notice_write_event'" />
             </div>
         </div>
         <div class="wave">

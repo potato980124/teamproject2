@@ -18,18 +18,23 @@
     height: 50px;
 }
 .tab_content_wrap {
-    border: 1px solid #f3f2ee;
+    /* border: 1px solid #f3f2ee; */
     box-sizing: border-box;
 }
 .tab_content_wrap > div {
     display: flex;
     width: 100%;
     padding: 20px 50px;
-    border-top: 1px solid #f3f2ee;
+    border: 1px solid #f3f2ee;
+    border-top: 0;
+    /* border-top: 1px solid #f3f2ee; */
     box-sizing: border-box;
     justify-content: space-between;
     /* background-color: rgba(255, 255, 255, 0.3); */
     /* line-height: 85px;  */
+}
+.tab_content_wrap > div:last-child {
+    border: 0px;
 }
 .notice_list .tab_content_wrap.tab_active {
     display: flex;
