@@ -1,5 +1,4 @@
 <body>
-    <div class="header">header</div>
     <main class="event">
         <section class="section1">
             <div class="sec_wrap">
@@ -30,10 +29,10 @@
         </section>
         <section class="section2">
             <div class="sec_wrap">
-                <div class="tab_wrap tap_swiper swiper">
+                <div class="tab_wrap tap_event_swiper swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide event_tab tab tab_active">
-                            <h4>부산 골목길<br />축제</h4>
+                            <h4>부산 골목길 축제</h4>
                         </div>
                         <div class="swiper-slide event_tab tab">
                             <h4>부산항 축제</h4>
@@ -55,7 +54,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab_content_wrap tab_active">
+                <div class="tap_event_content tab_content_wrap tab_active">
                     <div>
                         <div class="img starbucks"></div>
                     </div>
@@ -93,7 +92,7 @@
                         <div class="img"></div>
                     </div>
                 </div>
-                <div class="tab_content_wrap">
+                <div class="tap_event_content tab_content_wrap">
                     <div>
                         <div class="img ship"></div>
                     </div>
@@ -131,7 +130,7 @@
                         <div class="img"></div>
                     </div>
                 </div>
-                <div class="tab_content_wrap">
+                <div class="tap_event_content tab_content_wrap">
                     <div>
                         <div class="img">third</div>
                     </div>
@@ -169,7 +168,7 @@
                         <div class="img"></div>
                     </div>
                 </div>
-                <div class="tab_content_wrap">
+                <div class="tap_event_content tab_content_wrap">
                     <div>
                         <div class="img">fourth</div>
                     </div>
@@ -207,7 +206,7 @@
                         <div class="img"></div>
                     </div>
                 </div>
-                <div class="tab_content_wrap">
+                <div class="tap_event_content tab_content_wrap">
                     <div>
                         <div class="img">fifth</div>
                     </div>
@@ -245,7 +244,7 @@
                         <div class="img"></div>
                     </div>
                 </div>
-                <div class="tab_content_wrap">
+                <div class="tap_event_content tab_content_wrap">
                     <div>
                         <div class="img">sixth</div>
                     </div>
@@ -283,7 +282,7 @@
                         <div class="img"></div>
                     </div>
                 </div>
-                <div class="tab_content_wrap">
+                <div class="tap_event_content tab_content_wrap">
                     <div>
                         <div class="img">seventh</div>
                     </div>
@@ -342,7 +341,7 @@
     //     slidesPerView: 4,
     // });
     if (window.innerWidth >= 800) {
-        var swiper = new Swiper(".tap_swiper", {
+        var swiper = new Swiper(".tap_event_swiper", {
             // Install Plugin To Swiper
             // modules: [myPlugin],
             // spaceBetween: 12,
@@ -352,7 +351,7 @@
             slidesPerView: 4,
         });
     } else if (window.innerWidth < 800) {
-        var swiper = new Swiper(".tap_swiper", {
+        var swiper = new Swiper(".tap_event_swiper", {
             // Install Plugin To Swiper
             // modules: [myPlugin],
             // spaceBetween: 12,

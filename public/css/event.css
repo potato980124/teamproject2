@@ -1,26 +1,27 @@
 @import url(common/reset.css);
 @import url(common.css);
-.event .section1 {
+.event .event .section1 {
     background-color: #f3f2ee;
     margin-top: 70px;
 }
-.event .section2 {
+.event .event .section2 {
     background-color: #0c0c0c;
 }
-.event .section2 .sec_wrap {
+.event .event .section2 .sec_wrap {
     transform: translateY(-5%);
 }
-.event .swiper-wrapper {
+.event .event .swiper-wrapper {
     display: flex;
     height: 100px;
     flex-wrap: nowrap;
 }
-.event_tab {
+.event .event_tab {
     width: calc(25% - 9px) !important;
     flex-shrink: 0;
+    padding: 20px 0;
     /* margin-right: 12px; */
 }
-.event_tab:nth-child(4) {
+.event .event_tab:nth-child(4) {
     margin: 0;
 }
 /* .event .tab_wrap {
@@ -73,20 +74,20 @@
 .event_tab:nth-child(4){
     margin:0;
 } */
-.tab_content_wrap.tab_active {
+.event .tab_content_wrap.tab_active {
     margin-top: 12px;
     display: flex;
     flex-wrap: wrap;
-    /* gap: 12px; */
+    gap: 12px;
 }
-.tab_content_wrap {
+.event .tap_event_content {
     display: none;
 }
-.tab_content_wrap > div {
+.event .tap_event_content > div {
     width: calc(25% - 9px);
     height: auto;
 }
-.tab_content_wrap > div > .img {
+.event .tap_event_content > div > .img {
     width: 100%;
     padding-top: 100%;
     background-color: #f3f2ee;
@@ -94,27 +95,27 @@
     background-size: 50%;
     background-position: center center;
 }
-.starbucks {
+.event .starbucks {
     background-image: url(../img/butterfly.png);
 }
-.ship {
+.event .ship {
     background-image: url(../img/tape.png);
 }
 @media (max-width: 800px) {
-    .event_wrap {
+    .event .event_wrap {
         gap: 10px;
     }
-    .event_tab:nth-child(2n-1) {
+    .event .event_tab:nth-child(2n-1) {
         margin-right: 10px;
     }
-    .event .tab_wrap {
+    .event .event .tab_wrap {
         height: 50px;
     }
-    .event_tab {
+    .event .event_tab {
         width: calc(50% - 6px) !important;
         margin: 0;
     }
-    .tab_content_wrap > div {
+    .event .tap_event_content > div {
         width: calc(50% - 6px);
         height: auto;
     }

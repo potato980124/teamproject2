@@ -191,10 +191,10 @@ header .gnb ul {
     display: block;
     transition: all 1s;
 }
-.cate_accor > p {
+.cate_accor > a > p {
     color: #0c0c0c;
     text-align: left;
-    line-height: 1.5;
+    line-height: 2;
 }
 
 @media (max-width: 1100px) {
