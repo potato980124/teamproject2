@@ -804,6 +804,11 @@ main {
     .main section.section2 {
         height: 600px;
     } */
+    .main .sec3_subtitle {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
     .main .sec3_wrap > div {
         width: 100%;
     }
