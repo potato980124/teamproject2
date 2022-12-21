@@ -17,6 +17,7 @@ router.get("/", (req, res) => {
 // });
 router.get("/notice_list", (req, res) => {
     db.getNotice((rows1, rows2) => {
+        console.log(rows1);
         res.render("notice_list", { rows1: rows1, rows2: rows2 }); //ejs의 rows를 받아서 rows라는 이름으로 보낸다
     });
 });
@@ -41,6 +42,7 @@ router.get("/notice_detail", (req, res) => {
         res.render("notice_content", { row: row[0] }); //테이블의 한 행만 보내줄거기 때문에
     });
 });
+
 //notice====2222222=====================================
 
 router.get("/notice_write_event", (req, res) => {
@@ -56,6 +58,33 @@ router.post("/w_notice_event", (req, res) => {
 
     db.writeNotice_event(title, writer, category, password, content, () => {
         res.redirect("/notice_write_event");
+    });
+});
+//==============modify button==================================================
+router.get("/modifyNotice", (req, res) => {
+    let id = req.query.id;
+    db.modify_N(id, (row) => {
+        res.render("notice_modify", { row: row[0] });
+    });
+});
+// 업데이트 된 내용 내보내기=================================================
+router.post("/m_notice", (req, res) => {
+    let param = JSON.parse(JSON.stringify(req.body));
+    let id = req.query.id;
+    let title = param["title"];
+    let writer = param["writer"];
+    let category = param["category"];
+    let password = param["password"];
+    let content = param["content"];
+    db.updateNotice(id, title, writer, category, password, content, () => {
+        res.redirect("/notice_list");
+    });
+});
+//===============================아이디가 일치하면 삭제하기
+router.get("/deleteNotice", (req, res) => {
+    let id = req.query.id;
+    db.deleteNotice(id, () => {
+        res.redirect("/notice_list");
     });
 });
 //==============================================

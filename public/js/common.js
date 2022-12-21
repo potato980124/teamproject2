@@ -1,6 +1,8 @@
 window.onload = function () {
     header();
     footer();
+    headerHover();
+    headHoverOut();
 };
 function header() {
     let header = document.querySelector(".b_header");
@@ -10,6 +12,41 @@ function header() {
         header.classList.remove("main");
     }
 }
+// function headerHover() {
+//     let mouseHead = document.querySelectorAll(".mouseHead");
+//     let mouseover_hov = document.querySelectorAll(".mouseover_hov");
+//     let hov_header = document.querySelector(".hover_header");
+//     for (let i = 0; i < mouseHead.length; i++) {
+//         mouseHead[i].addEventListener("mouseover", (event) => {
+//             hov_header.classList.add("active");
+//             for (let j = 0; j < mouseover_hov.length; j++) {
+//                 console.log(i + "/" + j);
+//                 if (i == j) {
+//                     mouseover_hov[j].classList.add("active");
+//                     hov_header.classList.add("active");
+//                 }
+//                 // else {
+//                 //     mouseover_hov[j].classList.remove("active");
+//                 //     hov_header.classList.remove("active");
+//                 // }
+//             }
+//         });
+//     }
+// }
+// function headHoverOut() {
+//     let mouseHead = document.querySelectorAll(".mouseHead");
+//     let mouseover_hov = document.querySelectorAll(".mouseover_hov");
+//     let hov_header = document.querySelector(".hover_header");
+//     for (let i = 0; i < mouseHead.length; i++) {
+//         mouseHead[i].addEventListener("mouseout", (event) => {
+//             hov_header.classList.remove("active");
+//             for (let j = 0; j < mouseover_hov.length; j++) {
+//                 mouseover_hov[j].classList.remove("active");
+//             }
+//         });
+//     }
+// }
+
 function footer() {
     let footer = document.querySelector(".f_wrap");
     if (
