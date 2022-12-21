@@ -87,6 +87,20 @@
     width: calc(25% - 9px);
     height: auto;
 }
+.event .tap_event_content .regis_btn{
+    display: block;
+    width: 100%;
+}
+.event .tap_event_content .regis_btn>a{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.event .tap_event_content .regis_btn>a>input{
+    width: calc(25% - 9px); height: 80px;
+    background-color: green;
+    color: #f3f2ee; font-size: 22px; font-weight: bold;
+}
 .event .tap_event_content > div > .img {
     position: relative;
     width: 100%;

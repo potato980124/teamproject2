@@ -65,10 +65,17 @@ router.get("/committee", (req, res) => {
 router.get("/festival", (req, res) => {
     res.render("festival");
 });
+//---이벤트 페이지---
 router.get("/event", (req, res) => {
     res.render("event");
 });
+// 이벤트 등록 페이지
+router.get('/eventwrite',(req,res)=>{
+    res.render("event_write");
+})
 
+
+//---갤러리---
 router.get("/gallery", (req, res) => {
     res.render("gallery");
 });
