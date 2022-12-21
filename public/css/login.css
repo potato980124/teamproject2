@@ -2,7 +2,6 @@
 
 /* 메인 시작 */
 .login{
-    height: 100vh;
     display: flex;
     align-items: center;
 }
