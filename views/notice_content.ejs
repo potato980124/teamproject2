@@ -29,16 +29,22 @@
                 row.create_time.getFullYear(); %>
                 <div class="notice_cate title"><h3><%= row.title %></h3></div>
                 <div class="notice_info">
-                    <p>카테고리 : <%= row.category %> |</p>
-                    <p>작성자 : <%= row.writer %> |</p>
-                    <p>작성일 :<%= regisYear %>.<%= regisMonth%>.<%= regisDate %></p>
+                    <p>카테고리 : <%= row.category %></p>
+                    <p>|</p>
+                    <p>작성자 : <%= row.writer %></p>
+                    <p>|</p>
+                    <p>작성일 : <%= regisYear %>.<%= regisMonth%>.<%= regisDate %></p>
                 </div>
-                <div class="notice_content">
+                <div class="notice_text">
                     <pre>
-                        <%= row.content %>
+<%= row.content %>
                     </pre>
                 </div>
             </div>
+        </div>
+        <div class="notice_btn">
+            <input type="button" value="DELETE" class="list_btn" onclick="location.href='/notice_list'" />
+            <input type="submit" value="MODIFY" id="submit" />
         </div>
 
         <div class="wave">
