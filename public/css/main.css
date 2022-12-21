@@ -12,7 +12,7 @@ main {
     overflow: hidden;
 }
 .main .sec1_wrap {
-    height: 80vh;
+    height: 100vh;
     position: relative;
     margin-top: 70px;
     display: flex;
@@ -59,17 +59,18 @@ main {
     position: absolute;
 }
 .main_logo {
-    width: 20%;
-    top: 15%;
+
+    width: 15%;
+    top: 12%;
 }
 .main_logo > .img {
     padding-top: 53.69319%;
     background-image: url(../img/bfoc_logo_white.png);
 }
 .main .main_right {
-    width: 20%;
+    width: 44%;
     /* transform: translateX(110%) translateY(-34%); */
-    transform: translateX(110%) translateY(15%);
+    transform: translateX(56%) translateY(15%);
     z-index: 5;
 }
 .main_right > .img {
@@ -77,19 +78,18 @@ main {
     background-image: url(../img/main_right.png);
 }
 .main .main_center {
-    width: 25%;
+    width: 34%;
     /* translateY(-37%) */
-    transform: translateX(45%) translateY(15%);
+    transform: translateX(22%) translateY(-14%);
 }
 .main_center > .img {
     padding-top: 145.7777%;
     background-image: url(../img/main_center.png);
 }
 .main .main_left {
-    width: 46%;
+    width: 77%;
     z-index: 6;
-    /* translateY(-30%) */
-    transform: translateX(-27%) translateY(15%);
+    transform: translateX(-20%) translateY(6%);
 }
 .main_left > .img {
     padding-top: 95.111111%;
@@ -105,7 +105,12 @@ main {
     z-index: 100;
     margin-bottom: -2px;
 } */
-
+.main .section1 .wave {
+    width:100vw;
+    position: absolute;
+    bottom:0;
+    z-index: 99;
+}
 /* ======================================sec2========================= */
 .main .section2 {
     position: relative;
@@ -118,9 +123,7 @@ main {
     justify-content: space-between;
 }
 
-.main .section1 .wave {
-    z-index: 99;
-}
+
 .main .festi-poster {
     width: 100%;
     margin: 0 auto;
@@ -141,7 +144,7 @@ main {
 .main .speaker {
     width: 15%;
     /* transform: translateX(-280%) translateY(55%) rotate(-16.32deg); */
-    transform: translateX(-20%) translateY(55%) rotate(-16.32deg);
+    transform: translateX(-20%) translateY(81%) rotate(-16.32deg);
     z-index: 500;
     left: 0;
 }
@@ -152,7 +155,7 @@ main {
 .main .seagal {
     width: 22%;
     /* transform: translateX(180%) translateY(-43%) rotate(8.32deg); */
-    transform: translateX(25%) translateY(-43%) rotate(8.32deg);
+    transform: translateX(25%) translateY(-62%) rotate(8.32deg);
     right: 0;
     z-index: 499;
 }
