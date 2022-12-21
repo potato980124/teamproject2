@@ -1,7 +1,7 @@
 @import url(common/reset.css);
 @import url(common.css);
 .notice_list .section2 .tab_wrap {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
 }
 .notice_list h4,
 .notice p {
@@ -15,40 +15,49 @@
     background-color: #0c0c0c;
 }
 .notice_list .tab {
-    height: 50px;
+    height: auto;
+    padding: 20px 0;
 }
-.tab_content_wrap {
-    border: 1px solid #f3f2ee;
+.notice_list .tab_wrap {
+    gap: 12px;
+}
+.notice_list .tab_content_wrap {
+    /* border: 1px solid #f3f2ee; */
     box-sizing: border-box;
+    display: none;
 }
-.tab_content_wrap > div {
+.community .tab_content_wrap > div {
     display: flex;
     width: 100%;
     padding: 20px 50px;
-    border-top: 1px solid #f3f2ee;
+    border: 1px solid #f3f2ee;
+    border-top: 0;
+    /* border-top: 1px solid #f3f2ee; */
     box-sizing: border-box;
     justify-content: space-between;
     /* background-color: rgba(255, 255, 255, 0.3); */
     /* line-height: 85px;  */
 }
+.notice_list .tab_content_wrap > div:last-child {
+    border: 0px;
+}
 .notice_list .tab_content_wrap.tab_active {
     display: flex;
     flex-wrap: wrap;
 }
-.notice_list .tab_content_wrap {
-    display: none;
-}
-.tab_content_wrap > .notice_cate {
+
+.community .tab_content_wrap > .notice_cate {
     border-top: 0;
     background-color: #f3f2ee;
     padding: 10px 50px;
 }
-.notice_cate > h4 {
+.community .notice_cate > h4 {
     color: #0c0c0c;
     font-weight: 900;
 }
 .notice_list .tab_content_wrap > div > h4 {
     width: 25%;
+    text-align: left;
 }
 .notice_list .tab_content_wrap > div > h4:last-child {
     text-align: right;
@@ -64,5 +73,5 @@
 }
 
 .notice_list .notice_btn .list_btn {
-    margin-right: 0px;
+    margin: 0 auto;
 }

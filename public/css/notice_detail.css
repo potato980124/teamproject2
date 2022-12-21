@@ -11,7 +11,24 @@
     text-align: center;
     width: 100%;
 }
+.notice_content pre {
+    width: 100%;
+    height: auto;
+}
+.notice_content .notice_info p {
+    font-size: 12px;
+}
 .notice_content p,
 .notice_content pre {
     color: #f3f2ee;
+}
+.notice_content .notice_text {
+    height: 400px;
+    overflow-y: scroll;
+}
+.notice_content .tab_content_wrap > .notice_info {
+    justify-content: right;
+    gap: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

@@ -12,7 +12,7 @@ main {
     overflow: hidden;
 }
 .main .sec1_wrap {
-    height: 80vh;
+    height: 100vh;
     position: relative;
     margin-top: 70px;
     display: flex;
@@ -59,17 +59,17 @@ main {
     position: absolute;
 }
 .main_logo {
-    width: 20%;
-    top: 15%;
+    width: 15%;
+    top: 12%;
 }
 .main_logo > .img {
     padding-top: 53.69319%;
     background-image: url(../img/bfoc_logo_white.png);
 }
 .main .main_right {
-    width: 20%;
+    width: 44%;
     /* transform: translateX(110%) translateY(-34%); */
-    transform: translateX(110%) translateY(15%);
+    transform: translateX(56%) translateY(15%);
     z-index: 5;
 }
 .main_right > .img {
@@ -77,19 +77,18 @@ main {
     background-image: url(../img/main_right.png);
 }
 .main .main_center {
-    width: 25%;
+    width: 34%;
     /* translateY(-37%) */
-    transform: translateX(45%) translateY(15%);
+    transform: translateX(22%) translateY(-14%);
 }
 .main_center > .img {
     padding-top: 145.7777%;
     background-image: url(../img/main_center.png);
 }
 .main .main_left {
-    width: 46%;
+    width: 77%;
     z-index: 6;
-    /* translateY(-30%) */
-    transform: translateX(-27%) translateY(15%);
+    transform: translateX(-20%) translateY(6%);
 }
 .main_left > .img {
     padding-top: 95.111111%;
@@ -105,7 +104,12 @@ main {
     z-index: 100;
     margin-bottom: -2px;
 } */
-
+.main .section1 .wave {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+}
 /* ======================================sec2========================= */
 .main .section2 {
     position: relative;
@@ -118,9 +122,6 @@ main {
     justify-content: space-between;
 }
 
-.main .section1 .wave {
-    z-index: 99;
-}
 .main .festi-poster {
     width: 100%;
     margin: 0 auto;
@@ -141,7 +142,7 @@ main {
 .main .speaker {
     width: 15%;
     /* transform: translateX(-280%) translateY(55%) rotate(-16.32deg); */
-    transform: translateX(-20%) translateY(55%) rotate(-16.32deg);
+    transform: translateX(-20%) translateY(81%) rotate(-16.32deg);
     z-index: 500;
     left: 0;
 }
@@ -152,7 +153,7 @@ main {
 .main .seagal {
     width: 22%;
     /* transform: translateX(180%) translateY(-43%) rotate(8.32deg); */
-    transform: translateX(25%) translateY(-43%) rotate(8.32deg);
+    transform: translateX(25%) translateY(-62%) rotate(8.32deg);
     right: 0;
     z-index: 499;
 }
@@ -237,14 +238,20 @@ main {
 .main .sec3_wrap > div {
     width: calc(50% - 50px);
 }
-
+.main .sec3_wrap > .sec3_right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.main .sec3_wrap > .sec3_right p {
+    font-size: 22px;
+}
 .main .sec3_left {
     background-color: #f3f2ee;
     height: 500px;
 }
 .main .sec3_subtitle {
     display: flex;
-    flex-direction: column;
     gap: 10px;
 }
 .main .sec3_subtitle > h3 {
@@ -255,35 +262,11 @@ main {
     box-sizing: border-box;
     border-bottom: 1px solid #f3f2ee;
 }
-.main .section3 .d-day > h1 {
-    color: #f3f2ee;
-    font-weight: bold;
-    color: #ee4b3c;
-}
-.main .section3 .d-day > h1:nth-child(2) {
-    color: #f9b6b0;
-}
-.main .section3 .d-day > h1:nth-child(3) {
-    color: #1874c1;
-}
-.main .section3 .d-day > h1:nth-child(4) {
-    color: #ffbc16;
-}
-.main .section3 .d-day > h1:nth-child(5) {
-    color: #1ea849;
-}
-.d_day_count {
+.d-day > div {
     display: flex;
-    gap: 10px;
 }
-.d_day_count > div {
+.d-day > div > h1 {
     color: #f3f2ee;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.d_day_count > div > p {
-    font-size: 20px;
 }
 #d_date {
     color: #ee4b3c;
@@ -300,6 +283,12 @@ main {
 #d_second {
     color: #1874c1;
     /* background-color: #f3f2ee; */
+}
+.sec3_content_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
 }
 .main .sec3_wrap p {
     color: #f3f2ee;
@@ -325,8 +314,11 @@ main {
     color: #ffbc16;
 }
 .m_sec3_content {
+    height: 100%;
+    flex-direction: column;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .main .sec3_info {
     width: 100%;
@@ -750,7 +742,15 @@ main {
     width: 100%;
     height: 70px;
 }
-
+.main_banner {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+.main_banner > img {
+    width: 100%;
+    height: auto;
+}
 @media (max-width: 1440px) {
     .main .festi-poster {
         padding: 0;
@@ -766,6 +766,26 @@ main {
     }
     .f_icon {
         width: 20%;
+    }
+    .main .sec3_subtitle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .d-day {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        border-bottom: 1px solid #f3f2ee;
+    }
+    .sec3_content_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .main .sec3_right p {
+        display: none;
     }
 }
 @media (max-width: 1300px) {
@@ -793,6 +813,11 @@ main {
     .main section.section2 {
         height: 600px;
     } */
+    .main .sec3_subtitle {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
     .main .sec3_wrap > div {
         width: 100%;
     }
@@ -801,9 +826,10 @@ main {
     }
     .d-day {
         width: 100%;
-    }
-    .main .sec3_right p {
-        display: none;
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        border-bottom: 1px solid #f3f2ee;
     }
 }
 @media (max-width: 1000px) {
