@@ -32,17 +32,39 @@ function getNotice(callback) {
         callback(rows1, rows2);
     });
 }
-
-
-
 function getNoticeByid(id, callback) {
     //한줄을 다 불러올때는 from + 'table 이름" + 없음
+    connection.query(`SELECT * FROM notice where id='${id}'`, (err, row) => {
+        if (err) throw err;
+        callback(row);
+    });
+}
+//아이디가 일치하는 부분을 update할 내용 내보내기
+function modify_N(id, callback) {
     connection.query(`SELECT * FROM notice where id=${id}`, (err, row) => {
         if (err) throw err;
         callback(row);
     });
 }
 
+//아이디가 일치하는 부분을 update한 내용 내보내기
+function updateNotice(id, title, writer, category, password, content, callback) {
+    console.log("db" + id);
+    connection.query(
+        `UPDATE notice set create_time=now(),title='${title}',writer='${writer}',category='${category}',password=${password},content='${content}' where id=${id}`,
+        (err) => {
+            if (err) throw err;
+            callback();
+        }
+    );
+}
+//아이디가 일치하면 삭제하기
+function deleteNotice(id, callback) {
+    connection.query(`DELETE from notice WHERE id=${id}`, (err) => {
+        if (err) throw err;
+        callback();
+    });
+}
 // 회원가입 내용 db에 전달 해주는 함수
 function insertIntoJoinTable(id, pw, name, birth, email, callback) {
     connection.query(
@@ -93,6 +115,7 @@ module.exports = {
     getJointable,
     loginCheck,
     writeNotice_event,
-    getnews,
-    writenews
+    modify_N,
+    updateNotice,
+    deleteNotice,
 };

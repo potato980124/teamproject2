@@ -98,7 +98,7 @@ main{
 
 /* sec2 탭 시작 */
 .sec2_tab_wrap{
-    width: 40%;
+    width: 392px;
     margin: 0 auto 100px;
     display: flex;
     color: #fff;
@@ -159,9 +159,6 @@ main{
 }
 .his_swi_btn_wrap>div{
     width: 5%;
-}
-.his_swi_btn_wrap>div>img{
-    width: 100%;
 }
 .h_s_prev{
     width: 10%;
@@ -227,9 +224,7 @@ main{
 .ogar_swi_btn_wrap>div{
     width: 5%;
 }
-.ogar_swi_btn_wrap>div>img{
-    width: 100%;
-}
+
 .o_prev{
     width: 10%;
     transform: scaleX(-1);
@@ -260,6 +255,7 @@ main{
 }
 .location_map>img{
     width: 100%;
+    vertical-align: bottom;
 }
 
 .location_info{
@@ -288,11 +284,7 @@ main{
 .loca_call{
     background-color: #F9B6B0;
 }
-.center_line{
-    width: 100%;
-    height: 2px;
-    background-color: #0C0C0C;
-}
+
 .loca_sub{
     background-color: #1874C1;
 }
@@ -314,7 +306,7 @@ main{
     justify-content: space-between;
 }
 .l_api_box>div{
-    width: calc(33.333% - 20px);
+    width: calc(33.333% - 10px);
     background-color: #0C0C0C;
     padding: 10px 20px;
     box-sizing: border-box;
@@ -359,6 +351,27 @@ main{
     .w1440{
         width: 100%;
     }
+    /* 섹션1 시작 */
+    .middle_imgs{
+        width: 60%; height: 900px;
+    }
+      /* 섹션3 로케이션시작 */
+      .location_cont_wrap{
+        justify-content: center;
+    }
+    .location_map{
+        width: 80%;
+    }
+    .location_map>img{
+        width: 100%;
+    }
+    
+    .location_info{
+        width: 100%;
+    }
+    .location_info>li{
+        margin-top: 50px;
+    }
 }
 @media(max-width:1200px){
     /* 섹션1 시작 */
@@ -380,29 +393,13 @@ main{
     }
 
     /* 섹션3 로케이션시작 */
-    .location_cont_wrap{
-        justify-content: center;
-    }
-    .location_map{
-        width: 80%;
-    }
-    .location_map>img{
-        width: 100%;
-    }
-    
-    .location_info{
-        width: 100%;
-    }
-    .location_info>li{
-        margin-top: 50px;
-    }
     /* sec4 스폰서 시작 */
 }
 
 @media(max-width:600px){
     /* 섹션1 시작 */
     .middle_imgs{
-        height: 500px;
+        height: 400px;
     }
 
     .committee .bottom_txt>p{
@@ -412,9 +409,15 @@ main{
         font-size: 18px; font-weight: bold;
         margin-bottom: 50px;
     }
+    .committee .bottom_txt>h2{
+        margin-bottom: 0;
+    }
+    .committee .bottom_txt>.bottom_main_txt{
+        display: none;
+    }
     /* 섹션2시작 */
     .sec2_tab_wrap{
-        width: 40%;
+        width: 192px;
         margin: 20px auto 0;
     }
     .sec2_tab_wrap>li{
@@ -427,6 +430,9 @@ main{
         margin-top: 50px;
     }
     /* 히스토리 컨텐츠 시작 */
+    .mySwiper_his {
+        width: 100%;
+    }
     .his_con_box{
         height: 300px;
         padding: 25px 0;
@@ -437,8 +443,13 @@ main{
         justify-content: center;
         flex-direction: column;
     }
+    .his_swi_btn_wrap{
+        display: none;
+    }
     /* 조직체계 컨텐츠시작 */
-
+    .mySwiper_orga {
+        width: 100%;
+    }
     .ogar_con_box{
         height: 300px;
         padding: 25px 0;
@@ -459,7 +470,9 @@ main{
     .ogar_con_box>p>strong{
         margin-right: 10px;
     }
-
+    .ogar_swi_btn_wrap {
+        display: none;
+    }
 
     /* 섹션3 로케이션시작 */
     .location_cont_wrap {
@@ -509,7 +522,12 @@ main{
 
 
 @media(max-width:375px){
+    /* 섹션1 시작  */
     .middle_imgs{
         height: 300px;
+    }
+    /* 섹션2 시작  */
+    .sec2_tab_wrap{
+        width: 70%;
     }
 }

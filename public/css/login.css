@@ -1,5 +1,13 @@
 @import url(common.css);
-
+/* 뒤로가기 버튼 */
+.login .back_btn{
+    display: none;
+    position: absolute;
+    top: 0; left: 0;
+}
+.login .back_btn>img{
+    width: 80px; height: 80px;
+}
 /* 메인 시작 */
 .login{
     height: 100vh;
@@ -175,6 +183,11 @@
     .login .right_content_wrap{
         width: 100%;
         border: 0;
+    }
+}
+@media(max-width:1100px){
+    .login .back_btn{
+        display: block;
     }
 }
 @media(max-width:600px){

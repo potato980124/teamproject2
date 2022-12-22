@@ -13,12 +13,9 @@ main {
 }
 .main .sec1_wrap {
     height: 100vh;
-    position: relative;
     margin-top: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
     width: 100%;
+    position: relative;
 }
 .confetti {
     width: 70%;
@@ -54,8 +51,19 @@ main {
         opacity: 0;
     }
 }
-
-.main .sec1_wrap > div {
+.main .main_img_wrap{
+    width:100%;
+    height:100%;
+    min-width: 300px;
+    margin:0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+.main .sec1_wrap > div >div {
     position: absolute;
 }
 .main_logo {
@@ -107,6 +115,7 @@ main {
 .main .section1 .wave {
     width: 100vw;
     position: absolute;
+    left:0;
     bottom: 0;
     z-index: 99;
 }
@@ -381,19 +390,22 @@ main {
     display: flex;
     justify-content: space-between;
     vertical-align: middle;
-    padding: 30px 50px;
+    padding: 0px 50px;
     box-sizing: border-box;
 }
 .sec4_cont .notice_list h4 {
-    padding: 0 20px;
+    /* padding: 0 20px; */
+    line-height: 4;
     box-sizing: border-box;
     text-align: center;
 }
 .sec4_cont .notice_list > h4:first-child {
     width: 15%;
+    text-align: left;
 }
 .sec4_cont .notice_list > h4:last-child {
     width: 15%;
+    text-align: right;
 }
 .sec4_cont .notice_list .notice_title {
     text-align: left;
@@ -411,119 +423,148 @@ main {
 }
 
 /*섹션 5*/
-.section5{
-    background-color: #0c0c0c;
-   }
-    .section5 .sec5_content{
-    background-color: #0c0c0c;
-      }
-    .section5 .swiper {
-        width: 100%;
-        height: 100%;
-      }
-    .section5 .swiper-slide{
-        text-align: center;
-        width: 100%; height: 500px;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        /* filter: brightness(70%); */
-        transition:all 0.2s;
-      }
-      .section5  .swiper-slide-active{
-        filter: brightness(100%);
-      }
-      .section5 .newsimg .news_box{
-        width: 100%; height: 0;
-        transition:all 0.3s;
-      }
-      .section5 .newsimg img{
-        width: 100%; height: 100%;
-        position: relative;
-        object-fit: cover;
-      }
-      .section5 .swiper-slide-active .news_box{
-        position: absolute;
-        top:0;
-        height: 100%;
-        background-color: #00000080;
-        transition-duration: 0.5s;
-        transition-timing-function: ease-in-out;
-      }
-    
-      .section5 .newsimg .txt_box{
-        position: absolute;
-        top:0;
-        width: 100%; height: 100%;
-        padding: 40px;
-        box-sizing: border-box;
-        opacity: 0;
-       
-      }
-      .section5 .swiper-slide-active .txt_box{
-        opacity: 1;
-        box-sizing: border-box;
-        color: #fff;
-      }
-      .section5 .txt_box h4{
-        font-weight: bold;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        padding: 40px 10px;
-        box-sizing: border-box;
-      }
-      .section5 .txt_box p{
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 8;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        line-height: 1.6;
-        margin-bottom: 50px;
-        padding: 0 10px;
-        box-sizing: border-box;
-      }
-      .section5 .newsimg .n_more_btn{
-        display: block;
-        width: 30%;
-       margin: 0px auto;
-       padding: 10px;
-       box-sizing: border-box;
-       border: 1px solid #fff;
-       color: #fff;
-      }
- 
-      .section5 .swiper-pagination{
-        position: relative;
-        padding-top: 50px;
-      }
-      .section5 .swiper-pagination-bullets .swiper-pagination-bullet{
-        width: 5.2%;
-        background-color: #ffffff80;
-        margin:0 0;
-        border-radius: 0;
-      }
-    
 
-      .section5 .swiper-slide.img1{
-        background-image: url(../img/city1.jpg);
-      }
-      .section5 .swiper-slide.img2{
-        background-image: url(../img/city2.jpg);
-      }
-      .section5 .swiper-slide.img3{
-        background-image: url(../img/city3.jpg);
-      }
-      .section5 .swiper-slide.img4{
-        background-image: url(../img/city4.jpg);
-      }
-      .section5 .swiper-slide.img5{
-        background-image: url(../img/city5.jpg);
-      }
-      .section5 .swiper-slide.img6{
-        background-image: url(../img/city6.jpg);
-      }
+#section5 {
+    background-color: #f3f2ee;
+}
+.sec5_title {
+    /* padding: 100px 0; */
+    padding-top: 200px;
+}
+.swiperN {
+    width: 100%;
+    height: 100%;
+}
+
+.news_bnr {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.news_bnr1 {
+    background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 35.93%, rgba(0, 0, 0, 0) 90%),
+        linear-gradient(0deg, rgba(114, 114, 114, 0.3), rgba(114, 114, 114, 0.2)), url(../img/news0.png);
+}
+.news_bnr2 {
+    background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 35.93%, rgba(0, 0, 0, 0) 90%),
+        linear-gradient(0deg, rgba(114, 114, 114, 0.3), rgba(114, 114, 114, 0.2)), url(../img/news1.jpg);
+}
+.news_bnr3 {
+    background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 35.93%, rgba(0, 0, 0, 0) 90%),
+        linear-gradient(0deg, rgba(114, 114, 114, 0.3), rgba(114, 114, 114, 0.2)), url(../img/news2.jpg);
+}
+
+.news_txt {
+    position: absolute;
+    width: 50%;
+    right: 50px;
+    /* max-width: 50%;s */
+    text-align: right;
+    bottom: 50%;
+    transform: translateY(50%);
+    box-sizing: border-box;
+    color: #fff;
+}
+.news_txt > p {
+    margin: 20px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: no-wrap;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.news_more > a {
+    color: #fff;
+    font-weight: bold;
+}
+/* 여기서부터 시작 */
+
+.news_arrow > ul {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 30px;
+}
+.news_arrow > ul > li {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+}
+.news_arrow a {
+    display: block;
+    width: 40px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px auto;
+}
+
+.news_arrow > ul {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 30px;
+}
+.news_arrow > ul > li {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+}
+.news_arrow a {
+    display: block;
+    width: 40px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px auto;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: -3px;
+    width: auto;
+}
+
+.swiper-pagination {
+    width: 50px;
+    position: relative;
+    bottom: 0;
+    color: #000;
+    font-size: 0 !important;
+}
+.swiper-pagination > span {
+    font-size: 16px;
+    font-weight: bold;
+}
+.swiper-pagination-total {
+    margin-left: 25px;
+    position: relative;
+}
+.swiper-pagination-total::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 3px);
+    left: -15px;
+    width: 5px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #000;
+}
+.slide_prev {
+    background-image: url(../img/arrow_prev.png);
+}
+.slide_next {
+    background-image: url(../img/arrow_next.png);
+}
+
 /* 섹션5 종료 */
 
 /* 섹션6 시작 */
@@ -785,7 +826,7 @@ main {
 }
 @media (max-width: 1000px) {
     .main .sec4_cont > .notice_list {
-        padding: 30px 20px;
+        padding: 0 20px;
     }
     .main .notice_list > h4:nth-child(2) {
         overflow: hidden;
@@ -794,14 +835,13 @@ main {
     }
     .main .notice_list > h4:first-child {
         width: 20%;
-        font-size: 15px;
     }
     .main .notice_list > h4:last-child {
         width: 15%;
-        font-size: 15px;
     }
     .main .notice_list h4 {
-        padding: 0 0;
+        padding: 0;
+        font-size:15px;
     }
     .section5 .txt_box p{
         margin-bottom: 60px;
@@ -809,18 +849,7 @@ main {
       }
 }
 @media (max-width: 800px) {
-    #right_title > ul > li {
-        width: 100px;
-        height: 100px;
-    }
-    #right_title > ul > li > p {
-        font-size: 16px;
-    }
-    .section5 .txt_box h4{
-        padding: 50px 10px;
-      }
 }
-  
 @media (max-width: 600px) {
     h1 {
         font-size: 24px;
