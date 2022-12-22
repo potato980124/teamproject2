@@ -45,7 +45,6 @@
                     <h4>작성일</h4>
                 </div>
                 <% for(let i=0; i<9; i++){%>
-
                 <div onclick="javascript:location.href='/notice_detail?id=<%= rows1[i].id %>'">
                     <input type="hidden" name="id" value="<%= rows1[i].id %>" />
                     <h4><%= rows1[i].category %></h4>

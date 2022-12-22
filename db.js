@@ -24,10 +24,17 @@ function writeNotice(title, writer, category, password, content, callback) {
         }
     );
 }
+// function getData_main(callback) {
+//     connection.query("SELECT date_format(create_time, '%y:%c:%e') as time ,title, category FROM notice ORDER BY id;", (err, rows) => {
+//         if (err) throw err;
+//         let rows3 = rows[0];
+//         callback(rows3);
+//     });
+// }
 function getNotice(callback) {
     connection.query(
-        "SELECT  date_format(create_time, '%y:%c:%e') as time ,title, writer, category, password, content FROM notice ORDER BY id;" +
-            "SELECT  date_format(create_time, '%y:%c:%e') as time, title, writer, category, password, content FROM notice_event ORDER BY id;",
+        "SELECT  date_format(create_time, '%y:%c:%e') as time ,title, writer, category, password, content, id FROM notice ORDER BY id;" +
+            "SELECT  date_format(create_time, '%y:%c:%e') as time, title, writer, category, password, content, id FROM notice_event ORDER BY id;",
         (err, rows) => {
             if (err) throw err;
             let rows1 = rows[0];
@@ -37,13 +44,12 @@ function getNotice(callback) {
     );
 }
 function getNoticeByid(id, callback) {
-    //한줄을 다 불러올때는 from + 'table 이름" + 없음
-
-    connection.query(`SELECT * FROM notice where id='${id}'`, (err, row) => {
+    connection.query(`SELECT * FROM notice where id=${id}`, (err, row) => {
         if (err) throw err;
         callback(row);
     });
 }
+
 //아이디가 일치하는 부분을 update할 내용 내보내기
 function modify_N(id, callback) {
     connection.query(`SELECT * FROM notice where id=${id}`, (err, row) => {
@@ -122,4 +128,5 @@ module.exports = {
     modify_N,
     updateNotice,
     deleteNotice,
+    // getData_main,
 };

@@ -8,7 +8,9 @@ const path = require("path");
 const db = require("./../db.js");
 //notice=====================================
 router.get("/", (req, res) => {
-    res.render("main");
+    db.getNotice((rows1) => {
+        res.render("main", { rows1: rows1 });
+    });
 });
 // router.get("/notice_list", (req, res) => {
 //     db.getNotice((rows) => {
@@ -42,8 +44,7 @@ router.post("/w_notice", (req, res) => {
     });
 });
 router.get("/notice_detail", (req, res) => {
-    let param = JSON.parse(JSON.stringify(req.body));
-    let id = param["id"];
+    let id = req.query.id;
     // let id = req.query.id;
     db.getNoticeByid(id, (row) => {
         console.log(id);
@@ -108,7 +109,7 @@ router.get("/event", (req, res) => {
     res.render("event");
 });
 // 이벤트 등록 페이지
-router.get("/eventwrite", (req, res) => {
+router.get("/event_write", (req, res) => {
     res.render("event_write");
 });
 
@@ -151,47 +152,49 @@ router.get("/test", (req, res) => {
     res.render("test");
 });
 
-
 const upload = multer({
-    storage:multer.diskStorage({
-      destination(req,file,done) {
-        done(null, '../public/uploads/'); //폴더를 만들었으니 이제 upload에 저장할 공간을 확보해서 저장해라
-      },
-      filename(req,file,done){//파일의 이름을 똑같이 주면 안되니까... 파일명 뒤에 업데이트한 날짜를 붙히려고 하는 중
-        const ext = path.extname(file.originalname); //origin에서 파일의 확장자를 뽑아내는 것
-        done(null, path.basename(file.originalname, ext)+ Date.now() + ext); //파일명 + 날짜 +확장자명 으로 저장해주려고 하는 것
-        //파일명에 확장자까지 쭉 붙혀서 한 번에 저장하게 됨
-      }
+    storage: multer.diskStorage({
+        destination(req, file, done) {
+            done(null, "../public/uploads/"); //폴더를 만들었으니 이제 upload에 저장할 공간을 확보해서 저장해라
+        },
+        filename(req, file, done) {
+            //파일의 이름을 똑같이 주면 안되니까... 파일명 뒤에 업데이트한 날짜를 붙히려고 하는 중
+            const ext = path.extname(file.originalname); //origin에서 파일의 확장자를 뽑아내는 것
+            done(null, path.basename(file.originalname, ext) + Date.now() + ext); //파일명 + 날짜 +확장자명 으로 저장해주려고 하는 것
+            //파일명에 확장자까지 쭉 붙혀서 한 번에 저장하게 됨
+        },
     }),
     //파일 크기 limit 걸어주기
-    limits:{fileSize: 1024*1024*10} //10mb까지 올릴 수 있음 1024*1024*N -> N메가바이트까지 업로드 가능
-  })
-  
-  
+    limits: { fileSize: 1024 * 1024 * 10 }, //10mb까지 올릴 수 있음 1024*1024*N -> N메가바이트까지 업로드 가능
+});
+
 //뉴스 작성페이지
 router.get("/news_write", (req, res) => {
     res.render("news_write");
 });
 
-router.get('/news_list',(req, res) => {  //sub1페이지에 메모 데이터를 다 넣어주겠다.
+router.get("/news_list", (req, res) => {
+    //sub1페이지에 메모 데이터를 다 넣어주겠다.
     // res.render('sub1');
-    db.getnews((rows)=>{ //db에서 데이터를 받아 옴
-      res.render('news_list',{rows:rows}); //rows자리에 rows를 불러오겠다.
-    })
-  });
+    db.getnews((rows) => {
+        //db에서 데이터를 받아 옴
+        res.render("news_list", { rows: rows }); //rows자리에 rows를 불러오겠다.
+    });
+});
 
-router.post('/w_news',upload.single('news_img'), (req, res)=>{ //const에서 선언해준 upload 
+router.post("/w_news", upload.single("news_img"), (req, res) => {
+    //const에서 선언해준 upload
     let param = JSON.parse(JSON.stringify(req.body));
-    let img = 'uploads/' + req.file.filename; 
-    let name = param['news_title'];
-    let content = param['news_content'];
-    let category = param['category'];
-    db.writenews(img, name, content,category, () => { //데이터 저장(선언)한 거 모아서 보내주면 됨! , 단 db.js에는 이 순서 그대로 가야함!
-      /* res.redirect('/thumbnail'); */
-      res.redirect('/news_list');
-    }) 
+    let img = "uploads/" + req.file.filename;
+    let name = param["news_title"];
+    let content = param["news_content"];
+    let category = param["category"];
+    db.writenews(img, name, content, category, () => {
+        //데이터 저장(선언)한 거 모아서 보내주면 됨! , 단 db.js에는 이 순서 그대로 가야함!
+        /* res.redirect('/thumbnail'); */
+        res.redirect("/news_list");
+    });
     //ejs에 파일을 저장할 거임. ../img 순서를 만들어줘야 함
-  })
-  
+});
 
 module.exports = router;
