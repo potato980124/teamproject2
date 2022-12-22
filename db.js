@@ -141,7 +141,7 @@ module.exports = {
     loginCheck,
     writeNotice_event,
     insertIntoEvent,
-    getEvent
+    getEvent,
     modify_N,
     updateNotice,
     deleteNotice,
