@@ -33,7 +33,8 @@ header .sec_wrap {
     box-sizing: border-box;
 }
 header .logo {
-    width: 150px;
+    max-width: 150px;
+    min-width: 70px;
     height: 37px;
 }
 header .logo > img {
