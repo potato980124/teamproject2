@@ -38,6 +38,7 @@ function getNotice(callback) {
 }
 function getNoticeByid(id, callback) {
     //한줄을 다 불러올때는 from + 'table 이름" + 없음
+
     connection.query(`SELECT * FROM notice where id='${id}'`, (err, row) => {
         if (err) throw err;
         callback(row);

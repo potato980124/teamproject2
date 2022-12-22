@@ -42,7 +42,9 @@ router.post("/w_notice", (req, res) => {
     });
 });
 router.get("/notice_detail", (req, res) => {
-    let id = req.query.id;
+    let param = JSON.parse(JSON.stringify(req.body));
+    let id = param["id"];
+    // let id = req.query.id;
     db.getNoticeByid(id, (row) => {
         console.log(id);
         res.render("notice_content", { row: row[0] }); //테이블의 한 행만 보내줄거기 때문에
