@@ -32,6 +32,9 @@ function getNotice(callback) {
         callback(rows1, rows2);
     });
 }
+
+
+
 function getNoticeByid(id, callback) {
     //한줄을 다 불러올때는 from + 'table 이름" + 없음
     connection.query(`SELECT * FROM notice where id=${id}`, (err, row) => {
@@ -64,6 +67,24 @@ function loginCheck(id, pw, callback) {
         callback(results);
     });
 }
+
+
+//뉴스 데이터 테스트
+function getnews(callback) {
+    connection.query("SELECT * FROM news ORDER BY id", (err, rows) => {
+        if (err) throw err;
+        callback(rows);
+    });
+}
+function writenews(img, name, content, category, callback) {
+    connection.query(
+        `INSERT INTO news(create_time, newsimg, writer, content, category) values (NOW(),'${img}','${name}','${content}','${category}')`,
+        (err) => {
+            if (err) throw err;
+            callback();
+        }
+    );
+}
 module.exports = {
     writeNotice,
     getNotice,
@@ -72,4 +93,6 @@ module.exports = {
     getJointable,
     loginCheck,
     writeNotice_event,
+    getnews,
+    writenews
 };
