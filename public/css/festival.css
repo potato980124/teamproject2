@@ -13,11 +13,11 @@
 .sec_wrap.sec1_festival {
     margin-top: 80px;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
 }
 
-.sec1_festival>div {
-    width: 50%;
-}
+
 
 /* 왼쪽 포스터 내용 */
 .festival .sec1_cont {
@@ -25,39 +25,50 @@
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
+    justify-content: space-between;
 }
 
-.festival .sec1_cont>h2 {
-    margin: 80px 0;
-}
 
+/* 가운데 줄 */
 .festival .sec1_cont_line {
     width: 100%;
     height: 2px;
     background-color: black;
 }
 
-.festival .sec1_cont>.sec1_cont_maintxt {
-    margin: 80px 0;
-}
+
 
 /* 오른쪽 포스터 */
-.festival .sec1_poster {
-    display: flex;
-    justify-content: flex-end;
-}
+
 
 .festival .poster_img {
-    width: 65%;
+    width: 470px;
     height: 700px;
-    background-image: url(../img/main_sec3.png);
+    background-image: url(../img/busan-posster-festival.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-/* 모바일 텍스트 */
-.f_m_maintxt {
+/* 모바일 플러스 버튼 */
+.festival .m_plus_wrap {
     display: none;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+/* 모바일 메인 텍스트 */
+.festival .m_sec1_cont_maintxt {
+    height: 0;
+    opacity: 0;
+    transition: height 0.4s ease-in-out,opacity 1s ease-in-out;
+}
+
+.festival .m_sec1_cont_maintxt.m_sec1_cont_maintxt_on {
+    height: 450px;
+    opacity: 1;
+}
+.festival .m_sec1_cont_maintxt>h3 {
+    margin: 50px 0 20px;
 }
 
 /* 섹션 2 축제 프로그램 안내 */
@@ -176,26 +187,30 @@
 }
 
 .fes_loca_map {
-    width: calc(50% - 70px);
+    width: calc(50% - 35px);
 }
 
 .loca_map_bg {
     width: 100%;
-    height: 600px;
+    padding-top: 92.982%;
     background-image: url(../img/mapmap.png);
     background-size: cover;
     background-position: center center;
 }
 
 .fes_location_info {
-    width: 50%;
+    width: calc(50% - 35px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-.fes_location_info>li {
+.fes_location_info>li{
     display: flex;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.fes_location_info>li.fes_loca_bus{
+    padding-top: 0;
 }
 
 .fes_location_info>li>h4 {
@@ -224,99 +239,105 @@
     font-size: 18px;
 }
 
-.fes_center_line {
-    width: 100%;
-    height: 1px;
-    background-color: #0c0c0c;
-}
+
 
 @media(max-width:1440px) {
+
     /* 섹션1 축제소개 컨텐츠 및 포스터 섹션 */
+    .sec_wrap.sec1_festival {
+        justify-content: center;
+    }
+
+    /* 왼쪽 포스터 내용 */
+    .festival .sec1_cont {
+        padding-top: 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: baseline;
+    }
+
+    .festival .sec1_cont_line {
+        display: none;
+    }
+
+    /* 오른쪽 포스터 */
+
 
     .festival .poster_img {
-        width: 90%;
-        height: 750px;
+        width: 100%;
+        height: 0;
+        padding-top: 77.014%;
+        background-image: url(../img/main_sec3.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    /* 모바일 플러스 버튼 */
+    .festival .m_plus_wrap {
+        display: block;
+    }
+
+    .festival .sec1_cont_maintxt {
+        display: none;
     }
 
     /* <!-- 섹션 2 축제 프로그램 안내 --> */
     .mySwiper_fes_info {
         width: 80%;
     }
-}
 
-@media(max-width:1100px) {
+    /* 섹션3 축제위치 섹션 */
 
-    /* 섹션1 축제소개 컨텐츠 및 포스터 섹션 */
-    .sec_wrap.sec1_festival {
-        margin-top: 80px;
-        display: block;
-    }
-
-    .festival .sec1_cont {
-        display: none;
-    }
-
-    .sec1_festival>div {
-        width: 100%;
-    }
-
-    .festival .poster_img {
-        width: 100%;
-        height: auto;
-        padding-top: 80%;
-        background-color: red;
-    }
-
-    .f_m_maintxt {
-        padding-top: 30px;
-        box-sizing: border-box;
-        display: block;
-        text-align: center;
-    }
-
-    .f_m_maintxt>h3 {
-        font-weight: lighter;
-    }
-
-    /* <!-- 섹션 2 축제 프로그램 안내 --> */
-    .fes_info_bg {
-        height: 400px;
+    .fes_loca_cont_wrap {
+        padding: 0 50px;
         box-sizing: border-box;
     }
-
-    .fes_info_swi_btn_wrap {
-        top: 200px;
-        transform: translateY(-25%);
-    }
-
-
-     /* 섹션3 축제위치 섹션 */
-
-
     .fes_loca_map {
         width: 100%;
     }
+
     .fes_location_info {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-top: 50px;
     }
+
     .fes_location_info>li {
         padding-top: 25px;
         box-sizing: border-box;
     }
+
     .fes_location_info>li>h4 {
         margin: 0;
         width: fit-content;
         text-align: center;
     }
+
     .fes_location_info>li>p {
         margin-left: 20px;
     }
 }
 
+@media(max-width:1100px) {
+
+    /* 섹션1 축제소개 컨텐츠 및 포스터 섹션 */
+    /* <!-- 섹션 2 축제 프로그램 안내 --> */
+
+
+    /* 섹션3 축제위치 섹션 */
+
+}
+
 @media(max-width:600px) {
+    /* 섹션1 축제소개 컨텐츠 및 포스터 섹션 */
+    .festival .m_plus_wrap>img {
+        width: 32px; height: 32px;
+    }
 
     /* <!-- 섹션 2 축제 프로그램 안내 --> */
     .festival .subTitle {
@@ -345,31 +366,42 @@
     .fes_info_swi_btn_wrap>div>img {
         width: 15px;
     }
-      /* 섹션3 축제위치 섹션 */
 
-    .loca_map_bg {
-        height: 300px;
+    /* 섹션3 축제위치 섹션 */
+
+    .fes_loca_cont_wrap {
+        padding: 0;
+        box-sizing: border-box;
     }
 
     .fes_location_info>li {
         display: block;
     }
-    .fes_center_line_wrap{
+
+    .fes_center_line_wrap {
         padding-top: 0 !important;
     }
-    
-      
+
+
     .fes_location_info>li>p {
         margin: 0;
         padding-top: 15px;
-        box-sizing: border-box; 
+        box-sizing: border-box;
         font-size: 16px;
     }
-    
-    .fes_center_line{
+
+    .fes_center_line {
         display: none;
     }
 
+}
+
+@media(max-width:500px) {
+      /* 섹션1 축제소개 컨텐츠 및 포스터 섹션 */
+    .festival .m_sec1_cont_maintxt.m_sec1_cont_maintxt_on {
+        height: 350px;
+        opacity: 1;
+    }
 }
 
 @media(max-width:375px) {
@@ -389,11 +421,9 @@
         transform: translateY(-25%);
     }
 
-     /* 섹션3 축제위치 섹션 */
-     .loca_map_bg {
-        height: 250px;
-    }
-     .fes_location_info>li>p {
+    /* 섹션3 축제위치 섹션 */
+
+    .fes_location_info>li>p {
         font-size: 10px;
     }
 }

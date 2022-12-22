@@ -13,12 +13,9 @@ main {
 }
 .main .sec1_wrap {
     height: 100vh;
-    position: relative;
     margin-top: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
     width: 100%;
+    position: relative;
 }
 .confetti {
     width: 70%;
@@ -54,8 +51,19 @@ main {
         opacity: 0;
     }
 }
-
-.main .sec1_wrap > div {
+.main .main_img_wrap{
+    width:100%;
+    height:100%;
+    min-width: 300px;
+    margin:0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+.main .sec1_wrap > div >div {
     position: absolute;
 }
 .main_logo {
@@ -107,6 +115,7 @@ main {
 .main .section1 .wave {
     width: 100vw;
     position: absolute;
+    left:0;
     bottom: 0;
     z-index: 99;
 }
@@ -381,19 +390,22 @@ main {
     display: flex;
     justify-content: space-between;
     vertical-align: middle;
-    padding: 30px 50px;
+    padding: 0px 50px;
     box-sizing: border-box;
 }
 .sec4_cont .notice_list h4 {
-    padding: 0 20px;
+    /* padding: 0 20px; */
+    line-height: 4;
     box-sizing: border-box;
     text-align: center;
 }
 .sec4_cont .notice_list > h4:first-child {
     width: 15%;
+    text-align: left;
 }
 .sec4_cont .notice_list > h4:last-child {
     width: 15%;
+    text-align: right;
 }
 .sec4_cont .notice_list .notice_title {
     text-align: left;
@@ -834,7 +846,7 @@ main {
 }
 @media (max-width: 1000px) {
     .main .sec4_cont > .notice_list {
-        padding: 30px 20px;
+        padding: 0 20px;
     }
     .main .notice_list > h4:nth-child(2) {
         overflow: hidden;
@@ -843,32 +855,28 @@ main {
     }
     .main .notice_list > h4:first-child {
         width: 20%;
-        font-size: 15px;
     }
     .main .notice_list > h4:last-child {
         width: 15%;
-        font-size: 15px;
     }
     .main .notice_list h4 {
-        padding: 0 0;
+        padding: 0;
+        font-size:15px;
     }
 }
 @media (max-width: 800px) {
+    .main .sec1_wrap {
+        height: 70vh;
+    }
 }
 @media (max-width: 600px) {
-    h1 {
-        font-size: 24px;
-    }
-    h3 {
-        font-size: 16px;
+    /* h4 {
+        font-size: 12px;
         font-weight: 900;
-    }
-    h4 {
-        font-size: 10px;
-        font-weight: 900;
-    }
-    p {
-        font-size: 10px;
+    } */
+    .main .notice_list h4 {
+        padding: 0;
+        font-size:12px;
     }
     .main .sec3_subtitle {
         display: flex;
