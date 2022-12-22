@@ -47,7 +47,7 @@
                             <h4>부산 바다 축제</h4>
                         </div>
                         <div class="swiper-slide event_tab tab">
-                            <h4>부산 원도심 골목길 축제</h4>
+                            <h4>부산 유채꽃 축제</h4>
                         </div>
                         <div class="swiper-slide event_tab tab">
                             <h4>시민의 종 타종식</h4>
@@ -55,42 +55,11 @@
                     </div>
                 </div>
                 <div class="tap_event_content tab_content_wrap tab_active">
+                    <%citys.forEach((row)=>{%>
                     <div>
-                        <div class="img"><img src="img/alley_winner_08-01.png" alt=""></div>
+                        <div class="img"><img src="<%=row.eventimg%>" alt=""></div>
                     </div>
-                    <div>
-                        <div class="img"><img src="img/alley_winner_09-01.png" alt=""></div>
-                    </div>
-                    <div>
-                        <div class="img"><img src="img/alley_winner_10-01.png" alt=""></div>
-                    </div>
-                    <div>
-                        <div class="img"><img src="img/alley_winner_11-01.png" alt=""></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
+                    <%});%>
                     <span class="regis_btn">
                         <a href="/eventwrite">
                             <input type="button" value="이벤트 등록">
@@ -98,249 +67,75 @@
                     </span>
                 </div>
                 <div class="tap_event_content tab_content_wrap">
+                    <%havors.forEach((row)=>{%>
                     <div>
-                        <div class="img ship"></div>
+                        <div class="img"><img src="<%=row.eventimg%>" alt=""></div>
                     </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
+                    <%});%>
                     <span class="regis_btn">
-                        <input type="button" value="이벤트 등록">
+                        <a href="">
+                            <input type="button" value="이벤트 등록">
+                        </a>
                     </span>
                 </div>
                 <div class="tap_event_content tab_content_wrap">
+                    <%fires.forEach((row)=>{%>
                     <div>
-                        <div class="img">third</div>
+                        <div class="img"><img src="<%=row.eventimg%>" alt=""></div>
                     </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
+                    <%});%>
                     <span class="regis_btn">
-                        <input type="button" value="이벤트 등록">
+                        <a href="">
+                            <input type="button" value="이벤트 등록">
+                        </a>
                     </span>
                 </div>
                 <div class="tap_event_content tab_content_wrap">
+                    <%rocks.forEach((row)=>{%>
                     <div>
-                        <div class="img">fourth</div>
+                        <div class="img"><img src="<%=row.eventimg%>" alt=""></div>
                     </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
+                    <%});%>
                     <span class="regis_btn">
-                        <input type="button" value="이벤트 등록">
+                        <a href="">
+                            <input type="button" value="이벤트 등록">
+                        </a>
                     </span>
                 </div>
                 <div class="tap_event_content tab_content_wrap">
+                    <%seas.forEach((row)=>{%>
                     <div>
-                        <div class="img">fifth</div>
+                        <div class="img"><img src="<%=row.eventimg%>" alt=""></div>
                     </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
+                    <%});%>
                     <span class="regis_btn">
-                        <input type="button" value="이벤트 등록">
+                        <a href="">
+                            <input type="button" value="이벤트 등록">
+                        </a>
                     </span>
                 </div>
                 <div class="tap_event_content tab_content_wrap">
+                    <%flowers.forEach((row)=>{%>
                     <div>
-                        <div class="img">sixth</div>
+                        <div class="img"><img src="<%=row.eventimg%>" alt=""></div>
                     </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
+                    <%});%>
                     <span class="regis_btn">
-                        <input type="button" value="이벤트 등록">
+                        <a href="">
+                            <input type="button" value="이벤트 등록">
+                        </a>
                     </span>
                 </div>
                 <div class="tap_event_content tab_content_wrap">
+                    <%rings.forEach((row)=>{%>
                     <div>
-                        <div class="img">seventh</div>
+                        <div class="img"><img src="<%=row.eventimg%>" alt=""></div>
                     </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
-                    <div>
-                        <div class="img"></div>
-                    </div>
+                    <%});%>
                     <span class="regis_btn">
-                        <input type="button" value="이벤트 등록">
+                        <a href="">
+                            <input type="button" value="이벤트 등록">
+                        </a>
                     </span>
                 </div>
             </div>
