@@ -30,6 +30,7 @@ header .sec_wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 header .logo {
     width: 150px;
@@ -40,7 +41,7 @@ header .logo > img {
     height: 100%;
 }
 header .gnb {
-    width: 70%;
+    /* width: 70%; */
     display: flex;
     justify-content: right;
 }
