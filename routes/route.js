@@ -9,17 +9,17 @@ const db = require("./../db.js");
 const upload = multer({
     storage: multer.diskStorage({
         destination(req, file, done) {
-            done(null, '../public/uploads/');
+            done(null, "../public/uploads/");
         },
         filename(req, file, done) {
             const ext = path.extname(file.originalname); //파일의 확장자
             done(null, path.basename(file.originalname, ext) + Date.now() + ext); //파일명 + 날짜 + 확장자명
-        }
+        },
     }),
     limits: {
-        fileSize: 1024 * 1024 * 9
-    } //2메가까지 업로드 가능
-})
+        fileSize: 1024 * 1024 * 9,
+    }, //2메가까지 업로드 가능
+});
 //notice=====================================
 router.get("/", (req, res) => {
     db.getNotice((rows1) => {
@@ -35,7 +35,7 @@ router.get("/notice_list", (req, res) => {
     db.getNotice((rows1, rows2) => {
         res.render("notice_list", {
             rows1: rows1,
-            rows2: rows2
+            rows2: rows2,
         }); //ejs의 rows를 받아서 rows라는 이름으로 보낸다
     });
 });
@@ -59,7 +59,7 @@ router.get("/notice_detail", (req, res) => {
     // let id = req.query.id;
     db.getNoticeByid(id, (row) => {
         res.render("notice_content", {
-            row: row[0]
+            row: row[0],
         }); //테이블의 한 행만 보내줄거기 때문에
     });
 });
@@ -89,38 +89,35 @@ router.get("/festival", (req, res) => {
 });
 //---이벤트 페이지---
 router.get("/event", (req, res) => {
-    db.getEvent((havors,flowers,fires,rocks,seas,citys,rings) => {
+    db.getEvent((havors, flowers, fires, rocks, seas, citys, rings) => {
         res.render("event", {
             havors: havors,
             flowers: flowers,
             fires: fires,
-            rocks:rocks,
-            seas:seas,
-            citys:citys,
-            rings:rings
+            rocks: rocks,
+            seas: seas,
+            citys: citys,
+            rings: rings,
         });
-    })
+    });
 });
 // 이벤트 등록 페이지
-<<<<<<< HEAD
-router.get("/event_write", (req, res) => {
-=======
-router.get('/eventwrite', (req, res) => {
->>>>>>> 7adeeba3584801ed2cb5133f7cb9e984f55a1d76
+
+router.get("/eventwrite", (req, res) => {
     res.render("event_write");
-})
-router.post('/w_event', upload.single('eventimg'), (req, res) => {
+});
+router.post("/w_event", upload.single("eventimg"), (req, res) => {
     let param = JSON.parse(JSON.stringify(req.body));
-    let writer = param['name'];
-    let pw = param['password'];
-    let category = param['category'];
-    let title = param['title'];
-    let content = param['content'];
-    let eventimg = 'uploads/' + req.file.filename;
+    let writer = param["name"];
+    let pw = param["password"];
+    let category = param["category"];
+    let title = param["title"];
+    let content = param["content"];
+    let eventimg = "uploads/" + req.file.filename;
     db.insertIntoEvent(writer, pw, category, title, content, eventimg, () => {
-        res.redirect('/event');
-    })
-})
+        res.redirect("/event");
+    });
+});
 
 //---갤러리---
 router.get("/gallery", (req, res) => {
@@ -144,7 +141,7 @@ router.post("/loginCheck", (req, res) => {
 router.get("/join", (req, res) => {
     db.getJointable((ids) => {
         res.render("join", {
-            ids: ids
+            ids: ids,
         });
     });
 });
@@ -161,23 +158,6 @@ router.post("/joininfo", (req, res) => {
 });
 router.get("/test", (req, res) => {
     res.render("test");
-});
-
-<<<<<<< HEAD
-const upload = multer({
-    storage: multer.diskStorage({
-        destination(req, file, done) {
-            done(null, "../public/uploads/"); //폴더를 만들었으니 이제 upload에 저장할 공간을 확보해서 저장해라
-        },
-        filename(req, file, done) {
-            //파일의 이름을 똑같이 주면 안되니까... 파일명 뒤에 업데이트한 날짜를 붙히려고 하는 중
-            const ext = path.extname(file.originalname); //origin에서 파일의 확장자를 뽑아내는 것
-            done(null, path.basename(file.originalname, ext) + Date.now() + ext); //파일명 + 날짜 +확장자명 으로 저장해주려고 하는 것
-            //파일명에 확장자까지 쭉 붙혀서 한 번에 저장하게 됨
-        },
-    }),
-    //파일 크기 limit 걸어주기
-    limits: { fileSize: 1024 * 1024 * 10 }, //10mb까지 올릴 수 있음 1024*1024*N -> N메가바이트까지 업로드 가능
 });
 
 //뉴스 작성페이지
@@ -210,6 +190,3 @@ router.post("/w_news", upload.single("news_img"), (req, res) => {
 });
 
 module.exports = router;
-=======
-module.exports = router;
->>>>>>> 7adeeba3584801ed2cb5133f7cb9e984f55a1d76
