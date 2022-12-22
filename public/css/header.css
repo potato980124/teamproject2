@@ -30,6 +30,7 @@ header .sec_wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 header .logo {
     width: 150px;
@@ -64,6 +65,20 @@ header .gnb ul {
     color: #0c0c0c;
     font-size: 16px;
 }
+.b_header .lnb{
+    display: none;
+    position: absolute;
+}
+.b_header .first_lnb{
+    right: 0;
+}
+.b_header .last_lnb{
+    right: 0;
+}
+.b_header .lnb>a{
+    margin: 5px;
+}
+
 .cate.active {
     /* display: flex; */
     transition: all 0.5s;
