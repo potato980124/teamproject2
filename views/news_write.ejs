@@ -7,20 +7,15 @@
                         <h2>N</h2>
                     </div>
                     <div>
-                        <h2>O</h2>
-                    </div>
-                    <div>
-                        <h2>T</h2>
-                    </div>
-                    <div>
-                        <h2>I</h2>
-                    </div>
-                    <div>
-                        <h2>C</h2>
-                    </div>
-                    <div>
                         <h2>E</h2>
                     </div>
+                    <div>
+                        <h2>W</h2>
+                    </div>
+                    <div>
+                        <h2>S</h2>
+                    </div>
+               
                 </div>
             </div>
         </div>
@@ -29,7 +24,7 @@
         </div>
     </section>
     <section class="section2">
-        <form action="w_notice" method="post">
+        <form action="w_news" method="post">
             <div class="sec_wrap">
                 <div class="notice_write_cont">
                     <div class="notice_write_cate wh_bg"><h4>게시글 작성</h4></div>
@@ -39,7 +34,7 @@
                         <div class="notice_write_cont">
                             <div class="notice_write_cate wh_bg_line">
                                 <p class="notice_write_title">*작성자</p>
-                                <div><input type="text" name="name" id="writer" class="notice_write_input" /></div>
+                                <div><input type="text" name="name" id="writer" class="notice_write_input"  enctype="multipart/form-data" /></div>
                             </div>
 
                             <div class="notice_write_cont">
@@ -54,7 +49,7 @@
                                     <div>
                                         <select name="category">
                                             <option value="">--Please choose an option--</option>
-                                            <option value="BFOC">BFOC</option>
+                                            <option value="부산 관광 축제 조직위원회">부산 관광 축제 조직위원회</option>
                                             <option value="부산항 축제">부산항 축제</option>
                                             <option value="부산 바다축제">부산 바다축제</option>
                                             <option value="골목길 축제">골목길 축제</option>
@@ -69,23 +64,27 @@
                             <div class="notice_write_cont">
                                 <div class="notice_write_cate wh_bg_line">
                                     <p class="notice_write_title">제목</p>
-                                    <div><input type="text" name="title" id="title" class="notice_write_input2" /></div>
+                                    <div><input type="text" name="news_title" id="title" class="notice_write_input2" /></div>
                                 </div>
                             </div>
                             <div class="notice_write_cont">
                                 <div class="notice_write_cate wh_bg_line">
                                     <p class="notice_write_title">내용</p>
-                                    <div class="noti_textarea"><textarea name="content" rows="10" cols="100"></textarea></div>
+                                    <div class="noti_textarea"><textarea name="news_content" rows="10" cols="100"></textarea></div>
                                 </div>
                             </div>
                             <div class="notice_write_cont">
                                 <div class="notice_write_cate wh_bg_line">
                                     <p class="notice_write_title">첨부파일</p>
-                                    <div class="noti_file"><input type="file" name="title" id="title" class="notice_write_input2" /></div>
+                                    <div class="noti_file"><input type="file" name="news_img" id="title" class="notice_write_input2" /></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="notice_btn">
+                    <input type="button" value="취소" class="list_btn" onclick="location.href='/notice_list'" />
+                    <input type="submit" value="확인" id="submit" />
                 </div>
             </div>
         </form>

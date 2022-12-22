@@ -1,0 +1,31 @@
+<section>
+    <div class="btn_new">
+        <input type="button" value="new Memo" onclick="javascript:location.href='/newMemo'" />
+    </div>
+
+    <% rows1.forEach((row, index)=>{ %> <%= row.create_time.getFullYear() %>
+    <input type="hidden" name="id" value="<%= row.id %>" />
+    <div onclick="javascript:location.href='/notice_detail?id=<%= row.id %>'">
+        <h4><%= row.category %></h4>
+        <h4 class="notice_list_title"><%= row.title %></h4>
+    </div>
+    <% }) %>
+    <table border="1">
+        <tr>
+            <th>no</th>
+            <th>Memo</th>
+            <th>Date</th>
+            <th>Edit</th>
+        </tr>
+        <% rows2.forEach((row, index)=>{ %>
+        <tr>
+            <td style="display: none"><%=row.id%></td>
+            <td><%=index +1%></td>
+            <td>
+                <input type="button" onclick="javascript:location.href='/updateMemo?id=<%=row.id%>'" value="Edit" />
+                <input type="button" onclick="javascript:location.href='/deleteMemo?id=<%=row.id%>'" value="Del" />
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+</section>

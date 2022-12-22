@@ -24,7 +24,7 @@
 }
 
 .f_icon {
-    width: 15%;
+    width: 100%;
     height: 35px;
     margin: 20px auto;
 }
@@ -34,7 +34,8 @@
 }
 .f_icon > ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
 }
 .f_icon > ul > li {
     width: 35px;
@@ -42,6 +43,9 @@
     background-position: center center;
     background-size: 30px auto;
     background-repeat: no-repeat;
+}
+.footer_pc_wrap .mobile{
+    display: none;
 }
 
 .f_icon .insta {
@@ -68,4 +72,26 @@
 }
 .f_wrap.white .f_icon .facebook {
     background-image: url(../img/footer_fb_bk.png);
+}
+.footer_pc_wrap p{
+    font-size: 15px;
+}
+
+
+
+
+@media (max-width:800px){
+    .footer_pc_wrap p{
+        font-size: 13px;
+    }
+    .footer_pc_wrap .pc{
+        display: none;
+    }
+    .footer_pc_wrap .mobile{
+        display: block;
+    }
+    .f_wrap{
+        padding-bottom: 100px;
+    }
+
 }

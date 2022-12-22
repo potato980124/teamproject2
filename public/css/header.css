@@ -41,15 +41,34 @@ header .logo > img {
     height: 100%;
 }
 header .gnb {
-    width: 70%;
+    /* width: 70%; */
     display: flex;
     justify-content: right;
 }
+
 header .gnb ul {
     width: 100%;
     display: flex;
     justify-content: right;
     gap: 15px;
+}
+header .gnb ul li > .hover_wrap {
+    display: none;
+    width: 100vh;
+    position: fixed;
+    top: 70px;
+    left: 0;
+}
+header .gnb ul li:hover > .hover_wrap > div {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+header .gnb ul li:hover > .hover_wrap {
+    display: flex;
 }
 .b_header.main .gnb a {
     color: #f3f2ee;
@@ -82,7 +101,7 @@ header .gnb ul {
 .cate.active {
     /* display: flex; */
     transition: all 0.5s;
-    right:0;
+    right: 0;
 }
 .cate {
     display: flex;
@@ -210,7 +229,11 @@ header .gnb ul {
     text-align: left;
     line-height: 2;
 }
-
+@media (max-width: 1440px) {
+    .hover_header.active > .gnb > ul {
+        width: 100%;
+    }
+}
 @media (max-width: 1100px) {
     header .gnb > ul {
         display: none;
