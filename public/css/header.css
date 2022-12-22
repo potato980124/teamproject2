@@ -30,7 +30,7 @@ header .sec_wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
+    position: relative;
 }
 header .logo {
     max-width: 150px;
@@ -85,25 +85,20 @@ header .gnb ul li:hover > .hover_wrap {
     color: #0c0c0c;
     font-size: 16px;
 }
-/* .hover_header {
-    height: 0;
-    width: 0;
-    transition: 0.5s;
-}
-.hover_header.active {
-    width: 100%;
-    padding-bottom: 20px;
-    background-color: rgba(12, 12, 12, 0.6);
-    transition: 0.5s;
-}
-.hover_header.active .mouseover_hov.active {
-    display: flex;
-}
-.hover_header .mouseover_hov {
+.b_header .lnb{
     display: none;
-    justify-content: right;
-} */
-/* ==============================cate=============== */
+    position: absolute;
+}
+.b_header .first_lnb{
+    right: 0;
+}
+.b_header .last_lnb{
+    right: 0;
+}
+.b_header .lnb>a{
+    margin: 5px;
+}
+
 .cate.active {
     /* display: flex; */
     transition: all 0.5s;

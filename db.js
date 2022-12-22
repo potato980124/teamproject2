@@ -1,3 +1,4 @@
+const { query } = require("express");
 var mysql = require("mysql");
 var connection = mysql.createConnection({
     host: "localhost",
@@ -101,6 +102,34 @@ function loginCheck(id, pw, callback) {
     });
 }
 
+<<<<<<< HEAD
+=======
+//이벤트 테이블에 넣어주는 함수
+function insertIntoEvent(writer,pw,category,title,content,eventimg,callback){
+    connection.query(`insert into eventtable(create_time,writer,pw,category,title,content,eventimg)values(now(),'${writer}','${pw}','${category}','${title}','${content}','${eventimg}')`,(err)=>{
+        if(err)throw err;
+        callback();
+    })
+}
+// 이벤트 테이블에서 데이터 가져오는 함수
+function getEvent(callback){
+    connection.query(`select * from eventtable where category ='부산항 축제';`+`select * from eventtable where category ='유채꽃 축제';`
+    + `select * from eventtable where category ='부산 불꽃 축제';` + `select * from eventtable where category ='국제 록 페스티벌';`
+    + `select * from eventtable where category ='부산 바다축제';`+ `select * from eventtable where category ='골목길 축제';`
+    + `select * from eventtable where category ='시민의 종 타종식';`,(err,rows)=>{
+        if(err)throw err;
+        let havors = rows[0];
+        let flowers = rows[1];
+        let fires = rows[2];
+        let rocks = rows[3];
+        let seas = rows[4];
+        let citys = rows[5];
+        let rings = rows[6];
+        callback(havors,flowers,fires,rocks,seas,citys,rings);
+    });
+}
+
+>>>>>>> 7adeeba3584801ed2cb5133f7cb9e984f55a1d76
 //뉴스 데이터 테스트
 function getnews(callback) {
     connection.query("SELECT * FROM news ORDER BY id", (err, rows) => {
@@ -125,6 +154,8 @@ module.exports = {
     getJointable,
     loginCheck,
     writeNotice_event,
+    insertIntoEvent,
+    getEvent,
     modify_N,
     updateNotice,
     deleteNotice,

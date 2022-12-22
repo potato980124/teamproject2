@@ -253,9 +253,9 @@ main{
 .location_map{
     width: calc(50% - 50px);
 }
-.location_map>img{
+.location_map>.commit_map{
     width: 100%;
-    vertical-align: bottom;
+    padding-top: 92.982%;
 }
 
 .location_info{
