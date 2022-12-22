@@ -1,0 +1,68 @@
+<main class="community notice_list">
+    <section class="section1">
+        <div class="sec_wrap">
+            <div class="subpage_title_wrap">
+                <div class="subpage_title">
+                    <div>
+                        <h2>N</h2>
+                    </div>
+                    <div>
+                        <h2>O</h2>
+                    </div>
+                    <div>
+                        <h2>T</h2>
+                    </div>
+                    <div>
+                        <h2>I</h2>
+                    </div>
+                    <div>
+                        <h2>C</h2>
+                    </div>
+                    <div>
+                        <h2>E</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wave">
+            <div class="wave_bg wbg_top"></div>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="sec_wrap">
+            <div class="tab_wrap">
+                <div class="tab tab_active">
+                    <h4>공지사항</h4>
+                </div>
+                <div class="tab">
+                    <h4>새소식</h4>
+                </div>
+            </div>
+            <div class="tab_content_wrap tab_active">
+                <div class="notice_cate">
+                    <h4>공지사항</h4>
+                    <h4 class="notice_list_title">제목</h4>
+                    <h4>작성일</h4>
+                </div>
+                <% rows.forEach((row, index)=>{ %>
+                    <% let regisYear =  row.create_time.getFullYear();  %>
+                    <% let regisMonth =  row.create_time.getMonth()+1;  %>
+                    <% let regisDate =  row.create_time.getDate();  %>
+                    <div><%= row.id %></div>
+                <div onclick="javascript:location.href='/notice_detail?id=<%= row.id %>'">
+                    <h4><%= rows1[i].category %></h4>
+                    <h4 class="notice_list_title"><%= row.title %></h4>
+                    <h4><%=regisYear%>-<%= regisMonth%>-<%=regisDate%></h4>
+                </div>
+                <% }; %>
+                <div class="notice_btn">
+                    <input type="button" value="글쓰기" class="list_btn" onclick="location.href='/news_write'" />
+                </div>
+            </div>
+        </div>
+        <div class="wave">
+            <div class="wave_bg wbg_bot"></div>
+        </div>
+    </section>
+</main>
+<script src="js/event.js"></script>

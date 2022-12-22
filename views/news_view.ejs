@@ -1,0 +1,48 @@
+<main class="community news_content">
+  <section class="section1">
+      <div class="sec_wrap">
+          <div class="subpage_title_wrap">
+              <div class="subpage_title">
+                  <div>
+                      <h2>N</h2>
+                  </div>
+                  <div>
+                      <h2>E</h2>
+                  </div>
+                  <div>
+                      <h2>W</h2>
+                  </div>
+                  <div>
+                      <h2>S</h2>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="wave">
+          <div class="wave_bg wbg_top"></div>
+      </div>
+  </section>
+  <section class="section2">
+      <div class="sec_wrap_b">
+          <div class="tab_content_wrap">
+              <% let regisDate = row.create_time.getDate(); %> <% let regisMonth = row.create_time.getMonth()+1; %> <% let regisYear =
+              row.create_time.getFullYear(); %>
+              <div class="notice_cate title"><h3><%= row.title %></h3></div>
+              <div class="notice_info">
+                  <p>카테고리 : <%= row.category %> |</p>
+                  <p>작성자 : <%= row.writer %> |</p>
+                  <p>작성일 :<%= regisYear %>.<%= regisMonth%>.<%= regisDate %></p>
+              </div>
+              <div class="notice_content">
+                  <pre>
+                      <%= row.content %>
+                  </pre>
+              </div>
+          </div>
+      </div>
+
+      <div class="wave">
+          <div class="wave_bg wbg_bot"></div>
+      </div>
+  </section>
+</main>

@@ -35,36 +35,37 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 // <!-- Initialize Swiper -->
-var swiper = new Swiper(".mySwiperN", {
-    spaceBetween: 30,
-    centeredSlides: true,
+var swiper = new Swiper(".mySwiper_news", {
+    loop: true,
     slidesPerView: 1,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+    centeredSlides: true,
+    spaceBetween: 0,
     pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
+      el: ".swiper-pagination",
+      clickable: true,
     },
-    // Responsive breakpoints
+    //  autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    //   },
     breakpoints: {
-        640: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-        },
-        992: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-        },
+    900: {
+        slidesPerView: 2,
+        spaceBetween: 50,
     },
-    navigation: {
-        nextEl: ".slide_next",
-        prevEl: ".slide_prev",
+    1440: {
+        slidesPerView: 3,
+        spaceBetween: 50,
     },
-});
+  },
+  navigation: {
+    nextEl: ".nswiper-button-next",
+    prevEl: ".nswiper-button-prev",
+  }
+  });
 var swiper = new Swiper(".sponser_slide", {
     slidesPerView: 2,
+    
     breakpoints: {
         1200: {
             slidesPerView: 6,
