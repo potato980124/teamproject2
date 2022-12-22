@@ -44,15 +44,15 @@
                     <h4 class="notice_list_title">제목</h4>
                     <h4>작성일</h4>
                 </div>
-                <% for(let i=0; i<9; i++){%>
-
-                <div onclick="javascript:location.href='/notice_detail?id=<%= rows1[i].id %>'">
-                    <input type="hidden" name="id" value="<%= rows1[i].id %>" />
-                    <h4><%= rows1[i].category %></h4>
-                    <h4 class="notice_list_title"><%= rows1[i].title %></h4>
-                    <h4><%= rows1[i].time %></h4>
+                <% rows1.forEach((row,index)=>{%> <% let regisDate = row.create_time.getDate(); %> <% let regisMonth = row.create_time.getMonth()+1;
+                %> <% let regisYear = row.create_time.getFullYear(); %>
+                <input type="hidden" name="id" value="<%= row.name %>" />
+                <div onclick="javascript:location.href='/notice_detail?id=<%= row.id %>'">
+                    <h4><%= row.category %></h4>
+                    <h4 class="notice_list_title"><%= row.title %></h4>
+                    <h4><%= regisYear %>.<%= regisMonth %>.<%= regisDate %></h4>
                 </div>
-                <% }; %>
+                <% }); %>
                 <div class="notice_btn">
                     <input type="button" value="글쓰기" class="list_btn" onclick="location.href='/notice_write'" />
                 </div>
@@ -63,14 +63,15 @@
                     <h4 class="notice_list_title">제목</h4>
                     <h4>작성일</h4>
                 </div>
-                <% for(let i=0; i<9; i++){ %>
-                <div onclick="javascript:location.href='/notice_detail?id=<%= rows2[i].id %>'">
-                    <input type="hidden" name="id" value="<%= rows2[i].id %>" />
-                    <h4><%= rows2[i].category %></h4>
-                    <h4 class="notice_list_title"><%= rows2[i].title %></h4>
-                    <h4><%= rows1[i].time %></h4>
+                <% rows2.forEach((row,index)=>{%> <%= let regisDate = row.create_time.getDate(); %> <%= let regisMonth = row.create_time.getMonth()+1;
+                %> <%= let regisYear = row.create_time.getFullYear(); %>
+                <input type="hidden" name="id" value="<%= row.name %>" />
+                <div onclick="javascript:location.href='/notice_detail?id=<%= row.id %>'">
+                    <h4><%= row.category %></h4>
+                    <h4 class="notice_list_title"><%= row.title %></h4>
+                    <h4><%= regisYear %>.<%= regisMonth %>.<%= regisDate %></h4>
                 </div>
-                <% }; %>
+                <% }); %>
                 <div class="notice_btn">
                     <input type="button" value="글쓰기" class="list_btn" onclick="javascript:location.href='/notice_write_event'" />
                 </div>

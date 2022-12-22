@@ -29,7 +29,8 @@
         </div>
     </section>
     <section class="section2">
-        <form action="m_notice" method="post">
+        <!-- <form action="m_notice" method="post">
+            <input type="hide" value="<%= row.id %>" name="id" />
             <div class="sec_wrap">
                 <div class="notice_write_cont">
                     <div class="notice_write_cate wh_bg"><h4>게시글 수정</h4></div>
@@ -39,13 +40,15 @@
                         <div class="notice_write_cont">
                             <div class="notice_write_cate wh_bg_line">
                                 <p class="notice_write_title">*작성자</p>
-                                <div><input type="text" name="name" id="writer" class="notice_write_input" /></div>
+                                <div><input type="text" name="name" id="writer" class="notice_write_input" value="<%= row.writer %>" /></div>
                             </div>
 
                             <div class="notice_write_cont">
                                 <div class="notice_write_cate wh_bg_line">
                                     <p class="notice_write_title">비밀번호</p>
-                                    <div><input type="password" name="password" id="pw" class="notice_write_input" /></div>
+                                    <div>
+                                        <input type="password" name="password" id="pw" class="notice_write_input" value="<%= row.password %>" />
+                                    </div>
                                 </div>
                             </div>
                             <div class="notice_write_cont">
@@ -69,13 +72,15 @@
                             <div class="notice_write_cont">
                                 <div class="notice_write_cate wh_bg_line">
                                     <p class="notice_write_title">제목</p>
-                                    <div><input type="text" name="title" id="title" class="notice_write_input2" /></div>
+                                    <div><input type="text" name="title" id="title" class="notice_write_input2" value="<%= row.title %>" /></div>
                                 </div>
                             </div>
                             <div class="notice_write_cont">
                                 <div class="notice_write_cate wh_bg_line">
                                     <p class="notice_write_title">내용</p>
-                                    <div class="noti_textarea"><textarea name="content" rows="10" cols="100"></textarea></div>
+                                    <div class="noti_textarea">
+                                        <textarea name="content" rows="10" cols="100" value="<%= row.content %>"></textarea>
+                                    </div>
                                 </div>
                             </div>
                             <div class="notice_write_cont">
@@ -92,7 +97,7 @@
                     <input type="submit" value="SUBMIT" />
                 </div>
             </div>
-        </form>
+        </form> -->
         <div class="wave">
             <div class="wave_bg wbg_bot"></div>
         </div>

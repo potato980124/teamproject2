@@ -25,16 +25,13 @@
     <section class="section2">
         <div class="sec_wrap_b">
             <div class="tab_content_wrap">
-                <% let regisDate = row.create_time.getDate(); %> <% let regisMonth = row.create_time.getMonth()+1; %> <% let regisYear =
-                row.create_time.getFullYear(); %>
-                <input type="hide" value="<%= row.id %>" />
                 <div class="notice_cate title"><h3><%= row.title %></h3></div>
                 <div class="notice_info">
                     <p>카테고리 : <%= row.category %></p>
                     <p>|</p>
                     <p>작성자 : <%= row.writer %></p>
                     <p>|</p>
-                    <p>작성일 : <%= regisYear %>.<%= regisMonth%>.<%= regisDate %></p>
+                    <p>작성일 : <h4><%= row.time %></h4></p>
                 </div>
                 <div class="notice_text">
                     <pre>
