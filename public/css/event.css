@@ -87,19 +87,8 @@
     width: calc(25% - 9px);
     height: auto;
 }
-.event .tap_event_content .regis_btn{
-    display: block;
-    width: 100%;
-}
-.event .tap_event_content .regis_btn>a{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-.event .tap_event_content .regis_btn>a>input{
-    width: calc(25% - 9px); height: 80px;
-    background-color: green;
-    color: #f3f2ee; font-size: 22px; font-weight: bold;
+.event .notice_btn_wrap {
+    margin-top: 25px;
 }
 .event .tap_event_content > div > .img {
     position: relative;
@@ -111,12 +100,12 @@
     background-position: center center;
     overflow: hidden;
 }
-.event .tap_event_content > div > .img >img{
+.event .tap_event_content > div > .img > img {
     position: absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 @media (max-width: 800px) {
     .event .event_wrap {
