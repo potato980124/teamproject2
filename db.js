@@ -141,14 +141,14 @@ function getEvent(callback) {
 
 //뉴스 데이터 테스트
 function getnews(callback) {
-    connection.query("SELECT * FROM news ORDER BY id", (err, rows) => {
+    connection.query("SELECT * FROM news ORDER BY id desc", (err, rows, fields) => {
         if (err) throw err;
         callback(rows);
     });
 }
-function writenews(img, name, content, category, callback) {
+function writenews(img, name, title, pw, content, category, callback) {
     connection.query(
-        `INSERT INTO news(create_time, newsimg, writer, content, category) values (NOW(),'${img}','${name}','${content}','${category}')`,
+        `INSERT INTO news(create_time, newsimg, writer, title, password, content, category) values (NOW(),'${img}','${name}','${title}','${pw}','${content}','${category}')`,
         (err) => {
             if (err) throw err;
             callback();
@@ -168,5 +168,7 @@ module.exports = {
     modify_N,
     updateNotice,
     deleteNotice,
+    getnews,
+    writenews
     // getData_main,
 };
