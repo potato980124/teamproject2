@@ -48,7 +48,7 @@
                     <% let regisYear =  row.create_time.getFullYear();  %>
                     <% let regisMonth =  row.create_time.getMonth()+1;  %>
                     <% let regisDate =  row.create_time.getDate();  %>
-                    <div><%= row.id %></div>
+                    <input type="hidden" name="id" value="<%= rows.id %>" />
                 <div onclick="javascript:location.href='/news_view?id=<%= row.id %>'">
                     <h4><%= row.category %></h4>
                     <h4 class="notice_list_title"><%= row.title %></h4>

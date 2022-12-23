@@ -63,7 +63,7 @@ router.get("/notice_detail", (req, res) => {
         }); //테이블의 한 행만 보내줄거기 때문에
     });
 });
-//notice====2222222=====================================
+//notice===NEWS 섹션====================================
 
 router.get("/notice_write_event", (req, res) => {
     res.render("notice_write_event");
@@ -75,11 +75,17 @@ router.post("/w_notice_event", (req, res) => {
     let category = param["category"];
     let password = param["password"];
     let content = param["content"];
+    let img = param["img"];
 
-    db.writeNotice_event(title, writer, category, password, content, () => {
+    db.writeNotice_event(title, writer, category, password, content, img,  () => {
         res.redirect("/notice_write_event");
     });
 });
+
+
+
+
+
 //modify
 
 router.get("/modifyNotice", (req, res) => {
@@ -185,29 +191,29 @@ router.get("/test", (req, res) => {
 
 //뉴스 페이지
 
-router.get("/news_write", (req, res) => {
-    res.render("news_write");
-});
+// router.get("/news_write", (req, res) => {
+//     res.render("news_write");
+// });
 
-router.post("/w_news", upload.single("news_img"), (req, res) => {
-    //const에서 선언해준 upload
-    let param = JSON.parse(JSON.stringify(req.body));
-    let img = "uploads/" + req.file.filename;
-    let title = param["news_title"];
-    let name = param["news_name"];
-    let content = param["news_content"];
-    let category = param["category"];
-    let pw = param["password"];
-    db.writenews(img, name, title, pw, content, category, () => {
-        res.redirect("/news_list");
-    })
+// router.post("/w_news", upload.single("news_img"), (req, res) => {
+//     //const에서 선언해준 upload
+//     let param = JSON.parse(JSON.stringify(req.body));
+//     let img = "uploads/" + req.file.filename;
+//     let title = param["news_title"];
+//     let name = param["news_name"];
+//     let content = param["news_content"];
+//     let category = param["category"];
+//     let pw = param["password"];
+//     db.writenews(img, name, title, pw, content, category, () => {
+//         res.redirect("/news_list");
+//     })
 
-});
-router.get("/news_list", (req, res) => {
-    db.getnews((rows) => {
-        res.render("news_list", { rows: rows }); 
-    })
-});
+// });
+// router.get("/news_list", (req, res) => {
+//     db.getnews((rows) => {
+//         res.render("news_list", { rows: rows }); 
+//     })
+// });
 
 
 module.exports = router;

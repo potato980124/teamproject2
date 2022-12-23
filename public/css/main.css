@@ -622,32 +622,36 @@ main {
 }
 
 #right_title_1.active {
-    background-image: url(../img/temple-active2.png);
+    background-image: url(../img/temple-act_wh2.png);
     border: 3px solid #ee4b3c;
+    background-color: #ee4b3c;
     color: #ee4b3c;
 }
 #right_title_1.active + p {
     color: #ee4b3c;
 }
 #right_title_2.active {
-    background-image: url(../img/art-active2.png);
+    background-image: url(../img/art-act_wh.png);
     border: 3px solid #efa7a0;
+    background-color: #efa7a0;
     color: #efa7a0;
 }
 #right_title_2.active + p {
     color: #efa7a0;
 }
 #right_title_3.active {
-    background-image: url(../img/sea-active2.png);
+    background-image: url(../img/sea-act_wh.png);
     border: 3px solid #1874c1;
+    background-color:  #1874c1;
     color: #1874c1;
 }
 #right_title_3.active + p {
     color: #1874c1;
 }
 #right_title_4.active {
-    background-image: url(../img/park-active2.png);
+    background-image: url(../img/park-act_wh.png);
     border: 3px solid #1ea849;
+    background-color:  #1ea849;
     color: #1ea849;
 }
 #right_title_4.active + p {
