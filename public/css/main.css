@@ -58,7 +58,10 @@ main {
     height: 100%;
     min-width: 300px;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -813,7 +816,8 @@ main {
         width: 100%;
     }
     .main .sec3_left {
-        height: 200px;
+        height: 300px;
+        margin-bottom: 25px;
     }
     .d-day {
         width: 100%;
@@ -911,5 +915,8 @@ main {
     }
     .section5 .txt_box h4 {
         padding: 30px 10px;
+    }
+    .main #section4 .notice_date {
+        display: none;
     }
 }

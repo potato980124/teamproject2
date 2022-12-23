@@ -52,9 +52,11 @@
                     <h4><%= rows1[i].time %></h4>
                 </div>
                 <% }; %>
-                <div class="notice_btn">
-                    <input type="button" value="글쓰기" class="list_btn" onclick="location.href='/notice_write'" />
-                </div>
+                <span class="notice_btn_wrap">
+                    <span class="notice_btn">
+                        <input type="button" value="글쓰기" class="list_btn" onclick="location.href='/notice_write'" />
+                    </span>
+                </span>
             </div>
             <div class="tab_content_wrap">
                 <div class="notice_cate">
@@ -70,9 +72,11 @@
                     <h4><%= rows1[i].time %></h4>
                 </div>
                 <% }; %>
-                <div class="notice_btn">
-                    <input type="button" value="글쓰기" class="list_btn" onclick="javascript:location.href='/notice_write_event'" />
-                </div>
+                <span class="notice_btn_wrap">
+                    <span class="notice_btn">
+                        <input type="button" value="글쓰기" class="list_btn" onclick="javascript:location.href='/notice_write_event'" />
+                    </span>
+                </span>
             </div>
         </div>
         <div class="wave">

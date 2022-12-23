@@ -238,7 +238,28 @@ h4 {
 .tab:nth-child(7).tab_active > h4 {
     color: #f9b6b0;
 }
+/* ==============notice_btn */
+.notice_btn_wrap {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+    width: 100%;
+}
+.notice_btn {
+    width: 200px;
+    height: 50px;
+    border: 1px solid #f3f2ee;
+}
 
+.notice_btn input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    color: #f3f2ee;
+}
 @media (max-width: 1440px) {
     .sec_wrap {
         width: 100%;
@@ -306,7 +327,6 @@ h4 {
     }
     .wave {
         height: 150px;
-     
     }
 
     .tab {

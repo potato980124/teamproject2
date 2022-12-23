@@ -32,7 +32,7 @@
                     <p>|</p>
                     <p>작성자 : <%= row.writer %></p>
                     <p>|</p>
-                    <p>작성일 : <h4><%= row.time %></h4></p>
+                    <p>작성일 : <%= row.time %></p>
                 </div>
                 <div class="notice_text">
                     <pre>
@@ -41,11 +41,13 @@
                 </div>
             </div>
         </div>
-        <div class="notice_btn">
-            <input type="submit" value="MODIFY" onclick="javascript:location.href='/modifyNotice?id=<%= row.id %>'" />
-        </div>
-        <div class="notice_btn">
-            <input type="submit" value="DELETE" onclick="javascript:location.href='/deleteNotice?id=<%= row.id %>'" />
+        <div class="notice_btn_wrap">
+            <div class="notice_btn">
+                <input type="submit" value="MODIFY" onclick="javascript:location.href='/modifyNotice?id=<%= row.id %>'" />
+            </div>
+            <div class="notice_btn">
+                <input type="submit" value="DELETE" onclick="javascript:location.href='/deleteNotice?id=<%= row.id %>'" />
+            </div>
         </div>
         <div class="wave">
             <div class="wave_bg wbg_bot"></div>
