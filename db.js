@@ -25,21 +25,32 @@ function writeNotice(title, writer, category, password, content, callback) {
         }
     );
 }
+// function getData_main(callback) {
+//     connection.query("SELECT date_format(create_time, '%y:%c:%e') as time ,title, category FROM notice ORDER BY id;", (err, rows) => {
+//         if (err) throw err;
+//         let rows3 = rows[0];
+//         callback(rows3);
+//     });
+// }
 function getNotice(callback) {
-    connection.query("SELECT * FROM notice ORDER BY id;" + "SELECT * FROM notice_event ORDER BY id;", (err, rows) => {
-        if (err) throw err;
-        let rows1 = rows[0];
-        let rows2 = rows[1];
-        callback(rows1, rows2);
-    });
+    connection.query(
+        "SELECT  date_format(create_time, '%y:%c:%e') as time ,title, writer, category, password, content, id FROM notice ORDER BY id;" +
+            "SELECT  date_format(create_time, '%y:%c:%e') as time, title, writer, category, password, content, id FROM notice_event ORDER BY id;",
+        (err, rows) => {
+            if (err) throw err;
+            let rows1 = rows[0];
+            let rows2 = rows[1];
+            callback(rows1, rows2);
+        }
+    );
 }
 function getNoticeByid(id, callback) {
-    //한줄을 다 불러올때는 from + 'table 이름" + 없음
-    connection.query(`SELECT * FROM notice where id='${id}'`, (err, row) => {
+    connection.query(`SELECT * FROM notice where id=${id}`, (err, row) => {
         if (err) throw err;
         callback(row);
     });
 }
+
 //아이디가 일치하는 부분을 update할 내용 내보내기
 function modify_N(id, callback) {
     connection.query(`SELECT * FROM notice where id=${id}`, (err, row) => {
@@ -92,28 +103,37 @@ function loginCheck(id, pw, callback) {
 }
 
 //이벤트 테이블에 넣어주는 함수
-function insertIntoEvent(writer,pw,category,title,content,eventimg,callback){
-    connection.query(`insert into eventtable(create_time,writer,pw,category,title,content,eventimg)values(now(),'${writer}','${pw}','${category}','${title}','${content}','${eventimg}')`,(err)=>{
-        if(err)throw err;
-        callback();
-    })
+function insertIntoEvent(writer, pw, category, title, content, eventimg, callback) {
+    connection.query(
+        `insert into eventtable(create_time,writer,pw,category,title,content,eventimg)values(now(),'${writer}','${pw}','${category}','${title}','${content}','${eventimg}')`,
+        (err) => {
+            if (err) throw err;
+            callback();
+        }
+    );
 }
 // 이벤트 테이블에서 데이터 가져오는 함수
-function getEvent(callback){
-    connection.query(`select * from eventtable where category ='부산항 축제';`+`select * from eventtable where category ='유채꽃 축제';`
-    + `select * from eventtable where category ='부산 불꽃 축제';` + `select * from eventtable where category ='국제 록 페스티벌';`
-    + `select * from eventtable where category ='부산 바다축제';`+ `select * from eventtable where category ='골목길 축제';`
-    + `select * from eventtable where category ='시민의 종 타종식';`,(err,rows)=>{
-        if(err)throw err;
-        let havors = rows[0];
-        let flowers = rows[1];
-        let fires = rows[2];
-        let rocks = rows[3];
-        let seas = rows[4];
-        let citys = rows[5];
-        let rings = rows[6];
-        callback(havors,flowers,fires,rocks,seas,citys,rings);
-    });
+function getEvent(callback) {
+    connection.query(
+        `select * from eventtable where category ='부산항 축제';` +
+            `select * from eventtable where category ='유채꽃 축제';` +
+            `select * from eventtable where category ='부산 불꽃 축제';` +
+            `select * from eventtable where category ='국제 록 페스티벌';` +
+            `select * from eventtable where category ='부산 바다축제';` +
+            `select * from eventtable where category ='골목길 축제';` +
+            `select * from eventtable where category ='시민의 종 타종식';`,
+        (err, rows) => {
+            if (err) throw err;
+            let havors = rows[0];
+            let flowers = rows[1];
+            let fires = rows[2];
+            let rocks = rows[3];
+            let seas = rows[4];
+            let citys = rows[5];
+            let rings = rows[6];
+            callback(havors, flowers, fires, rocks, seas, citys, rings);
+        }
+    );
 }
 
 //뉴스 데이터 테스트
@@ -145,4 +165,5 @@ module.exports = {
     modify_N,
     updateNotice,
     deleteNotice,
+    // getData_main,
 };
