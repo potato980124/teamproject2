@@ -80,6 +80,26 @@ router.post("/w_notice_event", (req, res) => {
         res.redirect("/notice_write_event");
     });
 });
+//modify
+
+router.get("/modifyNotice", (req, res) => {
+    let id = req.query.id;
+    db.modify_N(id, (row) => {
+        res.render("notice_modify", { row: row[0] });
+    });
+});
+router.post("/m_notice", (req, res) => {
+    let param = JSON.parse(JSON.stringify(req.body));
+    let id = param["id"];
+    let title = param["title"];
+    let writer = param["writer"];
+    let category = param["category"];
+    let password = param["password"];
+    let content = param["content"];
+    db.updateNotice(id, title, writer, category, password, content, () => {
+        res.redirect("/notice_list"); //redirect 에는 / 붙인다
+    });
+});
 //==============================================
 router.get("/committee", (req, res) => {
     res.render("committee");

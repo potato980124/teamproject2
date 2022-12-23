@@ -41,42 +41,42 @@ var swiper = new Swiper(".mySwiper_news", {
     centeredSlides: true,
     spaceBetween: 0,
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
-     autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
+    //  autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    //   },
     breakpoints: {
-    900: {
-        slidesPerView: 2,
-        spaceBetween: 50,
+        900: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+        },
     },
-    1200: {
-        slidesPerView: 3,
-        spaceBetween: 50,
+    navigation: {
+        nextEl: ".nswiper-button-next",
+        prevEl: ".nswiper-button-prev",
     },
-  },
-  navigation: {
-    nextEl: ".nswiper-button-next",
-    prevEl: ".nswiper-button-prev",
-  }
-  });
+});
 var swiper = new Swiper(".sponser_slide", {
-    slidesPerView: 2,
-    
+    slidesPerView: 4,
+
     breakpoints: {
         1200: {
             slidesPerView: 6,
-            spaceBetween: 40,
+            spaceBetween: 20,
         },
-        600: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-        },
+        // 600: {
+        //     slidesPerView: 4,
+        //     spaceBetween: 20,
+        // },
     },
-    spaceBetween: 30,
+    spaceBetween: 20,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
