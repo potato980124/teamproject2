@@ -1,0 +1,64 @@
+<main class="community notice_content">
+    <section class="section1">
+        <div class="sec_wrap">
+            <div class="subpage_title_wrap">
+                <div class="subpage_title">
+                    <div>
+                        <h2>E</h2>
+                    </div>
+                    <div>
+                        <h2>V</h2>
+                    </div>
+                    <div>
+                        <h2>E</h2>
+                    </div>
+                    <div>
+                        <h2>N</h2>
+                    </div>
+                    <div>
+                        <h2>T</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wave">
+            <div class="wave_bg wbg_top"></div>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="sec_wrap_b">
+            <div class="tab_content_wrap">
+                <input type="hidden" name="id" value="<%= row.id %>" />
+                <div class="notice_cate title">
+                    <h3><%= row.title %></h3>
+                </div>
+                <div class="notice_info">
+                    <p>카테고리 : <%= row.category %></p>
+                    <p>|</p>
+                    <p>작성자 : <%= row.writer %></p>
+                    <p>|</p>
+                    <% let regisYear =  row.create_time.getFullYear();  %>
+                    <% let regisMonth =  row.create_time.getMonth()+1;  %>
+                    <% let regisDate =  row.create_time.getDate();  %>
+                    <p>작성일 : <%=regisYear%>.<%=regisMonth%>.<%=regisDate%> 
+                    </p>
+                </div>
+                <div class="notice_text">
+                    <pre>
+                        <img src="<%=row.eventimg%>" alt="">
+                        <p><%= row.content %></p>
+                    </pre>
+                </div>
+            </div>
+        </div>
+        <div class="notice_btn">
+            <input type="submit" value="MODIFY" onclick="javascript:location.href=''" />
+        </div>
+        <div class="notice_btn">
+            <input type="submit" value="DELETE" onclick="javascript:location.href=''" />
+        </div>
+        <div class="wave">
+            <div class="wave_bg wbg_bot"></div>
+        </div>
+    </section>
+</main>

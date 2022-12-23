@@ -118,6 +118,13 @@ router.post("/w_event", upload.single("eventimg"), (req, res) => {
         res.redirect("/event");
     });
 });
+//이벤트 세부 페이지
+router.get('/event_content',(req,res)=>{
+    let id = req.query.id;
+    db.getEventById(id,(row)=>{
+        res.render('event_content',{row:row[0]});
+    })
+})
 
 //---갤러리---
 router.get("/gallery", (req, res) => {

@@ -135,6 +135,13 @@ function getEvent(callback) {
         }
     );
 }
+//이벤트 세부페이지 데이터 값 가져올 함수
+function getEventById(id,callback){
+    connection.query(`select * from eventtable where id = '${id}'`,(err,row)=>{
+        if(err) throw err;
+        callback(row);
+    })
+}
 
 //뉴스 데이터 테스트
 function getnews(callback) {
@@ -162,6 +169,7 @@ module.exports = {
     writeNotice_event,
     insertIntoEvent,
     getEvent,
+    getEventById,
     modify_N,
     updateNotice,
     deleteNotice,
