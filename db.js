@@ -34,8 +34,8 @@ function writeNotice(title, writer, category, password, content, callback) {
 // }
 function getNotice(callback) {
     connection.query(
-        "SELECT  date_format(create_time, '%y:%c:%e') as time ,title, writer, category, password, content, id FROM notice ORDER BY id;" +
-            "SELECT  date_format(create_time, '%y:%c:%e') as time, title, writer, category, password, content, id FROM notice_event ORDER BY id;",
+        "SELECT  date_format(create_time, '%y.%c.%e') as time ,title, writer, category, password, content, id FROM notice ORDER BY id;" +
+            "SELECT  date_format(create_time, '%y.%c.%e') as time, title, writer, category, password, content, id FROM notice_event ORDER BY id;",
         (err, rows) => {
             if (err) throw err;
             let rows1 = rows[0];
@@ -45,10 +45,13 @@ function getNotice(callback) {
     );
 }
 function getNoticeByid(id, callback) {
-    connection.query(`SELECT * FROM notice where id=${id}`, (err, row) => {
-        if (err) throw err;
-        callback(row);
-    });
+    connection.query(
+        `SELECT date_format(create_time, '%y 년 %c 월 %e 일') as time ,title, writer, category, password, content, id FROM notice where id=${id}`,
+        (err, row) => {
+            if (err) throw err;
+            callback(row);
+        }
+    );
 }
 
 //아이디가 일치하는 부분을 update할 내용 내보내기
