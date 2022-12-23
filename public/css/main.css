@@ -401,10 +401,18 @@ main {
     line-height: 4;
     box-sizing: border-box;
     text-align: center;
+    color: #0c0c0c;
 }
 .sec4_cont .notice_list > h4:first-child {
     width: 15%;
     text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sec4_cont .notice_list > h4:nth-child(2) {
+    width: 60%;
+    text-align: center;
 }
 .sec4_cont .notice_list > h4:last-child {
     width: 15%;
@@ -935,5 +943,9 @@ main {
     }
     .main #section4 .notice_date {
         display: none;
+    }
+    .sec4_cont .notice_list > h4:nth-child(2) {
+        width: 80%;
+        text-align: left;
     }
 }

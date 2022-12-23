@@ -45,11 +45,11 @@ header .gnb_bg {
 header .logo {
     max-width: 150px;
     min-width: 70px;
-    height: 37px;
+    width: 25%;
 }
 header .logo > img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 header .gnb {
     /* width: 70%; */
@@ -95,7 +95,7 @@ header .gnb ul li:hover > .hover_wrap {
     color: #0c0c0c;
     font-size: 16px;
 }
-.b_header .lnb{
+.b_header .lnb {
     display: none;
     align-items: center;
     position: absolute;
@@ -104,13 +104,13 @@ header .gnb ul li:hover > .hover_wrap {
     transition: all 1s;
     z-index: 99;
 }
-.b_header .first_lnb{
+.b_header .first_lnb {
     right: 0;
 }
-.b_header .last_lnb{
+.b_header .last_lnb {
     right: 0;
 }
-.b_header .lnb>a{
+.b_header .lnb > a {
     margin: 5px;
 }
 
@@ -249,10 +249,10 @@ header .gnb ul li:hover > .hover_wrap {
     .hover_header.active > .gnb > ul {
         width: 100%;
     }
-    .b_header .first_lnb{
+    .b_header .first_lnb {
         right: 150px;
     }
-    .b_header .last_lnb{
+    .b_header .last_lnb {
         right: 150px;
     }
 }
