@@ -42,11 +42,11 @@
 }
 
 /* 모바일 플러스 버튼 */
-/* .festival .m_plus_wrap {
+.festival .m_plus_wrap {
     display: none;
     padding-top: 30px;
     box-sizing: border-box;
-} */
+}
 .festival .cate_more {
     width: 25px;
     height: 25px;

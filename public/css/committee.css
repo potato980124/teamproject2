@@ -19,11 +19,6 @@ main{
     box-sizing: border-box;
     background-color: #F3F2EE;
 }
-/* 로고시작 */
-.committee .top_logo{
-    height: 160px;
-    background-color: black;
-}
 
 /* 가운데 이미지 시작 */
 .middle_imgs{
