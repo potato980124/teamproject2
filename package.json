@@ -2,9 +2,6 @@
   "name": "seomooon-node",
   "version": "1.0.0",
   "main": "app.js",
-  "bin": {
-    "seomoon-node": "bin/www.js"
-  },
   "scripts": {
     "start":"node bin/www.js",
     "test": "echo \"Error: no test specified\" && exit 1"
