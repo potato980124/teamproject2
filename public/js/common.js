@@ -1,15 +1,18 @@
 window.onload = function () {
     header();
     footer();
-    headerHover();
-    headHoverOut();
+    // headerHover();
+    // headHoverOut();
 };
 function header() {
     let header = document.querySelector(".b_header");
+    let headerBg = document.querySelector('.gnb_bg')
     if (location.pathname == "/") {
         header.classList.add("main");
+        headerBg.classList.add('black');
     } else if (location.pathname != "/") {
         header.classList.remove("main");
+        headerBg.classList.remove('black');
     }
 }
 // function headerHover() {
