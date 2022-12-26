@@ -145,7 +145,30 @@ function getEventById(id,callback){
         callback(row);
     })
 }
-
+//이벤트 삭제 해줄 함수
+function deleteEvent(id, callback) {
+    connection.query(`DELETE from eventtable WHERE id=${id}`, (err) => {
+        if (err) throw err;
+        callback();
+    });
+}
+//이벤트 수정페이지에 보여줄 테이블 정보 함수 
+function modify_E(id, callback) {
+    connection.query(`SELECT * FROM eventtable where id=${id}`, (err, row) => {
+        if (err) throw err;
+        callback(row);
+    });
+}
+//이벤트 아이디가 일치하는 부분을 update
+function updateEvent(id,writer,pw,category,title,content,eventimg,callback) {
+    connection.query(
+        `UPDATE eventtable set create_time=NOW(),title='${title}',writer='${writer}',category='${category}',pw=${pw},content='${content}',eventimg ='${eventimg}' where id='${id}'`,
+        (err) => {
+            if (err) throw err;
+            callback();
+        }
+    );
+}
 //뉴스 데이터 테스트
 function getnews(callback) {
     connection.query("SELECT * FROM news ORDER BY id desc", (err, rows, fields) => {
@@ -177,6 +200,9 @@ module.exports = {
     updateNotice,
     deleteNotice,
     getnews,
-    writenews
+    writenews,
+    deleteEvent,
+    modify_E,
+    updateEvent,
     // getData_main,
 };

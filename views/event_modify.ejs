@@ -26,7 +26,8 @@
         </div>
     </section>
     <section class="section2">
-        <form action="w_event" method="post" enctype="multipart/form-data">
+        <form action="modify_e" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<%=row.id%>">
             <div class="sec_wrap">
                 <div class="notice_write_cont">
                     <div class="notice_write_cate wh_bg">
@@ -40,7 +41,7 @@
                         <div class="notice_write_cont">
                             <div class="notice_write_cate wh_bg_line">
                                 <p class="notice_write_title">*작성자</p>
-                                <div><input type="text" name="name" id="writer" class="notice_write_input" /></div>
+                                <div><input type="text" name="name" id="writer" class="notice_write_input" value="<%=row.writer%>" /></div>
                             </div>
 
                             <div class="notice_write_cont">
@@ -71,13 +72,13 @@
                             <div class="notice_write_cont">
                                 <div class="notice_write_cate wh_bg_line">
                                     <p class="notice_write_title">제목</p>
-                                    <div><input type="text" name="title" id="title" class="notice_write_input2" /></div>
+                                    <div><input type="text" name="title" id="title" class="notice_write_input2" value="<%=row.title%>" /></div>
                                 </div>
                             </div>
                             <div class="notice_write_cont">
                                 <div class="notice_write_cate wh_bg_line">
                                     <p class="notice_write_title">내용</p>
-                                    <div class="noti_textarea"><textarea name="content" rows="10" cols="100"></textarea>
+                                    <div class="noti_textarea"><textarea name="content" rows="10" cols="100"><%=row.content%></textarea>
                                     </div>
                                 </div>
                             </div>

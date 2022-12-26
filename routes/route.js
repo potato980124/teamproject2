@@ -9,7 +9,7 @@ const db = require("./../db.js");
 const upload = multer({
     storage: multer.diskStorage({
         destination(req, file, done) {
-            done(null, "../public/uploads/");
+            done(null, "public/uploads/");
         },
         filename(req, file, done) {
             const ext = path.extname(file.originalname); //파일의 확장자
@@ -151,6 +151,34 @@ router.get('/event_content',(req,res)=>{
         res.render('event_content',{row:row[0]});
     })
 })
+// 이벤트 세부 삭제 버튼
+router.get('/delete_event',(req,res)=>{
+    let id = req.query.id;
+    db.deleteEvent(id,()=>{
+        res.redirect('/event');
+    })
+})
+//이벤트 수정 페이지
+router.get('/modify_event',(req,res)=>{
+    let id = req.query.id;
+    db.modify_E(id,(row)=>{
+        res.render('event_modify',{row:row[0]});
+    })
+})
+//이벤트 수정 포스트 
+router.post("/modify_e", upload.single("eventimg"), (req, res) => {
+    let param = JSON.parse(JSON.stringify(req.body));
+    let id = param["id"];
+    let writer = param["name"];
+    let pw = param["password"];
+    let category = param["category"];
+    let title = param["title"];
+    let content = param["content"];
+    let eventimg = "uploads/" + req.file.filename;
+    db.updateEvent(id,writer,pw,category,title,content,eventimg,() => {
+        res.redirect("/event");
+    });
+});
 
 //---갤러리---
 router.get("/gallery", (req, res) => {

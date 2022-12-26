@@ -240,6 +240,7 @@ h4 {
 }
 /* ==============notice_btn */
 .notice_btn_wrap {
+    padding-top: 30px;
     display: flex;
     gap: 25px;
     justify-content: center;
