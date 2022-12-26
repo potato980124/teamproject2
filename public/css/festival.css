@@ -48,13 +48,12 @@
     box-sizing: border-box;
 }
 .festival .cate_more {
+    display: none;
     width: 25px;
     height: 25px;
     margin: 50px 0;
 }
-.festival .cate_more span:first-child {
-    transform: translateY(11.5px);
-}
+
 /* 모바일 메인 텍스트 */
 .festival .m_sec1_cont_maintxt {
     height: 0;
@@ -134,30 +133,9 @@
     margin: 0 0 20px;
 }
 
-.f_i_txt_wrap > li > div {
-    width: 20%;
-    height: fit-content;
-    padding: 8px 0;
-    margin-right: 30px;
-}
-
-.f_i_txt_wrap > li > div > h4 {
-    text-align: center;
-    color: #fff;
-    font-weight: bold;
-}
-
 .f_i_txt_wrap > li > h4 {
-    width: 80%;
+    width: calc(100% - 175px);
     color: #fff;
-}
-
-.f_i_peri_tit {
-    background-color: red;
-}
-
-.f_i_contxt_tit {
-    background-color: #f9b6b0;
 }
 
 /* 모바일 텍스트 */
@@ -198,57 +176,161 @@
 }
 
 .fes_loca_map {
-    width: calc(50% - 35px);
-}
-
-.loca_map_bg {
-    width: 100%;
-    padding-top: 92.982%;
-    background-size: cover;
-    background-position: center center;
+    width: calc(50% - 25px);
 }
 
 .fes_location_info {
-    width: calc(50% - 35px);
+    width: calc(50% - 25px);
     display: flex;
     flex-direction: column;
 }
 
 .fes_location_info > li {
     display: flex;
+    justify-content: space-between;
     padding-top: 50px;
     box-sizing: border-box;
 }
 .fes_location_info > li.fes_loca_bus {
     padding-top: 0;
 }
+.festival .sub_cate {
+    width: 125px;
+    padding: 0;
+}
+.fes_location_info > li > p {
+    width: calc(100% - 150px);
+    font-size: 18px;
+}
+/* ================================ */
+.festival .section4 {
+    background-color: #0c0c0c;
+}
+.selections > div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.selections > div:nth-child(2) {
+    margin: 20px 0;
+}
+.selections > div > div:nth-child(1) {
+    height: 60px;
+    padding: 0 20px;
+    width: 100px;
+    font-weight: 700;
+    color: #f3f2ee;
+    text-align: center;
+}
 
-.fes_location_info > li > h4 {
-    margin: 0 50px;
-    white-space: nowrap;
-    padding: 10px 10px;
+.select1 > div:nth-child(1) {
+    background-color: #ee4b3c;
+}
+.select2 > div:nth-child(1) {
+    background-color: #f9b6b0;
+}
+.select3 > div:nth-child(1) {
+    background-color: #1874c1;
+}
+.select_box {
+    position: relative;
+    width: 300px;
+    height: 60px;
+    padding: 0 20px;
     box-sizing: border-box;
-    height: fit-content;
-    color: #fff;
+    /* border: 2px solid #; */
+    background-color: #f3f2ee;
+    cursor: pointer;
+}
+
+.select_arrow {
+    display: block;
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    background-image: url(../img/arrow_next.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+}
+
+.select_box .label {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    border: 0 none;
+    outline: 0 none;
+    /* padding-left: 15px; */
+    background: transparent;
+    cursor: pointer;
+}
+
+.label + .optionList {
+    position: absolute;
+    top: 59px;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    /* transition: 0.3s ease-in; */
+}
+
+.label.active + .optionList.active {
+    max-height: 500px;
+    z-index: 200;
+}
+
+.select_box .optionItem {
+    border-bottom: 1px #0c0c0c;
+    padding: 5px 15px;
+    line-height: 2.5;
+    transition: 0.1s;
+    background: #f3f2ee;
+    /* background: rgba(243, 242, 238, 0.6); */
     font-weight: bold;
 }
 
-.bus_bg {
-    background-color: red;
+.select_box .optionItem:nth-child(1) {
+    color: #ee4b3c;
+}
+.select_box .optionItem:nth-child(2) {
+    color: #f9b6b0;
+}
+.select_box .optionItem:nth-child(3) {
+    color: #1874c1;
+}
+.select_box .optionItem:nth-child(4) {
+    color: #ffbc16;
+}
+.select_box .optionItem:nth-child(5) {
+    color: #1ea849;
+}
+.select_box .optionItem:nth-child(6) {
+    color: #ee4b3c;
 }
 
-.airbus_bg {
-    background-color: #f9b6b0;
+.select_box .optionItem:hover {
+    background: #0c0c0c;
 }
 
-.park_bg {
-    background-color: #1874c1;
+.select_box .optionItem:last-child {
+    border-bottom: 0 none;
 }
 
-.fes_location_info > li > p {
-    font-size: 18px;
+.select_box .date {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: transparent;
 }
-
+.select_box .date:focus {
+    outline: none;
+}
 @media (max-width: 1440px) {
     /* 섹션1 축제소개 컨텐츠 및 포스터 섹션 */
     .sec_wrap.sec1_festival {
@@ -300,8 +382,8 @@
     }
 
     /* 모바일 플러스 버튼 */
-    .festival .m_plus_wrap {
-        display: block;
+    .festival .cate_more {
+        display: flex;
     }
 
     .festival .sec1_cont_maintxt {

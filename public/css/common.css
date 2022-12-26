@@ -261,6 +261,32 @@ h4 {
     background-color: transparent;
     color: #f3f2ee;
 }
+/* ==================subpage cate */
+.sub_cate {
+    height: 60px;
+    padding: 0 25px;
+}
+.sub_cate > h4 {
+    font-weight: 700;
+    color: #f3f2ee;
+    text-align: center;
+    line-height: 60px;
+}
+.bgr {
+    background-color: #ee4b3c;
+}
+.bgp {
+    background-color: #f9b6b0;
+}
+.bgb {
+    background-color: #1874c1;
+}
+.bgy {
+    background-color: #ffbc16;
+}
+.bgg {
+    background-color: #1ea849;
+}
 @media (max-width: 1440px) {
     .sec_wrap {
         width: 100%;
