@@ -886,6 +886,19 @@ main {
     .main .sec3_info {
         width: 100%;
     }
+    .main #section4 .notice_date {
+        display: none;
+    }
+    .sec4_cont .notice_list > h4:nth-child(2) {
+        width: 80%;
+        text-align: left;
+    }
+    .section5 .swiper-slide {
+        height: 400px;
+    }
+    .section5 .txt_box h4 {
+        padding: 30px 10px;
+    }
     #right_title > ul > li {
         width: 20%;
     }
@@ -895,17 +908,8 @@ main {
     .section6 .tabcont {
         margin-top: 40px;
     }
-    .section5 .swiper-slide {
-        height: 400px;
-    }
-    .section5 .txt_box h4 {
-        padding: 30px 10px;
-    }
-    .main #section4 .notice_date {
-        display: none;
-    }
-    .sec4_cont .notice_list > h4:nth-child(2) {
-        width: 80%;
-        text-align: left;
+    #right_title > ul > li > div {
+        border: 2px solid #000;
+        /* border-radius: 50%; */
     }
 }

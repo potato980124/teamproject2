@@ -113,6 +113,15 @@ router.get("/committee", (req, res) => {
 router.get("/festival", (req, res) => {
     res.render("festival");
 });
+router.get("/fireworks", (req, res) => {
+    res.render("festival_fire");
+});
+router.get("/rock_festival", (req, res) => {
+    res.render("festival_rock");
+});
+router.get("/sea_festival", (req, res) => {
+    res.render("festival_sea");
+});
 //---이벤트 페이지---
 router.get("/event", (req, res) => {
     db.getEvent((havors, flowers, fires, rocks, seas, citys, rings) => {

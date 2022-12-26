@@ -91,7 +91,19 @@
         display: block;
     }
     .f_wrap{
-        padding-bottom: 100px;
+        padding-bottom: 120px;
     }
+    .f_logo {
 
+        padding-bottom: 0px;
+    }
+    .f_icon > ul > li {
+        background-size: 28px auto;
+    }
+}
+
+@media (max-width:500px){
+    .f_icon > ul > li {
+        background-size: 25px auto;
+    }
 }
