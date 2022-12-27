@@ -44,10 +44,10 @@ var swiper = new Swiper(".mySwiper_news", {
         el: ".swiper-pagination",
         clickable: true,
     },
-     autoplay: {
+    autoplay: {
         delay: 2500,
         disableOnInteraction: false,
-      },
+    },
     breakpoints: {
         900: {
             slidesPerView: 2,
@@ -71,10 +71,14 @@ var swiper = new Swiper(".sponser_slide", {
             slidesPerView: 6,
             spaceBetween: 20,
         },
-        // 600: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 20,
-        // },
+        600: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        300: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
     },
     spaceBetween: 20,
     autoplay: {

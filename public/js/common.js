@@ -68,7 +68,7 @@ let cate_click = document.querySelector(".click");
 let cate_close = document.querySelector(".close");
 let cate = document.querySelector(".cate");
 
-function category() {
+function categoryH() {
     cate_click.addEventListener("click", (event) => {
         cate.classList.add("active");
     });
@@ -76,7 +76,7 @@ function category() {
         cate.classList.remove("active");
     });
 }
-category();
+categoryH();
 let cate_more = document.querySelectorAll(".cate_more");
 let cate_accor = document.querySelectorAll(".cate_accor");
 function category_accor() {
