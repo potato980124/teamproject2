@@ -84,10 +84,6 @@ router.post("/w_notice_event", (req, res) => {
     });
 });
 
-
-
-
-
 //modify
 
 router.get("/modifyNotice", (req, res) => {
@@ -115,6 +111,27 @@ router.get("/committee", (req, res) => {
 });
 router.get("/festival", (req, res) => {
     res.render("festival");
+});
+router.post("/insert_reserve", (req, res) => {
+    let param = JSON.parse(JSON.stringify(req.body));
+    let festival = param["festival"];
+    let date = param["date"];
+    let time = param["time"];
+    let name = param["name"];
+    let phone = param["phone"];
+    console.log(festival);
+    db.insertReservation(festival, date, time, name, phone, () => {
+        res.redirect("/reservation");
+    });
+});
+router.get("/reservation", (req, res) => {
+    let id = req.query.id;
+    console.log(id);
+    db.getReserveById(id, (row) => {
+        res.render("reservation", {
+            row: row[0],
+        }); //테이블의 한 행만 보내줄거기 때문에
+    });
 });
 //---이벤트 페이지---
 router.get("/event", (req, res) => {
@@ -148,27 +165,27 @@ router.post("/w_event", upload.single("eventimg"), (req, res) => {
     });
 });
 //이벤트 세부 페이지
-router.get('/event_content',(req,res)=>{
+router.get("/event_content", (req, res) => {
     let id = req.query.id;
-    db.getEventById(id,(row)=>{
-        res.render('event_content',{row:row[0]});
-    })
-})
+    db.getEventById(id, (row) => {
+        res.render("event_content", { row: row[0] });
+    });
+});
 // 이벤트 세부 삭제 버튼
-router.get('/delete_event',(req,res)=>{
+router.get("/delete_event", (req, res) => {
     let id = req.query.id;
-    db.deleteEvent(id,()=>{
-        res.redirect('/event');
-    })
-})
+    db.deleteEvent(id, () => {
+        res.redirect("/event");
+    });
+});
 //이벤트 수정 페이지
-router.get('/modify_event',(req,res)=>{
+router.get("/modify_event", (req, res) => {
     let id = req.query.id;
-    db.modify_E(id,(row)=>{
-        res.render('event_modify',{row:row[0]});
-    })
-})
-//이벤트 수정 포스트 
+    db.modify_E(id, (row) => {
+        res.render("event_modify", { row: row[0] });
+    });
+});
+//이벤트 수정 포스트
 router.post("/modify_e", upload.single("eventimg"), (req, res) => {
     let param = JSON.parse(JSON.stringify(req.body));
     let id = param["id"];
@@ -178,7 +195,7 @@ router.post("/modify_e", upload.single("eventimg"), (req, res) => {
     let title = param["title"];
     let content = param["content"];
     let eventimg = "uploads/" + req.file.filename;
-    db.updateEvent(id,writer,pw,category,title,content,eventimg,() => {
+    db.updateEvent(id, writer, pw, category, title, content, eventimg, () => {
         res.redirect("/event");
     });
 });
@@ -224,9 +241,6 @@ router.get("/test", (req, res) => {
     res.render("test");
 });
 
-
-
-
 //뉴스 페이지
 
 // router.get("/news_write", (req, res) => {
@@ -249,9 +263,8 @@ router.get("/test", (req, res) => {
 // });
 // router.get("/news_list", (req, res) => {
 //     db.getnews((rows) => {
-//         res.render("news_list", { rows: rows }); 
+//         res.render("news_list", { rows: rows });
 //     })
 // });
-
 
 module.exports = router;
