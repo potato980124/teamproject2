@@ -263,8 +263,9 @@ h4 {
 }
 /* ==================subpage cate */
 .sub_cate {
+    /* padding: 0 25px; */
     height: 60px;
-    padding: 0 25px;
+    width: 125px;
 }
 .sub_cate > h4 {
     font-weight: 700;
@@ -309,8 +310,12 @@ h4 {
     h1 {
         font-size: 44px;
     }
+    h2 {
+        font-size: 34px;
+        font-weight: 900;
+    }
     h3 {
-        font-size: 28px;
+        font-size: 26px;
         font-weight: 900;
     }
     h4 {
@@ -342,7 +347,7 @@ h4 {
         font-weight: 900;
     }
     h3 {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 900;
     }
     h4 {
@@ -360,6 +365,16 @@ h4 {
         width: calc(50% - 5px);
         height: 50px;
     }
+    .sub_cate {
+        height: 40px;
+        width: 90px;
+    }
+    .sub_cate > h4 {
+        font-weight: 700;
+        color: #f3f2ee;
+        text-align: center;
+        line-height: 40px;
+    }
 }
 @media (max-width: 500px) {
     .sec_wrap {
@@ -372,7 +387,7 @@ h4 {
         font-size: 24px;
     }
     h2 {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 900;
     }
     h3 {

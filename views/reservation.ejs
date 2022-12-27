@@ -1,0 +1,79 @@
+<main class="reservation">
+    <section class="section1">
+        <div class="sec_wrap">
+            <div class="subpage_title_wrap">
+                <h2>CHECK YOUR</h2>
+                <div class="subpage_title">
+                    <div>
+                        <h2>T</h2>
+                    </div>
+                    <div>
+                        <h2>I</h2>
+                    </div>
+                    <div>
+                        <h2>C</h2>
+                    </div>
+                    <div>
+                        <h2>K</h2>
+                    </div>
+                    <div>
+                        <h2>E</h2>
+                    </div>
+                    <div>
+                        <h2>T</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wave">
+            <div class="wave_bg wbg_top"></div>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="sec_wrap">
+            <input type="hidden" value="<%= row.id %>" />
+            <h2>"<%= row.name %>"님, 회원님의 예약신청 사항입니다</h2>
+            <div class="reserve_list">
+                <div>
+                    <div class="sub_cate bgr"><h4>축제</h4></div>
+                    <h4><%= row.festival %></h4>
+                </div>
+
+                <div>
+                    <div class="sub_cate bgp"><h4>날짜</h4></div>
+                    <h4><%= row.date %></h4>
+                </div>
+                <div>
+                    <div class="sub_cate bgb"><h4>시간</h4></div>
+                    <h4><%= row.time %></h4>
+                </div>
+                <div>
+                    <div class="sub_cate bgp"><h4>예약일시</h4></div>
+                    <h4><%= row.create_time %></h4>
+                </div>
+                <div>
+                    <div class="sub_cate bgy"><h4>예약자명</h4></div>
+                    <h4><%= row.name %></h4>
+                </div>
+                <div>
+                    <div class="sub_cate bgg"><h4>전화번호</h4></div>
+                    <h4><%= row.phone %></h4>
+                </div>
+                <span class="notice_btn_wrap">
+                    <span class="notice_btn">
+                        <input type="button" value="확인" class="list_btn" />
+                    </span>
+                    <span class="notice_btn">
+                        <input type="button" value="수정" class="list_btn" />
+                    </span>
+                    <span class="notice_btn">
+                        <input type="button" value="취소" class="list_btn" />
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="wave">
+            <div class="wave_bg wbg_bot"></div>
+        </div>
+    </section>
+</main>
