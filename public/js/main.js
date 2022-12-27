@@ -16,6 +16,7 @@ function sprinkleFirst() {
     let confetti = document.querySelector(".con-first");
     confetti.classList.toggle("show");
 }
+
 function sprinkleSecond() {
     let confetti = document.querySelector(".con-second");
     confetti.classList.toggle("show");
@@ -107,3 +108,21 @@ function dDay() {
     d_second.innerText = leftSecond;
 }
 dDay();
+
+
+// 메인에 띄어줄 공지사항 개수 
+let noticeList = document.querySelectorAll('.notice_list');
+console.log(noticeList);
+if(noticeList.length>3){
+    for(i=noticeList.length-1;i>3;i--){
+        noticeList[i].remove();
+    }
+}
+
+//카테고리 색상
+let category = document.querySelectorAll('.notice_cate');
+category.forEach((e)=>{
+    e.style.color = e.nextElementSibling.innerText;
+})
+
+

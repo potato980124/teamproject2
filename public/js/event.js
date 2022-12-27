@@ -39,3 +39,29 @@ for (let i = 0; i < tab.length; i++) {
 //         tab_content_wrap[i].removeClass("none");
 //     });
 // }
+
+
+
+// 띄어줄 공지사항 개수 
+let noticeList = document.querySelectorAll('.notice_list_wrap');
+console.log(noticeList);
+if(noticeList.length>7){
+    for(i=noticeList.length-1;i>7;i--){
+        noticeList[i].remove();
+    }
+}
+
+//카테고리 색상
+let category = document.querySelectorAll('.category');
+category.forEach((e)=>{
+    e.style.color = e.nextElementSibling.innerText;
+})
+
+//띄어줄 뉴스 개수 
+let newsList = document.querySelectorAll('.news_list_wrap');
+console.log(noticeList);
+if(noticeList.length>7){
+    for(i=noticeList.length-1;i>7;i--){
+        noticeList[i].remove();
+    }
+}

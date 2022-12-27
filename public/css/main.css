@@ -366,6 +366,10 @@ main {
 .sec4_cont .notice_list .bold {
     font-weight: bold;
 }
+/* 데이터베이스에 저장된 컬러값 가져오기 위한 태그 */
+.sec4_cont .hidden{
+    display: none;
+}
 
 /*category color 종료*/
 

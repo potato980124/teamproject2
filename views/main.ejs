@@ -101,16 +101,17 @@
                 </div>
             </div>
             <div class="sec4_cont">
-                <% for(let i=0; i<4; i++){%>
-                <input type="hidden" name="id" value="<%= rows1[i].id %>" />
-                <div class="notice_list" onclick="javascript:location.href='/notice_detail?id=<%= rows1[i].id %>'">
-                    <h4 class="notice_cate"><%= rows1[i].category %></h4>
+                <% rows1.forEach((row)=>{%>
+                <input type="hidden" name="id" value="<%= row.id %>" />
+                <div class="notice_list" onclick="javascript:location.href='/notice_detail?id=<%= row.id %>'">
+                    <h4 class="notice_cate"><%= row.category %></h4>
+                    <div class="hidden"><%= row.categorycolor %></div>
                     <h4 class="notice_title">
-                        <a href=""><%= rows1[i].title %></a>
+                        <a href=""><%= row.title %></a>
                     </h4>
-                    <h4 class="notice_date"><%= rows1[i].time %></h4>
+                    <h4 class="notice_date"><%= row.time %></h4>
                 </div>
-                <% }; %>
+                <% }); %>
             </div>
         </div>
     </section>

@@ -7,18 +7,18 @@ var connection = mysql.createConnection({
     database: "bfoc",
     multipleStatements: true,
 });
-function writeNotice_event(title, writer, category, password, content, callback) {
+function writeNotice_event(title,writer,category,categorycolor,password,content,img,callback) {
     connection.query(
-        `INSERT INTO notice_event(create_time, title, writer, category, password, content) values (NOW(),'${title}','${writer}','${category}',${password},'${content}')`,
+        `INSERT INTO notice_event(create_time, title, writer, category,categorycolor,password, content) values (NOW(),'${title}','${writer}','${category}','${categorycolor}','${password}','${content}')`,
         (err) => {
             if (err) throw err;
             callback();
         }
     );
 }
-function writeNotice(title, writer, category, password, content, callback) {
+function writeNotice(title, writer, category,categorycolor,password, content, callback) {
     connection.query(
-        `INSERT INTO notice(create_time, title, writer, category, password, content) values (NOW(),'${title}','${writer}','${category}',${password},'${content}')`,
+        `INSERT INTO notice(create_time, title, writer, category,categorycolor,password, content) values (NOW(),'${title}','${writer}','${category}','${categorycolor}','${password}','${content}')`,
         (err) => {
             if (err) throw err;
             callback();
@@ -34,8 +34,8 @@ function writeNotice(title, writer, category, password, content, callback) {
 // }
 function getNotice(callback) {
     connection.query(
-        "SELECT  date_format(create_time, '%y.%c.%e') as time ,title, writer, category, password, content, id FROM notice ORDER BY id;" +
-            "SELECT  date_format(create_time, '%y.%c.%e') as time, title, writer, category, password, content, id FROM notice_event ORDER BY id;",
+        "SELECT  date_format(create_time, '%y.%c.%e') as time ,title, writer, category,categorycolor,password, content, id FROM notice ORDER BY id DESC;" +
+            "SELECT  date_format(create_time, '%y.%c.%e') as time, title, writer, category,categorycolor,password, content, id FROM notice_event ORDER BY id DESC;",
         (err, rows) => {
             if (err) throw err;
             let rows1 = rows[0];
@@ -46,7 +46,7 @@ function getNotice(callback) {
 }
 function getNoticeByid(id, callback) {
     connection.query(
-        `SELECT date_format(create_time, '%y 년 %c 월 %e 일') as time ,title, writer, category, password, content, id FROM notice where id=${id}`,
+        `SELECT date_format(create_time, '%y 년 %c 월 %e 일') as time ,title, writer, category,categorycolor,password, content, id FROM notice where id=${id}`,
         (err, row) => {
             if (err) throw err;
             callback(row);
@@ -63,10 +63,10 @@ function modify_N(id, callback) {
 }
 
 //아이디가 일치하는 부분을 update한 내용 내보내기
-function updateNotice(id, title, writer, category, password, content, callback) {
+function updateNotice(id, title, writer, category,categorycolor ,password, content, callback) {
     console.log("db" + id);
     connection.query(
-        `UPDATE notice set create_time=now(),title='${title}',writer='${writer}',category='${category}',password=${password},content='${content}' where id=${id}`,
+        `UPDATE notice set create_time=now(),title='${title}',writer='${writer}',category='${category}',categorycolor = '${categorycolor}',password=${password},content='${content}' where id=${id}`,
         (err) => {
             if (err) throw err;
             callback();

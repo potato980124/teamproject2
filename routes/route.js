@@ -47,10 +47,11 @@ router.post("/w_notice", (req, res) => {
     let title = param["title"];
     let writer = param["writer"];
     let category = param["category"];
+    let categorycolor = param["category_color"]; 
     let password = param["password"];
     let content = param["content"];
 
-    db.writeNotice(title, writer, category, password, content, () => {
+    db.writeNotice(title, writer, category,categorycolor,password,content,() => {
         res.redirect("/notice_list");
     });
 });
@@ -73,12 +74,13 @@ router.post("/w_notice_event", (req, res) => {
     let title = param["title"];
     let writer = param["writer"];
     let category = param["category"];
+    let categorycolor = param["category_color"];
     let password = param["password"];
     let content = param["content"];
     let img = param["img"];
 
-    db.writeNotice_event(title, writer, category, password, content, img,  () => {
-        res.redirect("/notice_write_event");
+    db.writeNotice_event(title,writer,category,categorycolor,password,content,img,() => {
+        res.redirect("/notice_list");
     });
 });
 
@@ -100,9 +102,10 @@ router.post("/m_notice", (req, res) => {
     let title = param["title"];
     let writer = param["writer"];
     let category = param["category"];
+    let categorycolor = param["category_color"];
     let password = param["password"];
     let content = param["content"];
-    db.updateNotice(id, title, writer, category, password, content, () => {
+    db.updateNotice(id, title, writer, category,categorycolor,password,content, () => {
         res.redirect("/notice_list"); //redirect 에는 / 붙인다
     });
 });
