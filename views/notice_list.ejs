@@ -44,14 +44,15 @@
                     <h4 class="notice_list_title">제목</h4>
                     <h4>작성일</h4>
                 </div>
-                <% for(let i=0; i<8; i++){%>
-                <div onclick="javascript:location.href='/notice_detail?id=<%= rows1[i].id %>'">
-                    <input type="hidden" name="id" value="<%= rows1[i].id %>" />
-                    <h4><%= rows1[i].category %></h4>
-                    <h4 class="notice_list_title"><%= rows1[i].title %></h4>
-                    <h4><%= rows1[i].time %></h4>
+                <% rows1.forEach((row)=>{%>
+                <div class="notice_list_wrap" onclick="javascript:location.href='/notice_detail?id=<%= row.id %>'">
+                    <input type="hidden" name="id" value="<%= row.id %>" />
+                    <h4 class="category"><%= row.category %></h4>
+                    <div class="hidden"><%= row.categorycolor %></div>
+                    <h4 class="notice_list_title"><%= row.title %></h4>
+                    <h4><%= row.time %></h4>
                 </div>
-                <% }; %>
+                <% }); %>
                 <span class="notice_btn_wrap">
                     <span class="notice_btn">
                         <input type="button" value="공지사항 등록" class="list_btn" onclick="location.href='/notice_write'" />
@@ -64,14 +65,15 @@
                     <h4 class="notice_list_title">제목</h4>
                     <h4>작성일</h4>
                 </div>
-                <% for(let i=0; i<8; i++){ %>
-                <div>
-                    <input type="hidden" name="id" value="<%= rows2[i].id %>" />
-                    <h4><%= rows2[i].category %></h4>
-                    <h4 class="notice_list_title"><%= rows2[i].title %></h4>
-                    <h4><%= rows1[i].time %></h4>
+                <% rows2.forEach((row)=>{%>
+                <div class="news_list_wrap">
+                    <input type="hidden" name="id" value="<%= row.id %>" />
+                    <h4 class="category"><%= row.category %></h4>
+                    <div class="hidden"><%= row.categorycolor %></div>
+                    <h4 class="notice_list_title"><%= row.title %></h4>
+                    <h4><%= row.time %></h4>
                 </div>
-                <% }; %>
+                <% }); %>
                 <span class="notice_btn_wrap">
                     <span class="notice_btn">
                         <input type="button" value="뉴스 등록" class="list_btn" onclick="javascript:location.href='/notice_write_event'" />

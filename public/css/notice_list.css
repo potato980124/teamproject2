@@ -55,6 +55,9 @@
     color: #0c0c0c;
     font-weight: 900;
 }
+.community .notice_cate > .hidden {
+    display: none;
+}
 .notice_list .tab_content_wrap > div > h4 {
     width: 25%;
     text-align: left;

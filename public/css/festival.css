@@ -176,6 +176,10 @@
 .fes_loca_map {
     width: calc(50% - 25px);
 }
+.fes_loca_map>.loca_map_bg{
+    width: 100%;
+    padding-top: 92.982%;
+}
 
 .fes_location_info {
     width: calc(50% - 25px);
