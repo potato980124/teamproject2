@@ -44,7 +44,7 @@
     background-size: 30px auto;
     background-repeat: no-repeat;
 }
-.footer_pc_wrap .mobile{
+.footer_pc_wrap .mobile {
     display: none;
 }
 
@@ -73,21 +73,18 @@
 .f_wrap.white .f_icon .facebook {
     background-image: url(../img/footer_fb_bk.png);
 }
-.footer_pc_wrap p{
+.footer_pc_wrap p {
     font-size: 15px;
 }
 
-
-
-
-@media (max-width:800px){
-    .footer_pc_wrap p{
+@media (max-width: 800px) {
+    .footer_pc_wrap p {
         font-size: 13px;
     }
-    .footer_pc_wrap .pc{
+    .footer_pc_wrap .pc {
         display: none;
     }
-    .footer_pc_wrap .mobile{
+    .footer_pc_wrap .mobile {
         display: block;
     }
     .f_wrap{

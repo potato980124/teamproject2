@@ -20,6 +20,9 @@ busan-fes2-program.jpg
 .festival .poster_img.fes_port_img{
   background-image: url(../img/poster2.png);
 }
+.festival .poster_img.fes_road_img{
+  background-image: url(../img/poster3.png);
+}
 .fes_info_bg {
   height: 500px;
   box-sizing: border-box;
@@ -40,6 +43,12 @@ busan-fes2-program.jpg
 .f_i_rock_bg{
   background-image: url(../img/busan-rock-program.jpg);
 }
+.f_i_port_bg{
+  background-image: url(../img/busan-port-program.jpg);
+}
+.f_i_road_bg{
+  background-image: url(../img/busan-road-program.jpg);
+}
 
 
 @media (max-width: 1440px){
@@ -55,6 +64,9 @@ busan-fes2-program.jpg
 }
 .festival .poster_img.fes_port_img{
   background-image: url(../img/busan-poster_port.jpg);
+}
+.festival .poster_img.fes_road_img{
+  background-image: url(../img/busan-poster_road.jpg);
 }
 
 }

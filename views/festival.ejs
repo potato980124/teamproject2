@@ -18,9 +18,6 @@
                     <h3>2022.12.31(토) - 2023.01.01(일)</h3>
                     <h3>용두산 공원 일원</h3>
                 </div>
-                <!-- <div class="m_plus_wrap">
-                    <img src="img/festival_plus.png" alt="" />
-                </div> -->
                 <div class="m_plus_wrap cate_more"><span></span><span></span></div>
                 <div class="m_sec1_cont_maintxt">
                     <h3>축제개요</h3>
@@ -64,7 +61,7 @@
             </div>
             <div class="sec2_addi_tit">
                 <h2>축제 프로그램 안내</h2>
-                <h4>부산 타종행사 만의 인생샷 필수코스</h4>
+            
             </div>
             <!-- 섹션2 축제프로그램 안내 컨텐츠 시작 스와이퍼 -->
             <div class="fes_info_cont_wrap">
@@ -75,15 +72,13 @@
                             <div>
                                 <ul class="f_i_txt_wrap">
                                     <li>
-                                        <div class="f_i_peri_tit">
-                                            <div class="sub_cate bgr"><h4>기간</h4></div>
-                                        </div>
+                                        <div class="sub_cate bgr"><h4>기간</h4></div>
+
                                         <h4>2022.12.31 ~2023.01.01</h4>
                                     </li>
                                     <li>
-                                        <div class="f_i_contxt_tit">
-                                            <div class="sub_cate bgp"><h4>내용</h4></div>
-                                        </div>
+                                        <div class="sub_cate bgp"><h4>내용</h4></div>
+
                                         <h4 class="f_i_contxt">
                                             새해맞이 시민의 종 타종행사에 온다면 꼭 들러야 하는 핫플레이스! 유니크하고 핫한 사진 명소 실루엣 포토존과
                                             2030 부산 세계 박람회 유치기원 레고 포토존에서 인생 사진을 만들어보세요.
@@ -98,15 +93,13 @@
                             <div>
                                 <ul class="f_i_txt_wrap">
                                     <li>
-                                        <div class="f_i_peri_tit">
-                                            <div class="sub_cate bgr"><h4>기간</h4></div>
-                                        </div>
+                                        <div class="sub_cate bgr"><h4>기간</h4></div>
+
                                         <h4>2022.12.31 ~2023.01.01</h4>
                                     </li>
                                     <li>
-                                        <div class="f_i_contxt_tit">
-                                            <div class="sub_cate bgp"><h4>내용</h4></div>
-                                        </div>
+                                        <div class="sub_cate bgp"><h4>내용</h4></div>
+
                                         <h4 class="f_i_contxt">
                                             새해맞이 시민의 종 타종행사에 온다면 꼭 들러야 하는 핫플레이스! 유니크하고 핫한 사진 명소 실루엣 포토존과
                                             2030 부산 세계 박람회 유치기원 레고 포토존에서 인생 사진을 만들어보세요.
@@ -121,15 +114,13 @@
                             <div>
                                 <ul class="f_i_txt_wrap">
                                     <li>
-                                        <div class="f_i_peri_tit">
-                                            <div class="sub_cate bgr"><h4>기간</h4></div>
-                                        </div>
+                                        <div class="sub_cate bgr"><h4>기간</h4></div>
+
                                         <h4>2022.12.31 ~2023.01.01</h4>
                                     </li>
                                     <li>
-                                        <div class="f_i_contxt_tit">
-                                            <div class="sub_cate bgp"><h4>내용</h4></div>
-                                        </div>
+                                        <div class="sub_cate bgp"><h4>내용</h4></div>
+
                                         <h4 class="f_i_contxt">
                                             새해맞이 시민의 종 타종행사에 온다면 꼭 들러야 하는 핫플레이스! 유니크하고 핫한 사진 명소 실루엣 포토존과
                                             2030 부산 세계 박람회 유치기원 레고 포토존에서 인생 사진을 만들어보세요.
@@ -211,33 +202,35 @@
                 <h1>O</h1>
                 <h1>N</h1>
             </div>
-            <div class="selections">
+            <!-- <form class="selections" action="insert_reserve" method="post"></form> -->
+            <!-- <div class="selections"> -->
+            <form action="insert_reserve" method="post" class="selections">
                 <div class="select1">
                     <div class="sub_cate bgy"><h4>축제</h4></div>
                     <div class="select_box">
                         <span class="select_arrow"></span>
-                        <button class="label">FESTIVALS</button>
+                        <input class="label" name="festival" />
                         <ul class="optionList">
                             <li class="optionItem">부산항 축제</li>
                             <li class="optionItem">부산 바다축제</li>
                             <li class="optionItem">골목길 축제</li>
+                            <li class="optionItem">유채꽃 축제</li>
                             <li class="optionItem">국제 록 페스티벌</li>
                             <li class="optionItem">시민의 종 타종식</li>
-                            <li class="optionItem">유채꽃 축제</li>
                         </ul>
                     </div>
                 </div>
                 <div class="select2">
                     <div class="sub_cate bgg"><h4>날짜</h4></div>
                     <div class="select_box">
-                        <input type="date" class="date" placeholder="날짜" />
+                        <input name="date" type="date" class="date" placeholder="날짜" />
                     </div>
                 </div>
                 <div class="select3">
                     <div class="sub_cate bgr"><h4>시간</h4></div>
                     <div class="select_box">
                         <span class="select_arrow"></span>
-                        <button class="label">시간</button>
+                        <input class="label" name="time" />
                         <ul class="optionList">
                             <li class="optionItem">1부</li>
                             <li class="optionItem">2부</li>
@@ -245,7 +238,49 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+                <div class="select5">
+                    <div class="sub_cate bgy"><h4>이름</h4></div>
+                    <div class="select_box">
+                        <input type="text" name="name" placeholder="이름" />
+                    </div>
+                </div>
+                <div class="select6">
+                    <div class="sub_cate bgg"><h4>전화번호</h4></div>
+                    <div class="select_box">
+                        <input type="text" name="phone" placeholder="전화번호" />
+                    </div>
+                </div>
+                <div class="select4">
+                    <div class="sub_cate reserve"><h4>BOOK A TICKET</h4></div>
+                </div>
+                <div class="popup_wrap">
+                    <div class="popup">
+                        <div class="popup_close">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="popup_content">
+                            <div class="subTitle">
+                                <h1>T</h1>
+                                <h1>H</h1>
+                                <h1>A</h1>
+                                <h1>N</h1>
+                                <h1>K</h1>
+                                <h1></h1>
+                                <h1>Y</h1>
+                                <h1>O</h1>
+                                <h1>U</h1>
+                            </div>
+                            <h3>예약이 완료되었습니다</h3>
+                            <div class="notice_btn_wrap">
+                                <div class="notice_btn">
+                                    <input type="submit" value="내 예약 확인하기" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
         <div class="wave">
             <div class="wave_bg wbg_bot"></div>

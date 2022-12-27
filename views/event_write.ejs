@@ -29,9 +29,13 @@
         <form action="w_event" method="post" enctype="multipart/form-data">
             <div class="sec_wrap">
                 <div class="notice_write_cont">
-                    <div class="notice_write_cate wh_bg"><h4>게시글 작성</h4></div>
+                    <div class="notice_write_cate wh_bg">
+                        <h4>게시글 작성</h4>
+                    </div>
                     <div class="notice_write_cont">
-                        <div class="notice_write_cate wh_bg_line"><h4>*는 필수 입력입니다.</h4></div>
+                        <div class="notice_write_cate wh_bg_line">
+                            <h4>*는 필수 입력입니다.</h4>
+                        </div>
 
                         <div class="notice_write_cont">
                             <div class="notice_write_cate wh_bg_line">
@@ -42,7 +46,8 @@
                             <div class="notice_write_cont">
                                 <div class="notice_write_cate wh_bg_line">
                                     <p class="notice_write_title">비밀번호</p>
-                                    <div><input type="password" name="password" id="pw" class="notice_write_input" /></div>
+                                    <div><input type="password" name="password" id="pw" class="notice_write_input" />
+                                    </div>
                                 </div>
                             </div>
                             <div class="notice_write_cont">
@@ -72,21 +77,27 @@
                             <div class="notice_write_cont">
                                 <div class="notice_write_cate wh_bg_line">
                                     <p class="notice_write_title">내용</p>
-                                    <div class="noti_textarea"><textarea name="content" rows="10" cols="100"></textarea></div>
+                                    <div class="noti_textarea"><textarea name="content" rows="10" cols="100"></textarea>
+                                    </div>
                                 </div>
                             </div>
                             <div class="notice_write_cont">
                                 <div class="notice_write_cate wh_bg_line">
                                     <p class="notice_write_title">첨부파일</p>
-                                    <div class="noti_file"><input type="file" name="eventimg" id="title" class="notice_write_input2" /></div>
+                                    <div class="noti_file"><input type="file" name="eventimg" id="title"
+                                            class="notice_write_input2" /></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="notice_btn">
-                    <input type="button" value="취소" class="list_btn" onclick="location.href='/event'" />
-                    <input type="submit" value="확인" id="submit" />
+                <div class="notice_btn_wrap">
+                    <div class="notice_btn">
+                        <input type="button" value="취소" class="list_btn" onclick="location.href='/event'" />
+                    </div>
+                    <div class="notice_btn">
+                        <input type="submit" value="확인" id="submit">
+                    </div>
                 </div>
             </div>
         </form>
