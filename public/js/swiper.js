@@ -44,10 +44,10 @@ var swiper = new Swiper(".mySwiper_news", {
         el: ".swiper-pagination",
         clickable: true,
     },
-    //  autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    //   },
+     autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
     breakpoints: {
         900: {
             slidesPerView: 2,
