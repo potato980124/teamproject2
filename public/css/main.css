@@ -468,7 +468,7 @@ main {
     position: absolute;
     top: 0;
     height: 100%;
-    background-color: #0c0c0c00090;
+    background-color: #00000090;
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
 }
