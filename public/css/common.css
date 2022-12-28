@@ -330,6 +330,11 @@ h4 {
     .header {
         height: 50px;
     }
+    .subTitle {
+        transform: translateY(-100%);
+        display: flex;
+        gap: 10px;
+    }
     .section {
         height: 50vh;
     }
@@ -382,6 +387,11 @@ h4 {
     }
     .sec_wrap_b {
         padding: 0 25px;
+    }
+    .subTitle {
+        transform: translateY(-100%);
+        display: flex;
+        gap: 5px;
     }
     h1 {
         font-size: 24px;
