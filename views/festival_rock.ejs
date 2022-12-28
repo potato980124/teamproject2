@@ -176,7 +176,7 @@
             </div>
             <div class="fes_loca_cont_wrap">
                 <div class="fes_loca_map">
-                    <div class="loca_map_bg2"></div>
+                    <div class="loca_map_bg"></div>
                 </div>
                 <ul class="fes_location_info">
                     <li class="fes_loca_bus">
@@ -201,7 +201,7 @@
                 </ul>
             </div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0252ddcc3a9c78735c3ba1f11b958df8"></script>
-            <script src="js/festival2api.js"></script>
+            <script src="js/festivalapi.js"></script>
         </div>
         <div class="wave">
             <div class="wave_bg wbg_top"></div>
@@ -222,33 +222,41 @@
                 <h1>O</h1>
                 <h1>N</h1>
             </div>
-            <div class="selections">
+            <!-- <form class="selections" action="insert_reserve" method="post"></form> -->
+            <!-- <div class="selections"> -->
+            <form action="insert_reserve" method="post" class="selections">
                 <div class="select1">
-                    <div class="sub_cate bgy"><h4>축제</h4></div>
+                    <div class="sub_cate bgy">
+                        <h4>축제</h4>
+                    </div>
                     <div class="select_box">
                         <span class="select_arrow"></span>
-                        <button class="label">FESTIVALS</button>
+                        <input class="label" name="festival" />
                         <ul class="optionList">
                             <li class="optionItem">부산항 축제</li>
                             <li class="optionItem">부산 바다축제</li>
                             <li class="optionItem">골목길 축제</li>
+                            <li class="optionItem">유채꽃 축제</li>
                             <li class="optionItem">국제 록 페스티벌</li>
                             <li class="optionItem">시민의 종 타종식</li>
-                            <li class="optionItem">유채꽃 축제</li>
                         </ul>
                     </div>
                 </div>
                 <div class="select2">
-                    <div class="sub_cate bgg"><h4>날짜</h4></div>
+                    <div class="sub_cate bgg">
+                        <h4>날짜</h4>
+                    </div>
                     <div class="select_box">
-                        <input type="date" class="date" placeholder="날짜" />
+                        <input name="date" type="date" class="date" placeholder="날짜" />
                     </div>
                 </div>
                 <div class="select3">
-                    <div class="sub_cate bgr"><h4>시간</h4></div>
+                    <div class="sub_cate bgr">
+                        <h4>시간</h4>
+                    </div>
                     <div class="select_box">
                         <span class="select_arrow"></span>
-                        <button class="label">시간</button>
+                        <input class="label" name="time" />
                         <ul class="optionList">
                             <li class="optionItem">1부</li>
                             <li class="optionItem">2부</li>
@@ -256,10 +264,62 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+                <div class="select5">
+                    <div class="sub_cate bgy"><h4>이름</h4></div>
+                    <div class="select_box">
+                        <input type="text" name="name" placeholder="이름" />
+                    </div>
+                </div>
+                <div class="select6">
+                    <div class="sub_cate bgg"><h4>전화번호</h4></div>
+                    <div class="select_box">
+                        <input type="text" name="phone" placeholder="전화번호" />
+                    </div>
+                </div>
+                <div class="select4">
+                    <div class="sub_cate reserve"><h4>BOOK A TICKET</h4></div>
+                </div>
+                <div class="popup_wrap">
+                    <div class="popup">
+                        <div class="popup_close">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="popup_content">
+                            <div class="subTitle">
+                                <h1>T</h1>
+                                <h1>H</h1>
+                                <h1>A</h1>
+                                <h1>N</h1>
+                                <h1>K</h1>
+                                <h1></h1>
+                                <h1>Y</h1>
+                                <h1>O</h1>
+                                <h1>U</h1>
+                            </div>
+                            <h3>예약이 완료되었습니다</h3>
+                            <div class="notice_btn_wrap">
+                                <div class="notice_btn">
+                                    <input type="submit" value="내 예약 확인하기" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
         <div class="wave">
             <div class="wave_bg wbg_bot"></div>
         </div>
     </section>
 </main>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper_fes_info", {
+        navigation: {
+            nextEl: ".f_i_next",
+            prevEl: ".f_i_prev",
+        },
+    });
+</script>
+<script src="js/festival.js"></script>
