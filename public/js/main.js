@@ -126,3 +126,20 @@ category.forEach((e)=>{
 })
 
 
+//TOP버튼
+let topBtn = document.querySelector('#topBtn');
+function scrollBtn () {
+    if(document.documentElement.scrollTop > 4000) {
+        console.log(document.documentElement.scrollTop)
+        topBtn.classList.add('active');
+    }else{
+        topBtn.classList.remove('active');
+    }
+}
+window.onscroll = function() {
+    scrollBtn();
+}
+
+topBtn.addEventListener('click',() => {
+    window.scrollTo({top : 0, behavior: 'smooth'});
+})

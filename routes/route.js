@@ -127,6 +127,9 @@ router.get("/fireworks", (req, res) => {
 router.get("/rock_festival", (req, res) => {
     res.render("festival_rock");
 });
+router.get("/flower_festival", (req, res) => {
+    res.render("festival_flower");
+});
 
 router.post("/insert_reserve", (req, res) => {
     let param = JSON.parse(JSON.stringify(req.body));

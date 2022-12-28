@@ -391,7 +391,7 @@ main {
     border-bottom: 1px solid #000;
 }
 .sec4_title {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 .sec4_cont > .notice_list {
     display: flex;
@@ -742,6 +742,47 @@ main {
     width: 100%;
     height: auto;
 }
+
+#topBtn{
+    width: 80px; height: 80px;
+    z-index: 99;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #000;
+    position: fixed;
+    right: 100px; bottom: 0px;
+    transition: 1s;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+}
+#topBtn span{
+    display: block;
+    width: 80px; height: 80px;
+    background-image: url(../img/bfoc_logo_black.png);
+    background-position: center center;
+    background-size: 50px auto;
+    background-repeat: no-repeat;
+}
+
+#topBtn.active{
+opacity: 1;
+bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1440px) {
     .main .festi-poster {
         padding: 0;

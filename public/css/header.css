@@ -18,10 +18,12 @@
 .logo_b {
     display: none;
 }
-.b_header.main .logo_b {
+/* .b_header */
+.main .logo_b {
     display: block;
 }
-.b_header.main .logo_w {
+/* .b_header */
+.main .logo_w {
     display: none;
 }
 header .sec_wrap {
