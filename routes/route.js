@@ -112,6 +112,25 @@ router.get("/committee", (req, res) => {
 router.get("/festival", (req, res) => {
     res.render("festival");
 });
+router.get("/port_festival", (req, res) => {
+    res.render("festival_port");
+});
+router.get("/sea_festival", (req, res) => {
+    res.render("festival_sea");
+});
+router.get("/road_festival", (req, res) => {
+    res.render("festival_road");
+});
+router.get("/fireworks", (req, res) => {
+    res.render("festival_fire");
+});
+router.get("/rock_festival", (req, res) => {
+    res.render("festival_rock");
+});
+router.get("/flower_festival", (req, res) => {
+    res.render("festival_flower");
+});
+
 router.post("/insert_reserve", (req, res) => {
     let param = JSON.parse(JSON.stringify(req.body));
     let festival = param["festival"];

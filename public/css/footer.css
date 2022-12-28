@@ -4,7 +4,7 @@
     width: 100%;
     height: 100%;
     background-color: #0c0c0c;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
 }
 .f_wrap.white {
     background-color: #f3f2ee;
@@ -21,6 +21,9 @@
     left: 50%;
     transform: translateX(-50%);
     /* margin-top: -100px; */
+}
+.footer_wrap a{
+    padding-bottom: 20px;
 }
 
 .f_icon {
@@ -87,11 +90,20 @@
     .footer_pc_wrap .mobile {
         display: block;
     }
-    .f_wrap {
-        padding-bottom: 100px;
+    .f_wrap{
+        padding-bottom: 120px;
     }
     .f_logo {
-        font-size: 25px;
-        padding-bottom: 10px;
+
+        padding-bottom: 0px;
+    }
+    .f_icon > ul > li {
+        background-size: 28px auto;
+    }
+}
+
+@media (max-width:500px){
+    .f_icon > ul > li {
+        background-size: 25px auto;
     }
 }

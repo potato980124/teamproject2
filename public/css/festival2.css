@@ -1,0 +1,80 @@
+busan-fes2-program.jpg
+  /*섹션1 축제 포스터 */
+.festival .poster_img {
+  width: 470px;
+  height: 700px;
+  /* background-image: url(../img/poster1.png); */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.festival .poster_img.fes_fire_img{
+  background-image: url(../img/busan\ poster-06.png);
+}
+.festival .poster_img.fes_rock_img{
+  background-image: url(../img/busan-poster-05.png);
+}
+.festival .poster_img.fes_sea_img{
+  background-image: url(../img/poster7.png);
+}
+.festival .poster_img.fes_port_img{
+  background-image: url(../img/poster2.png);
+}
+.festival .poster_img.fes_road_img{
+  background-image: url(../img/poster3.png);
+}
+.festival .poster_img.fes_flower_img{
+  background-image: url(../img/poster4.png);
+}
+.fes_info_bg {
+  height: 500px;
+  box-sizing: border-box;
+  background-position: center center;
+  background-size: cover;
+}
+  /*섹션2 축제 프로그램 */
+.f_i_bg1{
+  background-image: url(../img/busan-poster_fes1.jpg);
+  }
+  
+.f2_i_bg1 {
+  background-image: url(../img/busan-fes2-program.jpg);
+}
+.f2_i_bg3{
+  background-image: url(../img/busan-fes3-program.jpg);
+}
+.f_i_rock_bg{
+  background-image: url(../img/busan-rock-program.jpg);
+}
+.f_i_port_bg{
+  background-image: url(../img/busan-port-program.jpg);
+}
+.f_i_road_bg{
+  background-image: url(../img/busan-road-program.jpg);
+}
+.f_i_flower_bg{
+  background-image: url(../img/busan-flower-program.jpg);
+}
+
+
+@media (max-width: 1440px){
+  /*섹션1 이미지 반응형*/
+  .festival .poster_img.fes_fire_img {
+    background-image: url(../img/busan-poster_fire.jpg);
+}
+  .festival .poster_img.fes_sea_img {
+    background-image: url(../img/busan-poster_sea.jpg);
+}
+.festival .poster_img.fes_rock_img{
+  background-image: url(../img/busan-poster_rock.jpg);
+}
+.festival .poster_img.fes_port_img{
+  background-image: url(../img/busan-poster_port.jpg);
+}
+.festival .poster_img.fes_road_img{
+  background-image: url(../img/busan-poster_road.jpg);
+}
+.festival .poster_img.fes_flower_img{
+  background-image: url(../img/busan-poster_flower.jpg);
+}
+}
