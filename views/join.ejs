@@ -1,5 +1,13 @@
 <main class="join">
     <section class="section1">
+        <div class="mobile_btn_wrap">
+            <div class="home_btn" onclick="location.href ='/'">
+                <img src="img/home.png" alt="">
+            </div>
+            <div class="back_btn" onclick="goback();">
+                <img src="img/turn-back.png" alt="">
+            </div>
+        </div>
         <div class="sec_wrap">
             <div class="subpage_title_wrap">
                 <div class="subTitle">
@@ -12,7 +20,7 @@
             <div class="join_title">
                 <h3>개인정보입력</h3>
             </div>
-            <form action="/joininfo" method="post" name="joininfo" >
+            <form action="/joininfo" method="post" name="joininfo">
                 <table>
                     <colgroup>
                         <col width="20%" />
@@ -22,41 +30,27 @@
                         <tr>
                             <td class="join_title_box"><strong>*</strong>아이디</td>
                             <td>
-                                <input
-                                    class="join_input_box"
-                                    type="text"
-                                    placeholder="공백 없는 3-15자의 영문/숫자를 조합하여 입력해야 합니다."
-                                    name="id"
-                                    id="id"
-                                />
+                                <input class="join_input_box" type="text"
+                                    placeholder="공백 없는 3-15자의 영문/숫자를 조합하여 입력해야 합니다." name="id" id="id" />
                             </td>
                         </tr>
                         <tr>
                             <td class="join_title_box"><strong>*</strong>비밀번호</td>
                             <td>
-                                <input
-                                    class="join_input_box"
-                                    type="text"
-                                    placeholder="* 공백 없는 3-15자의 영문/숫자를 조합하여 입력해야 합니다."
-                                    name="pw"
-                                    id="pw"
-                                />
+                                <input class="join_input_box" type="text"
+                                    placeholder="* 공백 없는 3-15자의 영문/숫자를 조합하여 입력해야 합니다." name="pw" id="pw" />
                             </td>
                         </tr>
                         <tr>
                             <td class="join_title_box"><strong>*</strong>비밀번호 확인</td>
                             <td>
-                                <input
-                                    class="join_input_box"
-                                    type="text"
-                                    placeholder="* 비밀번호 확인을 위해 다시 입력해주세요."
-                                    id="rpw"
-                                />
+                                <input class="join_input_box" type="text" placeholder="* 비밀번호 확인을 위해 다시 입력해주세요."
+                                    id="rpw" />
                             </td>
                         </tr>
                         <tr>
                             <td class="join_title_box"><strong>*</strong>이름</td>
-                            <td><input class="join_input_box" type="text" name="name" id="name"/></td>
+                            <td><input class="join_input_box" type="text" name="name" id="name" /></td>
                         </tr>
                         <tr>
                             <td class="join_title_box"><strong>*</strong>생년월일</td>
@@ -65,23 +59,18 @@
                         <tr>
                             <td class="join_title_box"><strong>*</strong>이메일</td>
                             <td>
-                                <input
-                                    class="join_input_box"
-                                    type="text"
-                                    placeholder="* 본인확인을 위해 정확한 이메일주소를 입력해주세요."
-                                    name="email"
-                                    id="email"
-                                />
+                                <input class="join_input_box" type="text" placeholder="* 본인확인을 위해 정확한 이메일주소를 입력해주세요."
+                                    name="email" id="email" />
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <% let ides = [];%>
                 <%ids.forEach((index)=>{%>
-                 <%ides.push(index.id);%>
-                 <% console.log(ides); %>
-                 <%})%>
-                 <input class="join_btn" type="button" value="가입하기" onclick="Validation(<%for(i=0;i<ides.length;i++){%> '<%=ides[i]%>',<%}%>)">
+                <%ides.push(index.id);%>
+                <% console.log(ides); %>
+                <%})%>
+                <input class="join_btn" type="button" value="가입하기" onclick="Validation(<%for(i=0;i<ides.length;i++){%> '<%=ides[i]%>',<%}%>)">
             </form>
             <script src="js/join.js"></script>
         </div>

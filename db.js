@@ -63,7 +63,7 @@ function modify_N(id, callback) {
 }
 
 //아이디가 일치하는 부분을 update한 내용 내보내기
-function updateNotice(id, title, writer, category,categorycolor ,password, content, callback) {
+function updateNotice(id, title, writer, category,categorycolor,password, content, callback) {
     console.log("db" + id);
     connection.query(
         `UPDATE notice set create_time=now(),title='${title}',writer='${writer}',category='${category}',categorycolor = '${categorycolor}',password=${password},content='${content}' where id=${id}`,

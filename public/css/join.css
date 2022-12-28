@@ -1,4 +1,17 @@
 @import url(common.css);
+/* 상단 홈, 뒤로가기 버튼 */
+.join .mobile_btn_wrap{
+    display: flex;
+    position: absolute;
+    top: 10px; left: 20px;
+}
+.join div>img{
+    width: 50px; height: 50px;
+}
+.join .back_btn{
+    margin-left: 40px;
+}
+
 
 .join{
     display: flex;
