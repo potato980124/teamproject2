@@ -379,7 +379,7 @@ main {
 
 .sec4_cont {
     width: 100%;
-    border-top: 1px solid #000;
+    border-top: 1px solid #0c0c0c;
     padding-bottom: 40px;
 }
 /* .sec4_cont > table {
@@ -388,7 +388,7 @@ main {
 }*/
 .sec4_cont div {
     width: 100%;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #0c0c0c;
 }
 .sec4_title {
     padding-top: 100px;
@@ -468,7 +468,7 @@ main {
     position: absolute;
     top: 0;
     height: 100%;
-    background-color: #00000090;
+    background-color: #0c0c0c00090;
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
 }
@@ -589,7 +589,7 @@ main {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 35%;
-    border: 3px solid #000;
+    border: 3px solid #0c0c0c;
     /* border-radius: 50%; */
 }
 #right_title > ul > li > p {
@@ -667,47 +667,52 @@ main {
 }
 
 /* 탭 서브메뉴 */
-
+.sec6_tab_wrap {
+    border-bottom: 1px solid #0c0c0c;
+    padding: 0 20px;
+    height: auto;
+    /* transition: 3s; */
+    box-sizing: border-box;
+}
 .tab_title {
     width: 100%;
     line-height: 4;
-    padding: 0 20px;
     font-size: 20px;
     font-weight: bold;
     box-sizing: border-box;
-    border-bottom: 1px solid #000;
     display: flex;
     justify-content: space-between;
     text-align: center;
+    /* transition: 3s; */
 }
-.tabcont .tab_title:first-child {
-    border-top: 1px solid #000;
+.sec6_tab_wrap:first-child {
+    border-top: 1px solid #0c0c0c;
 }
 
 .sec6_tab_sub {
     width: 100%;
     max-height: 0;
     top: 100px;
-    box-sizing: border-box;
     overflow: hidden;
-}
-.sec6_tab_sub ul {
-    padding: 10px 10px;
+    /* transition: 3s; */
 }
 .sec6_tab_sub ul > li > a {
     width: 100%;
     display: block;
     font-size: 16px;
-    padding: 10px 0;
-    box-sizing: border-box;
+    line-height: 0;
     text-decoration: none;
-    color: #000000;
+    color: #0c0c0c;
+    transition: 0.5s;
 }
-.sub_toggle {
-    transition: all 0.5s ease-in-out;
+.sec6_tab_sub.sub_toggle {
+    /* transition: 3s; */
     max-height: fit-content;
-    opacity: 1;
     background-color: #f3f2ee;
+}
+.sec6_tab_sub.sub_toggle ul > li > a {
+    line-height: 3;
+    transition: all 0.5s ease-in-out;
 }
 
 .tab_active {
@@ -909,7 +914,7 @@ main {
         margin-top: 40px;
     }
     #right_title > ul > li > div {
-        border: 2px solid #000;
+        border: 2px solid #0c0c0c;
         /* border-radius: 50%; */
     }
 }

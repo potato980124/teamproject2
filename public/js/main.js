@@ -1,3 +1,5 @@
+// const e = require("express");
+
 setInterval(dDay, 1000);
 setInterval(sprinkleFirst, 2000);
 setInterval(sprinkleSecond, 2100);
@@ -65,26 +67,22 @@ let accor_btn = document.querySelectorAll(".accor_btn");
 
 let sec6_tab = document.getElementById("sec6_tab");
 
-let sec6_tab_sub = document.getElementsByClassName("sec6_tab_sub");
-let tab_title = document.getElementsByClassName("tab_title");
-
+let sec6_tab_sub = document.querySelectorAll(".sec6_tab_sub");
+let tab_title = document.querySelectorAll(".tab_title");
 for (let i = 0; i < tab_title.length; i++) {
     tab_title[i].addEventListener("click", (event) => {
         tab_title[i].classList.toggle("tab_active");
 
-        let next = tab_title[i].nextElementSibling;
-        if (next.style.maxHeight) {
-            next.style.maxHeight = null;
-        } else {
-            let act = document.querySelectorAll(".tab_active");
-
-            for (let j = 0; j < act.length; j++) {
-                act[j].classList.remove("tab_active");
-                act[j].nextElementSibling.style.maxHeight = null;
+        // let next = event.currentTarget.nextElementSibling;
+        // console.log(next);
+        // next.classList.toggle("sub_toggle");
+        for (j = 0; j < sec6_tab_sub.length; j++) {
+            if (i == j) {
+                sec6_tab_sub[j].classList.toggle("sub_toggle");
+            } else if (i !== j) {
+                tab_title[i].classList.remove("tab_active");
+                sec6_tab_sub[j].classList.remove("sub_toggle");
             }
-
-            tab_title[i].classList.add("tab_active");
-            next.style.maxHeight = "fit-content";
         }
     });
 }
@@ -109,20 +107,17 @@ function dDay() {
 }
 dDay();
 
-
-// 메인에 띄어줄 공지사항 개수 
-let noticeList = document.querySelectorAll('.notice_list');
+// 메인에 띄어줄 공지사항 개수
+let noticeList = document.querySelectorAll(".notice_list");
 console.log(noticeList);
-if(noticeList.length>3){
-    for(i=noticeList.length-1;i>3;i--){
+if (noticeList.length > 3) {
+    for (i = noticeList.length - 1; i > 3; i--) {
         noticeList[i].remove();
     }
 }
 
 //카테고리 색상
-let category = document.querySelectorAll('.notice_cate');
-category.forEach((e)=>{
+let category = document.querySelectorAll(".notice_cate");
+category.forEach((e) => {
     e.style.color = e.nextElementSibling.innerText;
-})
-
-
+});
