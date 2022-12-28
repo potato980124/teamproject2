@@ -534,6 +534,7 @@ main {
 }
 
 /* 섹션5 종료 */
+
 /* 섹션6 시작 */
 
 .section6 {
@@ -690,6 +691,8 @@ main {
     top: 100px;
     box-sizing: border-box;
     overflow: hidden;
+    transition: all 1s;
+    
 }
 .sec6_tab_sub ul {
     padding: 10px 10px;
@@ -704,7 +707,7 @@ main {
     color: #000000;
 }
 .sub_toggle {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s;
     max-height: fit-content;
     opacity: 1;
     background-color: #f3f2ee;
