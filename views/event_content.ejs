@@ -28,7 +28,6 @@
     <section class="section2">
         <div class="sec_wrap_b">
             <div class="tab_content_wrap">
-                <input type="hidden" name="id" value="<%= row.id %>" />
                 <div class="notice_cate title">
                     <h3><%= row.title %></h3>
                 </div>
@@ -37,11 +36,9 @@
                     <p>|</p>
                     <p>작성자 : <%= row.writer %></p>
                     <p>|</p>
-                    <% let regisYear =  row.create_time.getFullYear();  %>
-                    <% let regisMonth =  row.create_time.getMonth()+1;  %>
-                    <% let regisDate =  row.create_time.getDate();  %>
-                    <p>작성일 : <%=regisYear%>.<%=regisMonth%>.<%=regisDate%>
-                    </p>
+                    <% let regisYear = row.create_time.getFullYear(); %> <% let regisMonth = row.create_time.getMonth()+1; %> <% let regisDate =
+                    row.create_time.getDate(); %>
+                    <p>작성일 : <%=regisYear%>.<%=regisMonth%>.<%=regisDate%></p>
                 </div>
                 <div class="notice_text">
                     <pre>

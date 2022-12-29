@@ -773,7 +773,26 @@ main {
     opacity: 1;
     bottom: 100px;
 }
-
+/* sec7======================= */
+.main .section7 {
+    background-color: #0c0c0c;
+}
+.surprise_wrap {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.surprise_wrap > h3,
+.surprise_wrap > p {
+    text-align: center;
+    color: #f3f2ee;
+}
+.main .section7 .sub_cate {
+    width: fit-content;
+    padding: 0 25px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
 @media (max-width: 1440px) {
     .main .festi-poster {
         padding: 0;

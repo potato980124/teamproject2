@@ -196,12 +196,24 @@ function insertReservation(festival, date, time, name, phone, callback) {
 }
 function getReserveById(id, callback) {
     connection.query(
-        `select date_format(create_time, '%y 년 %c 월 %e 일') as c_time,festival,date_format(time, '%y 년 %c 월 %e 일') as r_time, time, name, phone from reservation ORDER BY id desc limit 1`,
+        `select date_format(create_time, '%y 년 %c 월 %e 일') as c_time, festival, date_format(time, '%y 년 %c 월 %e 일') as r_time, time, name, phone from reservation ORDER BY id desc limit 1`,
         (err, row) => {
             if (err) throw err;
             callback(row);
         }
     );
+}
+function writeComment(id, password, content, callback) {
+    connection.query(`INSERT INTO event_comment(id, password, content,create_time) values ('${id}','${password}','${content}',NOW())`, (err) => {
+        if (err) throw err;
+        callback();
+    });
+}
+function getComment(callback) {
+    connection.query("SELECT * FROM event_comment ORDER BY id desc", (err, rows, fields) => {
+        if (err) throw err;
+        callback(rows);
+    });
 }
 module.exports = {
     writeNotice,
@@ -224,5 +236,7 @@ module.exports = {
     updateEvent,
     insertReservation,
     getReserveById,
+    writeComment,
+    getComment,
     // getData_main,
 };

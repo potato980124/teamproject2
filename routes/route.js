@@ -47,11 +47,11 @@ router.post("/w_notice", (req, res) => {
     let title = param["title"];
     let writer = param["writer"];
     let category = param["category"];
-    let categorycolor = param["category_color"]; 
+    let categorycolor = param["category_color"];
     let password = param["password"];
     let content = param["content"];
 
-    db.writeNotice(title, writer, category,categorycolor,password,content,() => {
+    db.writeNotice(title, writer, category, categorycolor, password, content, () => {
         res.redirect("/notice_list");
     });
 });
@@ -79,7 +79,7 @@ router.post("/w_notice_event", (req, res) => {
     let content = param["content"];
     let img = param["img"];
 
-    db.writeNotice_event(title,writer,category,categorycolor,password,content,img,() => {
+    db.writeNotice_event(title, writer, category, categorycolor, password, content, img, () => {
         res.redirect("/notice_list");
     });
 });
@@ -101,7 +101,7 @@ router.post("/m_notice", (req, res) => {
     let categorycolor = param["category_color"];
     let password = param["password"];
     let content = param["content"];
-    db.updateNotice(id, title, writer, category,categorycolor,password,content, () => {
+    db.updateNotice(id, title, writer, category, categorycolor, password, content, () => {
         res.redirect("/notice_list"); //redirect 에는 / 붙인다
     });
 });
@@ -138,14 +138,12 @@ router.post("/insert_reserve", (req, res) => {
     let time = param["time"];
     let name = param["name"];
     let phone = param["phone"];
-    console.log(festival);
     db.insertReservation(festival, date, time, name, phone, () => {
         res.redirect("/reservation");
     });
 });
 router.get("/reservation", (req, res) => {
     let id = req.query.id;
-    console.log(id);
     db.getReserveById(id, (row) => {
         res.render("reservation", {
             row: row[0],
@@ -218,7 +216,23 @@ router.post("/modify_e", upload.single("eventimg"), (req, res) => {
         res.redirect("/event");
     });
 });
+router.post("/event_comment_write", (req, res) => {
+    let param = JSON.parse(JSON.stringify(req.body));
+    let id = param["id"];
+    let password = param["password"];
+    let content = param["content"];
 
+    db.writeComment(id, password, content, () => {
+        res.redirect("/luckybox");
+    });
+});
+router.get("/luckybox", (req, res) => {
+    db.getComment((rows) => {
+        res.render("luckybox", {
+            rows: rows,
+        }); //ejs의 rows를 받아서 rows라는 이름으로 보낸다
+    });
+});
 //---갤러리---
 router.get("/gallery", (req, res) => {
     res.render("gallery");
@@ -256,6 +270,7 @@ router.post("/joininfo", (req, res) => {
         res.redirect("/login");
     });
 });
+
 router.get("/test", (req, res) => {
     res.render("test");
 });

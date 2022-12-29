@@ -191,6 +191,9 @@ h4 {
 .subpage_title > div:nth-child(7) {
     background-color: #f9b6b0;
 }
+.subpage_title > div:nth-child(8) {
+    background-color: #1874c1;
+}
 .subpage_title > div > h2 {
     color: #fff;
 }
