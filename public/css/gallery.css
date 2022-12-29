@@ -18,8 +18,13 @@
     gap: 50px;
     padding-bottom: 200px;
 }
-.content_left {
+.content_wrap > a {
+    display: block;
     width: 35%;
+    height: fit-content;
+}
+.content_left {
+    width: 100%;
     /* max-height: 320px; */
     color: #fff;
 }
@@ -112,53 +117,50 @@
     background-image: url(../img/fireworks4.jpg);
 }
 
-
-.section2 .mySwiper_gall .swiper-wrapper .no5.img1{
+.section2 .mySwiper_gall .swiper-wrapper .no5.img1 {
     background-image: url(../img/rock-fes1.jpg);
 }
-.section2 .mySwiper_gall .swiper-wrapper .no5.img2{
+.section2 .mySwiper_gall .swiper-wrapper .no5.img2 {
     background-image: url(../img/rock-fes2.jpg);
 }
-.section2 .mySwiper_gall .swiper-wrapper .no5.img3{
+.section2 .mySwiper_gall .swiper-wrapper .no5.img3 {
     background-image: url(../img/rock-fes3.jpg);
 }
-.section2 .mySwiper_gall .swiper-wrapper .no5.img4{
+.section2 .mySwiper_gall .swiper-wrapper .no5.img4 {
     background-image: url(../img/rock-fes4.jpg);
 }
 
-
-.section2 .mySwiper_gall .swiper-wrapper .no6.img1{
+.section2 .mySwiper_gall .swiper-wrapper .no6.img1 {
     background-image: url(../img/bell-fes1.jpg);
 }
-.section2 .mySwiper_gall .swiper-wrapper .no6.img2{
+.section2 .mySwiper_gall .swiper-wrapper .no6.img2 {
     background-image: url(../img/bell-fes2.jpg);
 }
-.section2 .mySwiper_gall .swiper-wrapper .no6.img3{
+.section2 .mySwiper_gall .swiper-wrapper .no6.img3 {
     background-image: url(../img/bell-fes3.jpg);
 }
-.section2 .mySwiper_gall .swiper-wrapper .no6.img4{
+.section2 .mySwiper_gall .swiper-wrapper .no6.img4 {
     background-image: url(../img/bell-fes4.jpg);
 }
 
-
-.section2 .mySwiper_gall .swiper-wrapper .no7.img1{
+.section2 .mySwiper_gall .swiper-wrapper .no7.img1 {
     background-image: url(../img/flower-fes1.jpg);
 }
-.section2 .mySwiper_gall .swiper-wrapper .no7.img2{
+.section2 .mySwiper_gall .swiper-wrapper .no7.img2 {
     background-image: url(../img/flower-fes2.jpg);
 }
-.section2 .mySwiper_gall .swiper-wrapper .no7.img3{
+.section2 .mySwiper_gall .swiper-wrapper .no7.img3 {
     background-image: url(../img/flower-fes3.jpg);
 }
-.section2 .mySwiper_gall .swiper-wrapper .no7.img4{
+.section2 .mySwiper_gall .swiper-wrapper .no7.img4 {
     background-image: url(../img/flower-fes4.png);
 }
 
-.section2 .content_wrap:last-child{
+.section2 .content_wrap:last-child {
     padding-bottom: 0px;
 }
 
-.swiper-gall-next{
+.swiper-gall-next {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -172,16 +174,13 @@
     z-index: inherit;
 }
 
-
-.f_gallery{
+.f_gallery {
     background-color: #f3f2ee;
     padding-bottom: 100px;
-
 }
-.f_gallery p{
+.f_gallery p {
     color: #0c0c0c;
 }
-
 
 .f_icon .insta_sub {
     background-image: url(../img/footer_insta_bk.png);
@@ -196,8 +195,6 @@
     background-image: url(../img/footer_fb_bk.png);
 }
 
-
-
 @media (max-width: 1440px) {
     .content_left > h1 {
         display: inline-block;
@@ -206,14 +203,15 @@
     .content_right {
         width: 55%;
     }
-    .content_left {
+    .content_wrap > a {
+        display: block;
         width: 45%;
+        height: fit-content;
     }
 }
 
 @media (max-width: 970px) {
-
-    .content_left{
+    .content_wrap > a {
         width: 100%;
     }
     .content_right {
@@ -226,10 +224,10 @@
         flex-wrap: wrap-reverse;
         padding-bottom: 150px;
     }
-    .mySwiper_gall{
+    .mySwiper_gall {
         height: 400px;
     }
-    .g_mobile_no{
+    .g_mobile_no {
         display: none;
     }
     .content_left .sub_p {
@@ -237,27 +235,24 @@
         gap: 10px;
         font-weight: 400;
         /* font-size: 15px; */
-    } .content_left .sub_p p:first-child::after{
-        content: ',';
+    }
+    .content_left .sub_p p:first-child::after {
+        content: ",";
     }
 }
-@media (max-width:500px){
+@media (max-width: 500px) {
     .content_left > h1 {
-      
         font-size: 34px;
     }
 }
-@media (max-width:375px) {
-
+@media (max-width: 375px) {
     .content_left .sub_p {
         flex-direction: column;
     }
-    .mySwiper_gall{
+    .mySwiper_gall {
         height: 300px;
     }
     .content_wrap {
-       
         padding-bottom: 100px;
     }
 }
-

@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
     database: "bfoc",
     multipleStatements: true,
 });
-function writeNotice_event(title,writer,category,categorycolor,password,content,img,callback) {
+function writeNotice_event(title, writer, category, categorycolor, password, content, img, callback) {
     connection.query(
         `INSERT INTO notice_event(create_time, title, writer, category,categorycolor,password, content) values (NOW(),'${title}','${writer}','${category}','${categorycolor}','${password}','${content}')`,
         (err) => {
@@ -16,7 +16,7 @@ function writeNotice_event(title,writer,category,categorycolor,password,content,
         }
     );
 }
-function writeNotice(title, writer, category,categorycolor,password, content, callback) {
+function writeNotice(title, writer, category, categorycolor, password, content, callback) {
     connection.query(
         `INSERT INTO notice(create_time, title, writer, category,categorycolor,password, content) values (NOW(),'${title}','${writer}','${category}','${categorycolor}','${password}','${content}')`,
         (err) => {
@@ -63,7 +63,7 @@ function modify_N(id, callback) {
 }
 
 //아이디가 일치하는 부분을 update한 내용 내보내기
-function updateNotice(id, title, writer, category,categorycolor,password, content, callback) {
+function updateNotice(id, title, writer, category, categorycolor, password, content, callback) {
     console.log("db" + id);
     connection.query(
         `UPDATE notice set create_time=now(),title='${title}',writer='${writer}',category='${category}',categorycolor = '${categorycolor}',password=${password},content='${content}' where id=${id}`,
@@ -195,10 +195,13 @@ function insertReservation(festival, date, time, name, phone, callback) {
     );
 }
 function getReserveById(id, callback) {
-    connection.query(`select * from reservation ORDER BY id desc limit 1`, (err, row) => {
-        if (err) throw err;
-        callback(row);
-    });
+    connection.query(
+        `select date_format(create_time, '%y 년 %c 월 %e 일') as c_time,festival,date_format(time, '%y 년 %c 월 %e 일') as r_time, time, name, phone from reservation ORDER BY id desc limit 1`,
+        (err, row) => {
+            if (err) throw err;
+            callback(row);
+        }
+    );
 }
 module.exports = {
     writeNotice,
