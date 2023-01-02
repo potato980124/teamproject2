@@ -1,0 +1,88 @@
+<main class="luckybox">
+    <section class="section1">
+        <div class="sec_wrap">
+            <div class="subpage_title_wrap">
+                <h2>GET YOUR LUCKY BOX</h2>
+                <div class="subpage_title">
+                    <div>
+                        <h2>S</h2>
+                    </div>
+                    <div>
+                        <h2>U</h2>
+                    </div>
+                    <div>
+                        <h2>R</h2>
+                    </div>
+                    <div>
+                        <h2>P</h2>
+                    </div>
+                    <div>
+                        <h2>R</h2>
+                    </div>
+                    <div>
+                        <h2>I</h2>
+                    </div>
+                    <div>
+                        <h2>S</h2>
+                    </div>
+                    <div>
+                        <h2>E</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wave">
+            <div class="wave_bg wbg_top"></div>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="sec_wrap"></div>
+        <div class="wave">
+            <div class="wave_bg wbg_bot"></div>
+        </div>
+    </section>
+    <section class="section3">
+        <div class="sec_wrap">
+            <div class="comment_box">
+                <h4>LEAVE A COMMENT</h4>
+                <form action="event_comment_write" method="post">
+                    <div class="c_wrap">
+                        <div class="writer_info_wrap">
+                            <p>ID :</p>
+                            <div class="id">
+                                <input name="id" type="text" />
+                            </div>
+                            <p>PASSWORD :</p>
+                            <div class="password">
+                                <input name="password" type="text" />
+                            </div>
+                        </div>
+                        <div class="comment_write_wrap">
+                            <input name="comment" type="text" id="comment_write" />
+                        </div>
+                        <div class="notice_btn_wrap">
+                            <div class="notice_btn">
+                                <input type="submit" value="SUBMIT" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="comment">
+                <% rows.forEach((row)=>{%>
+                <div class="comment_info">
+                    <h4><%= row.id %></h4>
+                    <p>22.12.28</p>
+                </div>
+                <div class="comment_content">
+                    <p><%= row.content %></p>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+        <div class="wave">
+            <div class="wave_bg wbg_bot"></div>
+        </div>
+    </section>
+</main>

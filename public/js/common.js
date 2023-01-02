@@ -57,6 +57,7 @@ function footer() {
         location.pathname == "/about_us" ||
         location.pathname == "/committee" ||
         location.pathname == "/join" ||
+        location.pathname == "/event_content" ||
         location.pathname == "/login"
     ) {
         footer.classList.remove("white");

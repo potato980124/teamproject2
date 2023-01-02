@@ -1,12 +1,12 @@
-let plusBtn = document.querySelector(".m_plus_wrap");
+let plusBtn_f = document.querySelector(".m_plus_wrap");
 let mainTxt = document.querySelector(".m_sec1_cont_maintxt");
-plusBtn.addEventListener("click", () => {
+plusBtn_f.addEventListener("click", () => {
     mainTxt.classList.toggle("m_sec1_cont_maintxt_on");
 });
 
 const labels = document.querySelectorAll(".label");
 const optionLists = document.querySelectorAll(".optionList");
-const options = document.querySelectorAll(".optionItem");
+const options_f = document.querySelectorAll(".optionItem");
 let optionListsActive = document.querySelector(".optionList.active");
 
 for (i = 0; i < labels.length; i++) {

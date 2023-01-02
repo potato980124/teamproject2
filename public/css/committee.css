@@ -315,7 +315,7 @@ main {
 
 /* sec4 스폰서 시작 */
 .sec3_sponser {
-    padding-top: 250px;
+    /* padding-top: 250px; */
     box-sizing: border-box;
     background-color: #f3f2ee;
 }
