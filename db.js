@@ -1,12 +1,6 @@
 const { query } = require("express");
 var mysql = require("mysql");
-var connection = mysql.createConnection({
-    host: "test.cqi8uofs7gi9.ap-northeast-1.rds.amazonaws.com",
-    user: "root",
-    password: "sewon0076",
-    database: "bfoc",
-    multipleStatements: true, //데이터 여러개 넣는것
-});
+var connection = mysql.createConnection({});
 function writeNotice_event(title, writer, category, categorycolor, password, content, img, callback) {
     connection.query(
         `INSERT INTO notice_event(create_time, title, writer, category,categorycolor,password, content) values (NOW(),'${title}','${writer}','${category}','${categorycolor}','${password}','${content}')`,
