@@ -42,7 +42,7 @@ router.get("/notice_list", (req, res) => {
 router.get("/notice_write", (req, res) => {
     res.render("notice_write");
 });
-router.post("/w_notice",upload.single('noticeimg') ,(req, res) => {
+router.post("/w_notice", upload.single("noticeimg"), (req, res) => {
     let param = JSON.parse(JSON.stringify(req.body));
     let title = param["title"];
     let writer = param["writer"];
@@ -50,8 +50,8 @@ router.post("/w_notice",upload.single('noticeimg') ,(req, res) => {
     let categorycolor = param["category_color"];
     let password = param["password"];
     let content = param["content"];
-    let noticeimg = 'uploads/'+req.file.filename;
-    db.writeNotice(title, writer, category,categorycolor,password,content,noticeimg,() => {
+    let noticeimg = "uploads/" + req.file.filename;
+    db.writeNotice(title, writer, category, categorycolor, password, content, noticeimg, () => {
         res.redirect("/notice_list");
     });
 });
@@ -98,10 +98,10 @@ router.post("/m_notice", (req, res) => {
     let title = param["title"];
     let writer = param["writer"];
     let category = param["category"];
-    let categorycolor = param["category_color"];
     let password = param["password"];
     let content = param["content"];
-    db.updateNotice(id, title, writer, category, categorycolor, password, content, () => {
+    console.log(title);
+    db.updateNotice(id, title, writer, category, password, content, () => {
         res.redirect("/notice_list"); //redirect 에는 / 붙인다
     });
 });

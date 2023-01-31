@@ -16,7 +16,7 @@ function writeNotice_event(title, writer, category, categorycolor, password, con
         }
     );
 }
-function writeNotice(title, writer, category, categorycolor, password, content,noticeimg ,callback) {
+function writeNotice(title, writer, category, categorycolor, password, content, noticeimg, callback) {
     connection.query(
         `INSERT INTO notice(create_time, title, writer, category,categorycolor,password, content,noticeimg) values (NOW(),'${title}','${writer}','${category}','${categorycolor}','${password}','${content}','${noticeimg}')`,
         (err) => {
@@ -25,17 +25,32 @@ function writeNotice(title, writer, category, categorycolor, password, content,n
         }
     );
 }
-// function getData_main(callback) {
-//     connection.query("SELECT date_format(create_time, '%y:%c:%e') as time ,title, category FROM notice ORDER BY id;", (err, rows) => {
-//         if (err) throw err;
-//         let rows3 = rows[0];
-//         callback(rows3);
-//     });
+
+// function getNotice(callback) {
+//     connection.query(
+//         "SELECT  date_format(create_time, '%y.%c.%e') as time ,title, writer, category,categorycolor,password, content, id FROM notice ORDER BY id DESC;" +
+//             "SELECT  date_format(create_time, '%y.%c.%e') as time, title, writer, category,categorycolor,password, content, id FROM notice_event ORDER BY id DESC;",
+//         (err, rows) => {
+//             if (err) throw err;
+//             let rows1 = rows[0];
+//             let rows2 = rows[1];
+//             callback(rows1, rows2);
+//         }
+//     );
+// }
+// function getNoticeByid(id, callback) {
+//     connection.query(
+//         `SELECT date_format(create_time, '%y 년 %c 월 %e 일') as time ,title, writer, category,categorycolor,password, content,noticeimg ,id FROM notice where id=${id}`,
+//         (err, row) => {
+//             if (err) throw err;
+//             callback(row);
+//         }
+//     );
 // }
 function getNotice(callback) {
     connection.query(
-        "SELECT  date_format(create_time, '%y.%c.%e') as time ,title, writer, category,categorycolor,password, content, id FROM notice ORDER BY id DESC;" +
-            "SELECT  date_format(create_time, '%y.%c.%e') as time, title, writer, category,categorycolor,password, content, id FROM notice_event ORDER BY id DESC;",
+        "SELECT  date_format(create_time, '%y.%c.%e') as time ,title, writer, category,password, content, id FROM notice ORDER BY id DESC;" +
+            "SELECT  date_format(create_time, '%y.%c.%e') as time, title, writer, category,password, content, id FROM notice_event ORDER BY id DESC;",
         (err, rows) => {
             if (err) throw err;
             let rows1 = rows[0];
@@ -46,7 +61,7 @@ function getNotice(callback) {
 }
 function getNoticeByid(id, callback) {
     connection.query(
-        `SELECT date_format(create_time, '%y 년 %c 월 %e 일') as time ,title, writer, category,categorycolor,password, content,noticeimg ,id FROM notice where id=${id}`,
+        `SELECT date_format(create_time, '%y 년 %c 월 %e 일') as time ,title, writer, category,password, content,noticeimg ,id FROM notice where id=${id}`,
         (err, row) => {
             if (err) throw err;
             callback(row);
@@ -63,10 +78,20 @@ function modify_N(id, callback) {
 }
 
 //아이디가 일치하는 부분을 update한 내용 내보내기
-function updateNotice(id, title, writer, category, categorycolor, password, content, callback) {
+// function updateNotice(id, title, writer, category, categorycolor, password, content, callback) {
+//     console.log("db" + id);
+//     connection.query(
+//         `UPDATE notice set create_time=now(),title='${title}',writer='${writer}',category='${category}',categorycolor = '${categorycolor}',password=${password},content='${content}' where id=${id}`,
+//         (err) => {
+//             if (err) throw err;
+//             callback();
+//         }
+//     );
+// }
+function updateNotice(id, title, writer, category, password, content, callback) {
     console.log("db" + id);
     connection.query(
-        `UPDATE notice set create_time=now(),title='${title}',writer='${writer}',category='${category}',categorycolor = '${categorycolor}',password=${password},content='${content}' where id=${id}`,
+        `UPDATE notice set create_time=now(), title='${title}', writer='${writer}',category='${category}', password=${password},content='${content}' where id='${id}'`,
         (err) => {
             if (err) throw err;
             callback();
@@ -83,7 +108,7 @@ function deleteNotice(id, callback) {
 // 회원가입 내용 db에 전달 해주는 함수
 function insertIntoJoinTable(id, pw, name, birth, email, callback) {
     connection.query(
-        `insert into jointable(create_time,id,pw,name,birth,mail)values(now(),'${id}','${pw}','${name}','${birth}','${email}')`,
+        `insert into jointable(create_time,id,pw,name,birth,email)values(now(),'${id}','${pw}','${name}','${birth}','${email}')`,
         (err) => {
             if (err) throw err;
             callback();

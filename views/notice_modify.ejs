@@ -39,14 +39,14 @@
                         <div class="notice_write_cont">
                             <div class="notice_write_cate wh_bg_line">
                                 <p class="notice_write_title">*작성자</p>
-                                <div><input type="text" name="name" id="writer" class="notice_write_input" value="<%= row.writer %>"/></div>
+                                <div><input type="text" name="writer" id="writer" class="notice_write_input" value="<%= row.writer %>" /></div>
                             </div>
 
                             <div class="notice_write_cont">
                                 <div class="notice_write_cate wh_bg_line">
                                     <p class="notice_write_title">비밀번호</p>
                                     <div>
-                                        <input type="password" name="password" id="pw" class="notice_write_input" value="<%= row.password %>" />
+                                        <input type="password" name="password" id="pw" password="notice_write_input" value="<%= row.password %>" />
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@
                             <div class="notice_write_cont">
                                 <div class="notice_write_cate wh_bg_line">
                                     <p class="notice_write_title">첨부파일</p>
-                                    <div class="noti_file"><input type="file" name="title" id="title" class="notice_write_input2" /></div>
+                                    <div class="noti_file"><input type="file" name="file" id="title" class="notice_write_input2" /></div>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +104,7 @@
                         <input type="button" value="취소" class="list_btn" onclick="location.href='/notice_list'" />
                     </div>
                     <div class="notice_btn">
-                        <input type="submit" value="확인" id="submit">
+                        <input type="submit" value="확인" id="submit" />
                     </div>
                 </div>
             </div>
