@@ -1,19 +1,20 @@
 @import url(common.css);
 /* 섹션1 시작 */
 
-
 /* 상단 홈, 뒤로가기 버튼 */
-.login .mobile_btn_wrap{
+.login .mobile_btn_wrap {
     display: flex;
     position: absolute;
-    top: 10px; left: 20px;
+    top: 50px;
+    left: 50px;
 }
-.login div>img{
-    width: 50px; height: 50px;
+.login div > img {
+    width: 35px;
+    height: 35px;
 }
-.login .back_btn{
+/* .login .back_btn {
     margin-left: 40px;
-}
+} */
 /* 메인 시작 */
 .login {
     height: 100vh;

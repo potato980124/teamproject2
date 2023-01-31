@@ -1,11 +1,11 @@
 const { query } = require("express");
 var mysql = require("mysql");
 var connection = mysql.createConnection({
-    host: "database-2.cnhgeyew7wkq.ap-northeast-1.rds.amazonaws.com",
-    user: "admin",
-    password: "xlavmf12",
+    host: "test.cqi8uofs7gi9.ap-northeast-1.rds.amazonaws.com",
+    user: "root",
+    password: "sewon0076",
     database: "bfoc",
-    multipleStatements: true,
+    multipleStatements: true, //데이터 여러개 넣는것
 });
 function writeNotice_event(title, writer, category, categorycolor, password, content, img, callback) {
     connection.query(
@@ -196,7 +196,7 @@ function insertReservation(festival, date, time, name, phone, callback) {
 }
 function getReserveById(id, callback) {
     connection.query(
-        `select date_format(create_time, '%y 년 %c 월 %e 일') as c_time, festival, date_format(time, '%y 년 %c 월 %e 일') as r_time, time, name, phone from reservation ORDER BY id desc limit 1`,
+        `SELECT date_format(create_time, '%y 년 %c 월 %e 일') as c_time, festival, date_format(time, '%y 년 %c 월 %e 일') as r_time, time, name, phone from reservation ORDER BY id desc limit 1`,
         (err, row) => {
             if (err) throw err;
             callback(row);
@@ -210,10 +210,13 @@ function writeComment(id, password, content, callback) {
     });
 }
 function getComment(callback) {
-    connection.query("SELECT * FROM event_comment ORDER BY id desc", (err, rows, fields) => {
-        if (err) throw err;
-        callback(rows);
-    });
+    connection.query(
+        "SELECT id, content, date_format(create_time, '%y 년 %c 월 %e 일') as time FROM event_comment ORDER BY num desc",
+        (err, rows) => {
+            if (err) throw err;
+            callback(rows);
+        }
+    );
 }
 module.exports = {
     writeNotice,

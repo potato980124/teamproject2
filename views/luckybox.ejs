@@ -2,45 +2,70 @@
     <section class="section1">
         <div class="sec_wrap">
             <div class="subpage_title_wrap">
-                <h2>GET YOUR LUCKY BOX</h2>
+                <h2>GET YOUR</h2>
                 <div class="subpage_title">
                     <div>
-                        <h2>S</h2>
+                        <h2>L</h2>
                     </div>
                     <div>
                         <h2>U</h2>
                     </div>
                     <div>
-                        <h2>R</h2>
+                        <h2>C</h2>
                     </div>
                     <div>
-                        <h2>P</h2>
+                        <h2>K</h2>
                     </div>
                     <div>
-                        <h2>R</h2>
+                        <h2>Y</h2>
                     </div>
                     <div>
-                        <h2>I</h2>
+                        <h2>B</h2>
                     </div>
                     <div>
-                        <h2>S</h2>
+                        <h2>O</h2>
                     </div>
                     <div>
-                        <h2>E</h2>
+                        <h2>X</h2>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="wave">
+        <!-- <div class="wave">
             <div class="wave_bg wbg_top"></div>
-        </div>
+        </div> -->
     </section>
     <section class="section2">
-        <div class="sec_wrap"></div>
-        <div class="wave">
-            <div class="wave_bg wbg_bot"></div>
+        <div class="sec_wrap">
+            <div class="lucky_content">
+                <div class="box_place">
+                    <div class="box_mockup"><img src="img/gift_box_mockup2.png" alt="" /></div>
+                    <div class="box_mockup2"><img src="img/gift_box_mockup2_open.png" alt="" /></div>
+                </div>
+                <h3>2023.01.01 ~ 2023.03.01</h3>
+                <!-- <div class="festival_list">
+                    <div class="wrap">
+                        <h4>부산시민의종타종식</h4>
+                        <h4>부산항축제</h4>
+                        <h4>부산바다축제</h4>
+                    </div>
+                    <div class="wrap">
+                        <h4>골목길축제</h4>
+                        <h4>부산불꽃축제</h4>
+                        <h4>국제록페스티벌</h4>
+                        <h4>유채꽃축제</h4>
+                    </div>
+                </div> -->
+                <h4>2023 부산에서 열리는 축제중 <span>가장 기대되는 축제</span> 한 가지와</h4>
+                <h4>그 이유를 적어주시면 추첨을 통해</h4>
+                <h4><span>에어팟</span>과 <span>10만원 상당의 lucky box</span>를 총 10분께 드립니다!</h4>
+                <h4>BFOC 인스타 팔로우후</h4>
+                <h4>이벤트 관련 게시물에 좋아요를 달면 당첨 확률 UP!</h4>
+            </div>
         </div>
+        <!-- <div class="wave">
+            <div class="wave_bg wbg_bot"></div>
+        </div> -->
     </section>
     <section class="section3">
         <div class="sec_wrap">
@@ -59,7 +84,7 @@
                             </div>
                         </div>
                         <div class="comment_write_wrap">
-                            <input name="comment" type="text" id="comment_write" />
+                            <input name="content" type="text" id="comment_write" />
                         </div>
                         <div class="notice_btn_wrap">
                             <div class="notice_btn">
@@ -73,7 +98,7 @@
                 <% rows.forEach((row)=>{%>
                 <div class="comment_info">
                     <h4><%= row.id %></h4>
-                    <p>22.12.28</p>
+                    <p><%= row.time %></p>
                 </div>
                 <div class="comment_content">
                     <p><%= row.content %></p>
@@ -82,7 +107,8 @@
             </div>
         </div>
         <div class="wave">
-            <div class="wave_bg wbg_bot"></div>
+            <div class="wave_bg wbg_top"></div>
         </div>
     </section>
 </main>
+<script src="js/lucky.js"></script>

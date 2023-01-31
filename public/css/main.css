@@ -250,6 +250,12 @@ main {
 .main .sec3_wrap > div {
     width: calc(50% - 50px);
 }
+.main .sec3_left {
+    overflow: hidden;
+}
+.main .sec3_left > img {
+    width: 100%;
+}
 .main .sec3_wrap > .sec3_right {
     display: flex;
     justify-content: space-between;
@@ -776,11 +782,19 @@ main {
 /* sec7======================= */
 .main .section7 {
     background-color: #0c0c0c;
+    position: relative;
 }
+/* .main .section7 .sec_wrap {
+    position: relative;
+} */
 .surprise_wrap {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+}
+.surprise_wrap > h3 {
+    margin-bottom: 30px;
+    font-weight: 900;
 }
 .surprise_wrap > h3,
 .surprise_wrap > p {
@@ -789,9 +803,31 @@ main {
 }
 .main .section7 .sub_cate {
     width: fit-content;
-    padding: 0 25px;
+    padding: 0 30px;
+    border: 1px solid #f3f2ee;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 30px auto 5px;
+}
+.main .section7 .gifts {
+    position: absolute;
+    width: 16%;
+    height: auto;
+    left: 50%;
+    bottom: 50%;
+    transform: translateY(12%) translateX(62%) rotate(18deg);
+    z-index: 100;
+}
+.main .section7 .gift {
+    position: absolute;
+    width: 13%;
+    height: auto;
+    left: 50%;
+    bottom: 50%;
+    transform: translateY(-5%) translateX(-190%) rotate(0);
+    z-index: 100;
+}
+.main .section7 img {
+    width: 100%;
 }
 @media (max-width: 1440px) {
     .main .festi-poster {

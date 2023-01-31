@@ -221,6 +221,7 @@ router.post("/event_comment_write", (req, res) => {
     let id = param["id"];
     let password = param["password"];
     let content = param["content"];
+    console.log(content);
 
     db.writeComment(id, password, content, () => {
         res.redirect("/luckybox");
