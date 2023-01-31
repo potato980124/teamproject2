@@ -42,7 +42,7 @@ router.get("/notice_list", (req, res) => {
 router.get("/notice_write", (req, res) => {
     res.render("notice_write");
 });
-router.post("/w_notice", (req, res) => {
+router.post("/w_notice",upload.single('noticeimg') ,(req, res) => {
     let param = JSON.parse(JSON.stringify(req.body));
     let title = param["title"];
     let writer = param["writer"];
@@ -50,14 +50,14 @@ router.post("/w_notice", (req, res) => {
     let categorycolor = param["category_color"];
     let password = param["password"];
     let content = param["content"];
-
-    db.writeNotice(title, writer, category, categorycolor, password, content, () => {
+    let noticeimg = 'uploads/'+req.file.filename;
+    db.writeNotice(title, writer, category,categorycolor,password,content,noticeimg,() => {
         res.redirect("/notice_list");
     });
 });
 router.get("/notice_detail", (req, res) => {
     let id = req.query.id;
-    // let id = req.query.id;
+    console.log(id);
     db.getNoticeByid(id, (row) => {
         res.render("notice_content", {
             row: row[0],
