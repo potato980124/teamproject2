@@ -64,6 +64,12 @@ router.get("/notice_detail", (req, res) => {
         }); //테이블의 한 행만 보내줄거기 때문에
     });
 });
+router.get("/deleteNotice",(req,res)=> {
+    let id = req.query.id;
+    db.deleteNotice(id,()=>{
+        res.redirect("notice_list")
+    })
+})
 //notice===NEWS 섹션====================================
 
 router.get("/notice_write_event", (req, res) => {

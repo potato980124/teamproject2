@@ -1,6 +1,12 @@
 const { query } = require("express");
-var mysql = require("mysql");
-var connection = mysql.createConnection({});
+var mysql = require("mysql2");
+var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '1234',
+    database: 'bfoc',
+    multipleStatements: true
+});
 function writeNotice_event(title, writer, category, categorycolor, password, content, img, callback) {
     connection.query(
         `INSERT INTO notice_event(create_time, title, writer, category,categorycolor,password, content) values (NOW(),'${title}','${writer}','${category}','${categorycolor}','${password}','${content}')`,
