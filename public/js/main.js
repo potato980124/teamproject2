@@ -109,7 +109,7 @@ dDay();
 
 // 메인에 띄어줄 공지사항 개수
 let noticeList = document.querySelectorAll(".notice_list");
-console.log(noticeList);
+// console.log(noticeList);
 if (noticeList.length > 3) {
     for (i = noticeList.length - 1; i > 3; i--) {
         noticeList[i].remove();
@@ -119,5 +119,6 @@ if (noticeList.length > 3) {
 //카테고리 색상
 let category = document.querySelectorAll(".notice_cate");
 category.forEach((e) => {
+    console.log(e.nextElementSibling.innerText);
     e.style.color = e.nextElementSibling.innerText;
 });

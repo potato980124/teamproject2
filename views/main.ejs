@@ -105,6 +105,7 @@
                 <input type="hidden" name="id" value="<%= row.id %>" />
                 <div class="notice_list" onclick="javascript:location.href='/notice_detail?id=<%= row.id %>'">
                     <h4 class="notice_cate"><%= row.category %></h4>
+                    <div class="hidden"><%= row.color %></div>
                     <h4 class="notice_title">
                         <a href="/notice_detail?id=<%= row.id %>"><%= row.title %></a>
                     </h4>

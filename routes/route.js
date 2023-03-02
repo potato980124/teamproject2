@@ -50,7 +50,14 @@ router.post("/w_notice", upload.single("noticeimg"), (req, res) => {
     let categorycolor = param["category_color"];
     let password = param["password"];
     let content = param["content"];
-    let noticeimg = "uploads/" + req.file.filename;
+    let noticeimg = "";
+    // let noticeimg = "uploads/" + req.file.filename;
+    if(!req.file){
+        noticeimg += "";
+    }else{
+        noticeimg += "uploads/" + req.file.filename;
+    }
+    console.log(noticeimg);
     db.writeNotice(title, writer, category, categorycolor, password, content, noticeimg, () => {
         res.redirect("/notice_list");
     });

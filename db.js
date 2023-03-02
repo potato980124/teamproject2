@@ -18,7 +18,7 @@ function writeNotice_event(title, writer, category, categorycolor, password, con
 }
 function writeNotice(title, writer, category, categorycolor, password, content, noticeimg, callback) {
     connection.query(
-        `INSERT INTO notice(create_time, title, writer, category,categorycolor,password, content,noticeimg) values (NOW(),'${title}','${writer}','${category}','${categorycolor}','${password}','${content}','${noticeimg}')`,
+        `INSERT INTO notice(create_time, title, writer, category,color,password, content,noticeimg) values (NOW(),'${title}','${writer}','${category}','${categorycolor}','${password}','${content}','${noticeimg}')`,
         (err) => {
             if (err) throw err;
             callback();
@@ -49,7 +49,7 @@ function writeNotice(title, writer, category, categorycolor, password, content, 
 // }
 function getNotice(callback) {
     connection.query(
-        "SELECT  date_format(create_time, '%y.%c.%e') as time ,title, writer, category,password, content, id FROM notice ORDER BY id DESC;" +
+        "SELECT  date_format(create_time, '%y.%c.%e') as time ,title, writer, category,color,password, content, id FROM notice ORDER BY id DESC;" +
             "SELECT  date_format(create_time, '%y.%c.%e') as time, title, writer, category,password, content, id FROM notice_event ORDER BY id DESC;",
         (err, rows) => {
             if (err) throw err;
