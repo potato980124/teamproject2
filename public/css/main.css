@@ -703,7 +703,7 @@ main {
     overflow: hidden;
     /* transition: 3s; */
 }
-.sec6_tab_sub ul > li > a {
+.sec6_tab_sub ul > li{
     width: 100%;
     display: block;
     font-size: 16px;
@@ -717,8 +717,8 @@ main {
     max-height: fit-content;
     background-color: #f3f2ee;
 }
-.sec6_tab_sub.sub_toggle ul > li > a {
-    line-height: 3;
+.sec6_tab_sub.sub_toggle ul > li{
+    line-height: 2;
     transition: all 0.5s ease-in-out;
 }
 
