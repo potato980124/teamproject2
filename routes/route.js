@@ -9,7 +9,7 @@ const db = require("./../db.js");
 const upload = multer({
     storage: multer.diskStorage({
         destination(req, file, done) {
-            done(null, "public/uploads/");
+            done(null, "../public/uploads/");
         },
         filename(req, file, done) {
             const ext = path.extname(file.originalname); //파일의 확장자
@@ -51,13 +51,11 @@ router.post("/w_notice", upload.single("noticeimg"), (req, res) => {
     let password = param["password"];
     let content = param["content"];
     let noticeimg = "";
-    // let noticeimg = "uploads/" + req.file.filename;
     if(!req.file){
         noticeimg += "";
     }else{
         noticeimg += "uploads/" + req.file.filename;
     }
-    console.log(noticeimg);
     db.writeNotice(title, writer, category, categorycolor, password, content, noticeimg, () => {
         res.redirect("/notice_list");
     });
@@ -106,15 +104,24 @@ router.get("/modifyNotice", (req, res) => {
     });
 });
 router.post("/m_notice", (req, res) => {
+    // let param = JSON.parse(JSON.stringify(req.body));
+    // let id = param["id"];
+    // let title = param["title"];
+    // let writer = param["writer"];
+    // let category = param["category"];
+    // let password = param["password"];
+    // let content = param["content"];
     let param = JSON.parse(JSON.stringify(req.body));
     let id = param["id"];
     let title = param["title"];
     let writer = param["writer"];
     let category = param["category"];
+    let categorycolor = param["category_color"];
     let password = param["password"];
     let content = param["content"];
+    let img = param["img"];
     console.log(title);
-    db.updateNotice(id, title, writer, category, password, content, () => {
+    db.updateNotice(id, title, categorycolor, writer, category, password, content,img, () => {
         res.redirect("/notice_list"); //redirect 에는 / 붙인다
     });
 });

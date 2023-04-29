@@ -15,7 +15,7 @@ $orgarnTab.addEventListener('click',(e)=>{
 $hisTab.addEventListener('click',(e)=>{
     e.target.classList.add('tab_bg');
     e.target.nextElementSibling.classList.remove('tab_bg');
-    e.target.sibbl
+    // e.target.sibbl
     $sec2_con_wrap.forEach((e)=>{
         e.classList.remove('tab_on');
     })

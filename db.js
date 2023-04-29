@@ -50,7 +50,7 @@ function writeNotice(title, writer, category, categorycolor, password, content, 
 function getNotice(callback) {
     connection.query(
         "SELECT  date_format(create_time, '%y.%c.%e') as time ,title, writer, category,color,password, content, id FROM notice ORDER BY id DESC;" +
-            "SELECT  date_format(create_time, '%y.%c.%e') as time, title, writer, category,password, content, id FROM notice_event ORDER BY id DESC;",
+            "SELECT  date_format(create_time, '%y.%c.%e') as time, title, writer, category,categorycolor,password, content, id FROM notice_event ORDER BY id DESC;",
         (err, rows) => {
             if (err) throw err;
             let rows1 = rows[0];
@@ -88,10 +88,10 @@ function modify_N(id, callback) {
 //         }
 //     );
 // }
-function updateNotice(id, title, writer, category, password, content, callback) {
+function updateNotice(id, title, categorycolor, writer, category, password, content,noticeimg, callback) {
     console.log("db" + id);
     connection.query(
-        `UPDATE notice set create_time=now(), title='${title}', writer='${writer}',category='${category}', password=${password},content='${content}' where id='${id}'`,
+        `UPDATE notice set create_time=now(), title='${title}',color ='${categorycolor}', writer='${writer}',category='${category}', password='${password}',content='${content}',noticeimg = '${noticeimg}' where id='${id}'`,
         (err) => {
             if (err) throw err;
             callback();
@@ -221,7 +221,7 @@ function insertReservation(festival, date, time, name, phone, callback) {
 }
 function getReserveById(id, callback) {
     connection.query(
-        `SELECT date_format(create_time, '%y 년 %c 월 %e 일') as c_time, festival, date_format(time, '%y 년 %c 월 %e 일') as r_time, time, name, phone from reservation ORDER BY id desc limit 1`,
+        `SELECT date_format(create_time, '%y 년 %c 월 %e 일') as c_time, festival, date_format(time, '%y 년 %c 월 %e 일') as r_time, time, name, date,phone from reservation ORDER BY id desc limit 1`,
         (err, row) => {
             if (err) throw err;
             callback(row);

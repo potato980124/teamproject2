@@ -268,10 +268,10 @@ main {
     align-items: center;
     justify-content: space-between;
 }
-.location_info .sub_cate + p {
+/* .location_info .sub_cate + p {
     font-weight: 700;
     font-size: 20px;
-}
+} */
 
 /* .location_info > li:nth-child(-n + 2) > p {
     font-size: 22px;
@@ -315,7 +315,7 @@ main {
 
 /* sec4 스폰서 시작 */
 .sec3_sponser {
-    /* padding-top: 250px; */
+    padding-top: 250px;
     box-sizing: border-box;
     background-color: #f3f2ee;
 }
@@ -380,10 +380,10 @@ main {
     }
 
     /* 섹션3 로케이션시작 */
-    .location_info .sub_cate + p {
+    /* .location_info .sub_cate + p {
         font-weight: 700;
         font-size: 16px;
-    }
+    } */
     /* sec4 스폰서 시작 */
     .sec3_sponser {
         padding-top: 120px;
